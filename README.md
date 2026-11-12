@@ -10,3 +10,7 @@ A custom documentation and project hub with a Minecraft-inspired pixel-art ocean
 - `water.js` — animated background accents
 
 Project licences remain in each source repository, not in this documentation repository.
+
+## Community
+
+- [Birb SMP Discord](https://discord.gg/5yq3xZjPhc)
