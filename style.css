@@ -243,36 +243,11 @@ nav{font-size:13px;font-weight:700}
 .project-icon-fallback[hidden]{display:none!important}
 .project-icon-fallback:not([hidden]){display:grid}
 
-/* Hard fix: keep the in-game map texture above legacy ocean overlays */
-.pixel-ocean.minecraft-map{
-  position:relative!important;
-  isolation:isolate!important;
-  overflow:hidden!important;
-  background:#061c38!important;
-  min-height:340px;
-}
-.pixel-ocean.minecraft-map > .map-texture{
-  position:absolute!important;
-  inset:0!important;
-  z-index:2!important;
-  display:block!important;
-  width:100%!important;
-  height:100%!important;
-  max-width:none!important;
-  max-height:none!important;
-  object-fit:cover!important;
-  object-position:center!important;
-  image-rendering:pixelated!important;
-  opacity:1!important;
-  visibility:visible!important;
-}
-.pixel-ocean.minecraft-map::after{
-  z-index:3!important;
-  opacity:.12!important;
-  pointer-events:none!important;
-  background:linear-gradient(180deg,rgba(2,8,24,.02),rgba(2,8,24,.10))!important;
-}
-.pixel-ocean.minecraft-map > .map-marker{z-index:5!important}
-.pixel-ocean.minecraft-map > .idea-cloud{z-index:6!important}
-.pixel-ocean.minecraft-map > .map-compass{z-index:5!important}
-.comment-gif{width:150px;height:115px;max-width:100%;object-fit:contain}
+/* Always show the comments media/reaction block, even when external GIF media is unavailable. */
+.comments-preview{display:flex!important;visibility:visible!important;opacity:1!important;min-width:0}
+.comment-gif-link{display:grid!important;place-items:center;min-width:140px;min-height:110px;text-decoration:none}
+.comment-gif{display:block!important;max-width:150px;max-height:115px}
+.comment-gif-fallback{display:none;align-items:center;justify-content:center;min-width:140px;min-height:90px;padding:12px;border:1px solid #347497;border-radius:10px;background:linear-gradient(145deg,#0c2e4b,#06172b);color:#9de7ff;font-size:13px;font-weight:800;letter-spacing:.04em}
+.comment-gif-fallback:not([hidden]){display:flex!important}
+.comment-emoji-row{display:flex!important;visibility:visible!important;opacity:1!important;align-items:center;justify-content:center;gap:9px;min-height:30px;font-size:21px}
+.comments-preview small{display:block!important;visibility:visible!important;opacity:1!important}
