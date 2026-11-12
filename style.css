@@ -441,3 +441,50 @@ html[data-theme="light"] .comment-fallback{color:#48657a!important}
 html[data-theme="light"] .discussion-fallback-card{background:linear-gradient(145deg,#fff,#eaf2f8)!important;border-color:#b5cadb!important}
 html[data-theme="light"] .discussion-fallback-card h3{color:#14283a!important}
 html[data-theme="light"] .discussion-fallback-card p{color:#405d73!important}
+
+/* Align the player marker with the ideas cloud near the top of the map. */
+.pixel-ocean.minecraft-map>.map-marker{top:13%!important;left:53%!important}
+
+/* Required first-visit disclaimer */
+.disclaimer-overlay{position:fixed;inset:0;z-index:10000;display:grid;place-items:center;padding:22px;background:rgba(0,7,18,.88);backdrop-filter:blur(12px)}
+.disclaimer-overlay[hidden]{display:none!important}
+.disclaimer-card{width:min(620px,100%);max-height:min(88vh,760px);overflow:auto;padding:clamp(22px,4vw,36px);border:1px solid #3185a9;border-radius:16px;background:linear-gradient(145deg,#0b2035,#04101f);color:#eaf7ff;box-shadow:0 24px 90px #0009}
+.disclaimer-kicker,.sidebar-kicker,.sidebar-section-label{font-size:10px;font-weight:850;letter-spacing:.14em;color:#80dfff}
+.disclaimer-card h2{margin:10px 0 18px;font-size:clamp(25px,4vw,34px);line-height:1.12;font-weight:900;color:#fff}
+.disclaimer-card p{margin:0 0 13px;color:#c0d3e1;font-size:14px;line-height:1.65}
+.disclaimer-card p strong{color:#fff}
+.disclaimer-card .disclaimer-last{margin-top:18px;color:#91e4ff;font-weight:700}
+.disclaimer-accept{width:100%;display:flex;justify-content:space-between;align-items:center;margin-top:12px;padding:15px 18px;border:1px solid #55d4ff;border-radius:9px;background:#0d9acb;color:#041321;font-size:13px;font-weight:900;letter-spacing:.06em;cursor:pointer}
+.disclaimer-accept:hover{background:#55d4ff}
+.disclaimer-note{display:block;margin-top:12px;color:#89a6ba;text-align:center;font-size:11px}
+html.disclaimer-open,html.disclaimer-open body{overflow:hidden!important}
+html[data-theme="light"] .disclaimer-card{background:linear-gradient(145deg,#fff,#eaf3f9);color:#14283a;border-color:#8dbbd4}
+html[data-theme="light"] .disclaimer-card h2,html[data-theme="light"] .disclaimer-card p strong{color:#14283a}
+html[data-theme="light"] .disclaimer-card p{color:#405d73}
+html[data-theme="light"] .disclaimer-card .disclaimer-last{color:#087fae}
+html[data-theme="light"] .disclaimer-note{color:#587085}
+
+/* Slide-out page sidebar */
+.sidebar-open{position:fixed;left:16px;top:96px;z-index:9000;display:flex;align-items:center;gap:8px;padding:10px 12px;border:1px solid #3c8db0;border-radius:8px;background:rgba(4,19,35,.94);color:#dff7ff;font:800 11px/1 var(--body);letter-spacing:.08em;cursor:pointer;box-shadow:0 5px 18px #0004;backdrop-filter:blur(8px)}
+.sidebar-open:hover{border-color:#70ddff;color:#70ddff}
+.site-sidebar-backdrop{position:fixed;inset:0;z-index:8998;background:#0009;backdrop-filter:blur(2px)}
+.site-sidebar-backdrop[hidden]{display:none!important}
+.site-sidebar{position:fixed;left:0;top:0;bottom:0;z-index:8999;width:min(310px,86vw);padding:24px 18px;overflow-y:auto;background:#061728;border-right:1px solid #245675;box-shadow:18px 0 50px #0006;transform:translateX(-105%);visibility:hidden;transition:transform .24s ease,visibility .24s}
+.site-sidebar.is-open{transform:translateX(0);visibility:visible}
+.sidebar-head{display:flex;justify-content:space-between;align-items:center;padding:4px 5px 20px;border-bottom:1px solid #24455e;margin-bottom:12px}
+.sidebar-close{width:32px;height:32px;border:1px solid #315d78;border-radius:7px;background:#0b263c;color:#eaf7ff;font-size:22px;cursor:pointer}
+.sidebar-link{display:flex;align-items:center;gap:12px;padding:11px 12px;margin:3px 0;border-radius:7px;color:#d2e5f2;text-decoration:none;font-size:13px;font-weight:700;transition:background .15s,color .15s}
+.sidebar-link:hover,.sidebar-link:focus-visible{background:#10334d;color:#7cddff;outline:none}
+.sidebar-sub{padding-left:24px;font-size:12px;color:#a8c1d2}
+.sidebar-divider{height:1px;background:#24455e;margin:14px 5px}
+.sidebar-section-label{display:block;padding:0 12px 8px;color:#83a9bf;font-size:9px}
+html[data-theme="light"] .sidebar-open{background:rgba(255,255,255,.96);color:#173349;border-color:#9dbfd3}
+html[data-theme="light"] .site-sidebar{background:#f4f9fd;border-color:#b6ccdc}
+html[data-theme="light"] .sidebar-head{border-color:#c1d2df}
+html[data-theme="light"] .sidebar-close{background:#e6f0f7;color:#173349;border-color:#b6ccdc}
+html[data-theme="light"] .sidebar-link{color:#29475e}
+html[data-theme="light"] .sidebar-link:hover{background:#deedf6;color:#087fae}
+html[data-theme="light"] .sidebar-divider{background:#c1d2df}
+html[data-theme="light"] .sidebar-section-label{color:#58758a}
+@media(max-width:700px){.sidebar-open{top:84px;left:10px;padding:9px 10px}.disclaimer-card{padding:21px}}
+@media(prefers-reduced-motion:reduce){.site-sidebar{transition:none}}

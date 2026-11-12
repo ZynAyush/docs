@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><meta name="description" content="Release notes and development updates from the ZynAyush Minecraft project archive."><title>Project Updates — ZynAyush</title><script>(function(){try{var t=localStorage.getItem("zynayush-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script><link rel="stylesheet" href="style.css?v=20261112-theme-layout"><link rel="stylesheet" href="docs.css?v=20261112-theme-layout"><style>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><meta name="description" content="Release notes and development updates from the ZynAyush Minecraft project archive."><title>Project Updates — ZynAyush</title><script>(function(){try{var t=localStorage.getItem("zynayush-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script><link rel="stylesheet" href="style.css?v=20261112-disclaimer-sidebar"><link rel="stylesheet" href="docs.css?v=20261112-theme-layout"><style>
 .updates-main{padding-bottom:70px}
 .updates-hero{padding-top:50px;padding-bottom:42px}
 .updates-hero h1{margin-bottom:15px}
@@ -19,7 +19,43 @@
 .updates-note p{font-size:15px;line-height:1.65;color:#afc4d5;margin:0}
 @media(max-width:700px){.updates-hero{padding-top:38px}.update-card{grid-template-columns:1fr;gap:14px;padding:18px}.update-meta{flex-direction:row;align-items:center;flex-wrap:wrap}.update-body h2{font-size:23px}.update-body p{font-size:15px}}
 </style></head>
-<body><canvas id="water" aria-hidden="true"></canvas><div class="shade"></div>
+<body>
+<div class="site-sidebar-backdrop" data-sidebar-backdrop hidden></div>
+<aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation" aria-hidden="true">
+  <div class="sidebar-head"><span class="sidebar-kicker">ZYNAYUSH / ARCHIVE</span><button type="button" class="sidebar-close" data-sidebar-close aria-label="Close navigation">×</button></div>
+  <a class="sidebar-link" href="index.html">⌂ <span>Home</span></a>
+  <a class="sidebar-link" href="index.html#projects">▦ <span>Projects</span></a>
+  <a class="sidebar-link" href="about.html">◉ <span>About</span></a>
+  <a class="sidebar-link" href="journal.html">↗ <span>Updates</span></a>
+  <a class="sidebar-link" href="faq.html">? <span>FAQ</span></a>
+  <a class="sidebar-link" href="docs/">▤ <span>Documentation index</span></a>
+  <div class="sidebar-divider"></div>
+  <span class="sidebar-section-label">PROJECT DOCUMENTATION</span>
+  <a class="sidebar-link sidebar-sub" href="docs/carpet-fake-players.html">Carpet Fake Players</a>
+  <a class="sidebar-link sidebar-sub" href="docs/zeroxfog.html">ZeroXFog</a>
+  <a class="sidebar-link sidebar-sub" href="docs/netherite-stones-ores.html">Netherite Stones &amp; Ores</a>
+  <a class="sidebar-link sidebar-sub" href="docs/smooth-fonts-32x.html">Smooth Fonts 32x</a>
+  <div class="sidebar-divider"></div>
+  <a class="sidebar-link" href="index.html#community">Community</a>
+  <a class="sidebar-link" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</aside>
+<button class="sidebar-open" type="button" data-sidebar-open aria-controls="site-sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>MENU</span></button>
+<div class="disclaimer-overlay" id="site-disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title" aria-describedby="disclaimer-copy">
+  <div class="disclaimer-card">
+    <span class="disclaimer-kicker">PLEASE READ BEFORE CONTINUING</span>
+    <h2 id="disclaimer-title">A QUICK DISCLAIMER.</h2>
+    <div id="disclaimer-copy">
+      <p><strong>Independent project archive.</strong> This website and its projects are not affiliated with, endorsed by, or associated with Mojang Studios or Microsoft. Minecraft is a trademark of Microsoft.</p>
+      <p><strong>Use downloads responsibly.</strong> Mods, plugins, resource packs and other files are provided as described on their project pages. Compatibility may vary. Back up your worlds and files before installing anything, and review each download and its source before use.</p>
+      <p><strong>No warranty or guaranteed support.</strong> Projects and website content are provided on an “as is” basis. Features, availability, compatibility and documentation may change. No guarantee is made that every project will be error-free or suitable for every setup.</p>
+      <p><strong>External services.</strong> Links to GitHub, Modrinth, Discord and other third-party services are governed by their own terms and privacy policies. This site does not control those services.</p>
+      <p class="disclaimer-last">By selecting Accept &amp; Continue, you confirm that you have read and understood this notice.</p>
+    </div>
+    <button type="button" class="disclaimer-accept" data-disclaimer-accept>ACCEPT &amp; CONTINUE <span aria-hidden="true">→</span></button>
+    <small class="disclaimer-note">This notice will stay here until you accept it on this browser.</small>
+  </div>
+</div>
+<canvas id="water" aria-hidden="true"></canvas><div class="shade"></div>
 <header class="site-header"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav aria-label="Primary navigation"><a href="index.html#projects">PROJECTS</a><a href="docs/">DOCS</a><a href="journal.html" aria-current="page">UPDATES</a><a href="faq.html">FAQ</a><a href="about.html">ABOUT</a><a href="index.html#community">COMMUNITY</a><a class="nav-github" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☀</span><span class="theme-toggle-label">LIGHT</span></button></nav></header>
 <main class="doc-wrap updates-main">
  <div class="doc-top"><a href="index.html">← PROJECT ARCHIVE</a><span class="eyebrow">FIELD NOTES / RELEASES</span></div>
@@ -40,4 +76,4 @@
  </section>
  <section class="updates-note"><h2>What belongs here?</h2><p>Only meaningful changes: public releases, compatibility updates, important fixes and project milestones. Download links remain on the project's official Modrinth page.</p></section>
 </main>
-<footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH · BUILT BLOCK BY BLOCK</span><a href="about.html">ABOUT ↗</a><a href="index.html">HOME ↑</a></div></footer><script src="water.js"></script><script src="theme.js?v=20261112-theme-layout"></script></body></html>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH · BUILT BLOCK BY BLOCK</span><a href="about.html">ABOUT ↗</a><a href="index.html">HOME ↑</a></div></footer><script src="water.js"></script><script src="theme.js?v=20261112-theme-layout"></script><script src="site-ui.js?v=20261112-disclaimer-sidebar"></script></body></html>
