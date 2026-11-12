@@ -160,3 +160,78 @@ nav{font:650 13px/1.35 var(--body);gap:20px;flex-wrap:wrap}
  .steve-render{width:82px;height:126px}
 }
 @media(prefers-reduced-motion:reduce){.marker-dot,.idea-cloud,.project-card{animation:none!important;transition:none!important}}
+
+/* Final repair pass: consistent hierarchy and readable desktop scaling */
+html{font-size:16px}
+body{font-size:18px;line-height:1.65}
+h1{font-size:clamp(42px,4.2vw,60px);font-weight:850;line-height:1.08;letter-spacing:-.055em}
+h2,.section-head h2,.status-inner h2,.about h2{font-size:clamp(30px,2.8vw,38px);font-weight:850;line-height:1.16;letter-spacing:-.045em}
+h3{font-size:19px;font-weight:800;line-height:1.32;letter-spacing:-.025em}
+.hero-desc,.section-note,.project-info p,.about>div:nth-child(2)>p{font-size:17px;line-height:1.65}
+.eyebrow{font-size:11px;font-weight:750;letter-spacing:.09em}
+.site-header{min-height:76px}
+nav{font-size:13px;font-weight:700}
+.pixel-btn{font-size:13px;font-weight:750}
+.project-info h3{font-size:17px;font-weight:800;line-height:1.35}
+.project-info p{font-size:15.5px;line-height:1.58}
+.tags span,.card-links{font-size:11px;font-weight:700}
+.project-visual-icon{display:grid;place-items:center;min-height:170px;position:relative}
+.project-icon-real{width:88px;height:88px;max-width:42%;object-fit:contain;image-rendering:auto;border-radius:15px;border:1px solid #426d8b;box-shadow:0 8px 20px #0006;background:#07182b}
+.netherite-project-icon{width:82px;height:82px}
+.steve-mini{position:absolute;right:20px;bottom:17px;width:46px;height:68px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 5px 8px #0008)}
+.project-visual-icon .visual-label{font-size:10px}
+.project-visual-icon .visual-code{font-size:10px;max-width:calc(100% - 24px);overflow-wrap:anywhere}
+.comments-section{padding-top:56px;padding-bottom:76px}
+.comments-heading{display:grid;grid-template-columns:1fr 240px;gap:30px;align-items:center;margin-bottom:24px}
+.comments-heading h2{font-size:clamp(30px,3vw,39px);font-weight:850;margin:0 0 12px}
+.comments-intro{max-width:620px;color:#b7c8d9;font-size:17px;line-height:1.6;margin:0}
+.comments-preview{display:flex;flex-direction:column;align-items:center;gap:10px;padding:14px;border:1px solid #1e4e70;border-radius:12px;background:#07192b}
+.comment-gif-link{display:block}
+.comment-gif{display:block;max-width:150px;max-height:115px;object-fit:contain;border-radius:8px}
+.comment-emoji-row{display:flex;gap:8px;font-size:18px}
+.comments-preview small{font-size:12px;color:#9eb6c9;text-align:center;line-height:1.4}
+.discussion-card{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:24px 26px;border:1px solid #245b7b;border-radius:13px;background:linear-gradient(145deg,#09213a,#061528);box-shadow:0 12px 30px #0003}
+.discussion-kicker{display:block;color:#83cdeb;font-size:11px;font-weight:750;letter-spacing:.08em;margin-bottom:10px}
+.discussion-card h3{font-size:21px;font-weight:850;margin:0 0 8px}
+.discussion-card p{font-size:15px;color:#afc4d5;line-height:1.6;margin:0;max-width:700px}
+.discussion-button{flex:0 0 auto;padding:13px 17px;border:1px solid #6fd7ff;border-radius:8px;background:#087eae;color:#031323;font-size:13px;font-weight:800;white-space:nowrap;transition:transform .2s,filter .2s}
+.discussion-button:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.comments-footnote{font-size:12px;color:#8ea8bf;margin:12px 2px 0}
+.comments-footnote a{color:#83d9ff}
+@media(min-width:1500px){
+  .wrap{width:min(1480px,calc(100% - 80px))}
+  .site-header{padding-left:max(40px,calc((100% - 1480px)/2));padding-right:max(40px,calc((100% - 1480px)/2))}
+  .hero{grid-template-columns:minmax(360px,.78fr) minmax(600px,1.22fr);gap:54px}
+  .hero-desc{font-size:19px}
+  .pixel-ocean.minecraft-map{min-height:390px}
+  .project-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+  .project-card{display:flex;flex-direction:column;min-width:0}
+  .project-visual{height:155px;min-height:155px;border-right:0;border-bottom:1px solid #164267}
+  .project-visual-icon{height:155px;min-height:155px}
+  .project-info{padding:20px;display:flex;flex-direction:column;flex:1}
+  .project-info p{font-size:16px;min-height:76px}
+  .card-links{gap:11px;font-size:11px}
+  .project-icon-real{width:86px;height:86px}
+  .netherite-project-icon{width:80px;height:80px}
+  .steve-mini{width:44px;height:66px}
+}
+@media(max-width:900px){
+  .comments-heading{grid-template-columns:1fr 200px}
+  .discussion-card{align-items:flex-start;flex-direction:column}
+}
+@media(max-width:700px){
+  body{font-size:16px}
+  .comments-heading{grid-template-columns:1fr}
+  .comments-preview{flex-direction:row;justify-content:flex-start;flex-wrap:wrap}
+  .comments-preview small{flex-basis:100%;text-align:left}
+  .discussion-card{padding:18px}
+  .discussion-card h3{font-size:18px}
+  .discussion-button{white-space:normal}
+}
+@media(max-width:430px){
+  .project-visual-icon{min-height:160px}
+  .project-icon-real{width:78px;height:78px}
+}
+@media(prefers-reduced-motion:reduce){
+ .discussion-button{transition:none}
+}

@@ -1,2 +1,43 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><title>Dev Log — ZynAyush</title><link rel="stylesheet" href="style.css"></head><body><canvas id="water" aria-hidden="true"></canvas><div class="shade"></div><header class="site-header"><a class="logo" href="index.html"><span class="logo-mark">Z</span><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav><a href="index.html#projects">PROJECTS</a><a href="journal.html">DEV LOG</a><a href="faq.html">FAQ</a><a href="https://discord.gg/gQzXVPCEp8">DISCORD</a><a href="index.html#about">ABOUT</a><a class="nav-github" href="https://github.com/ZynAyush">GITHUB ↗</a></nav></header><main class="wrap"><section class="hero" style="min-height:420px;display:block;padding-top:90px"><p class="eyebrow">04 / FIELD NOTES</p><h1>THE <span class="cyan">DEV LOG.</span></h1><p class="hero-desc">Build notes, release updates and lessons from the workshop.</p></section><section class="section"><p class="eyebrow">LATEST TRANSMISSION</p><h2>LOG_0001 — <span class="cyan">COMING SOON</span></h2><p class="hero-desc">Development notes will appear here as projects evolve. No filler posts — just useful updates.</p><a class="pixel-btn ghost" href="index.html">← BACK TO PROJECT ARCHIVE</a></section></main><footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><span class="logo-mark">Z</span><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH</span><a href="index.html#community">DISCORD ↗</a><a href="index.html">HOME ↑</a></div></footer><script src="water.js"></script></body></html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><meta name="description" content="Release notes and development updates from the ZynAyush Minecraft project archive."><title>Project Updates — ZynAyush</title><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="docs.css"><style>
+.updates-main{padding-bottom:70px}
+.updates-hero{padding-top:50px;padding-bottom:42px}
+.updates-hero h1{margin-bottom:15px}
+.updates-list{display:grid;gap:16px;padding:34px 0 42px}
+.update-card{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:25px;border:1px solid #194b6d;border-radius:13px;background:linear-gradient(145deg,#081c32,#041020);box-shadow:0 10px 28px #0002}
+.update-featured{border-color:#2c81aa;background:linear-gradient(145deg,#0a2944,#06172a)}
+.update-meta{display:flex;flex-direction:column;align-items:flex-start;gap:11px;color:#9db5c9;font:700 12px/1.4 var(--body)}
+.update-type{display:inline-flex;padding:7px 10px;border:1px solid #2a7198;border-radius:6px;color:#7edaff;font-size:11px;letter-spacing:.07em}
+.update-body h2{font-size:clamp(22px,2.1vw,29px);font-weight:850;line-height:1.22;margin:0 0 12px}
+.update-body p{font-size:16px;line-height:1.7;color:#b8cbd9;margin:0 0 17px;max-width:850px}
+.update-links{display:flex;gap:16px;flex-wrap:wrap}
+.update-links a{font-size:12px;line-height:1.4;font-weight:750;color:#83dfff}
+.update-links a:hover{color:#fecb8b}
+.updates-note{padding:22px 25px;border-left:3px solid #49bfff;border-radius:0 10px 10px 0;background:#07192a}
+.updates-note h2{font-size:20px;font-weight:850;margin:0 0 9px}
+.updates-note p{font-size:15px;line-height:1.65;color:#afc4d5;margin:0}
+@media(max-width:700px){.updates-hero{padding-top:38px}.update-card{grid-template-columns:1fr;gap:14px;padding:18px}.update-meta{flex-direction:row;align-items:center;flex-wrap:wrap}.update-body h2{font-size:23px}.update-body p{font-size:15px}}
+</style></head>
+<body><canvas id="water" aria-hidden="true"></canvas><div class="shade"></div>
+<header class="site-header"><a class="logo" href="index.html"><span class="logo-mark">Z</span><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav aria-label="Primary navigation"><a href="index.html#projects">PROJECTS</a><a href="docs/">DOCS</a><a href="journal.html" aria-current="page">UPDATES</a><a href="faq.html">FAQ</a><a href="about.html">ABOUT</a><a href="index.html#community">COMMUNITY</a><a class="nav-github" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></nav></header>
+<main class="doc-wrap updates-main">
+ <div class="doc-top"><a href="index.html">← PROJECT ARCHIVE</a><span class="eyebrow">FIELD NOTES / RELEASES</span></div>
+ <section class="doc-hero updates-hero"><p class="eyebrow">BUILD NOTES · RELEASES · PROJECT CHANGES</p><h1>PROJECT <span class="cyan">UPDATES.</span></h1><p class="lede">A short record of shipped releases, useful changes and what is being improved across the archive. No placeholder posts.</p><div class="doc-actions"><a href="index.html#projects">BROWSE PROJECTS ↗</a><a href="https://modrinth.com/user/zynayush" target="_blank" rel="noopener noreferrer">MODRINTH PROFILE ↗</a></div></section>
+ <section class="updates-list">
+  <article class="update-card update-featured">
+   <div class="update-meta"><span class="update-type">RELEASE</span><time datetime="2026-10-10">10 OCT 2026</time></div>
+   <div class="update-body"><h2>ZeroXFog <span class="cyan">1.2</span> published</h2><p>The published release includes Sodium shader fog support alongside clearer views through the Nether, End and caves while keeping the familiar vanilla look.</p><div class="update-links"><a href="https://modrinth.com/mod/zeroxfog" target="_blank" rel="noopener noreferrer">VIEW RELEASE ↗</a><a href="docs/zeroxfog.html">READ THE GUIDE ↗</a><a href="https://github.com/ZynAyush/ZeroXFog" target="_blank" rel="noopener noreferrer">SOURCE ↗</a></div></div>
+  </article>
+  <article class="update-card">
+   <div class="update-meta"><span class="update-type">ARCHIVE</span><time datetime="2026-11-12">12 NOV 2026</time></div>
+   <div class="update-body"><h2>Project archive refresh</h2><p>The archive is being reorganised around clearer project pages, a dedicated About page, direct documentation links and a public feedback discussion.</p><div class="update-links"><a href="index.html#projects">EXPLORE THE ARCHIVE ↗</a><a href="about.html">ABOUT THIS SPACE ↗</a><a href="https://github.com/ZynAyush/docs/discussions/1" target="_blank" rel="noopener noreferrer">LEAVE FEEDBACK ↗</a></div></div>
+  </article>
+  <article class="update-card">
+   <div class="update-meta"><span class="update-type">ONGOING</span><span>PROJECT MAINTENANCE</span></div>
+   <div class="update-body"><h2>Documentation and compatibility</h2><p>Project guides explain installation and intended use. For the newest supported Minecraft versions, check each project's Modrinth Versions tab before downloading.</p><div class="update-links"><a href="docs/">OPEN DOCUMENTATION ↗</a><a href="faq.html">READ THE FAQ ↗</a></div></div>
+  </article>
+ </section>
+ <section class="updates-note"><h2>What belongs here?</h2><p>Only meaningful changes: public releases, compatibility updates, important fixes and project milestones. Download links remain on the project's official Modrinth page.</p></section>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><span class="logo-mark">Z</span><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH · BUILT BLOCK BY BLOCK</span><a href="about.html">ABOUT ↗</a><a href="index.html">HOME ↑</a></div></footer><script src="water.js"></script></body></html>
