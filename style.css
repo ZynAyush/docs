@@ -178,7 +178,7 @@ nav{font-size:13px;font-weight:700}
 .project-visual-icon{display:grid;place-items:center;min-height:170px;position:relative}
 .project-icon-real{width:88px;height:88px;max-width:42%;object-fit:contain;image-rendering:auto;border-radius:15px;border:1px solid #426d8b;box-shadow:0 8px 20px #0006;background:#07182b}
 .netherite-project-icon{width:82px;height:82px}
-.steve-mini{position:absolute;right:20px;bottom:17px;width:46px;height:68px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 5px 8px #0008)}
+
 .project-visual-icon .visual-label{font-size:10px}
 .project-visual-icon .visual-code{font-size:10px;max-width:calc(100% - 24px);overflow-wrap:anywhere}
 .comments-section{padding-top:56px;padding-bottom:76px}
@@ -285,3 +285,33 @@ nav{font-size:13px;font-weight:700}
 @media(max-width:430px){
  .pixel-ocean.minecraft-map>.map-status{left:8px!important;bottom:8px!important;padding:7px 9px!important;font-size:9px!important}
 }
+
+/* Final map alignment: map image and overlay coordinates use identical frame bounds. */
+.pixel-ocean.minecraft-map{position:relative!important;overflow:hidden!important;aspect-ratio:1.13!important;min-height:0!important}
+.pixel-ocean.minecraft-map>.map-texture{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:fill!important;object-position:0 0!important;transform:none!important;display:block!important}
+.pixel-ocean.minecraft-map>.map-marker{left:54%!important;top:57%!important}
+.pixel-ocean.minecraft-map>.idea-cloud{left:58%!important;top:10%!important}
+.steve-mini{display:none!important}
+.comment-board{border:1px solid #245b7b;border-radius:13px;padding:22px;background:linear-gradient(145deg,#09213a,#061528)}
+.comment-board-head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+.comment-board-head h3{font-size:22px;font-weight:850;margin:0 0 5px}
+.comment-board-head p{margin:0;color:#afc4d5;font-size:14px}
+.comment-count{font-size:11px;font-weight:800;letter-spacing:.08em;color:#8ddfff}
+.comment-form{display:grid;grid-template-columns:1fr;gap:8px}
+.comment-form label{font-size:12px;font-weight:750;color:#c7d9e8;margin-top:5px}
+.comment-form input,.comment-form textarea{width:100%;box-sizing:border-box;padding:12px 13px;border:1px solid #285574;border-radius:8px;background:#041426;color:#eaf7ff;font:15px/1.5 var(--body);outline:none}
+.comment-form input:focus,.comment-form textarea:focus{border-color:#6fd7ff;box-shadow:0 0 0 2px #6fd7ff22}
+.comment-form textarea{resize:vertical;min-height:88px}
+.comment-form-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-top:8px}
+.comment-form-bottom small{max-width:550px;color:#8faabd;font-size:11px;line-height:1.5}
+.comment-feedback{min-height:18px;margin:0;color:#8de3ff;font-size:12px}
+.comment-list{display:grid;gap:10px;margin-top:18px}
+.comment-entry{padding:14px 16px;border:1px solid #1e4a68;border-radius:9px;background:#06182a}
+.comment-entry-top{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.comment-entry-top strong{font-size:14px;color:#dff5ff}
+.comment-entry-top time{font-size:10px;color:#829caf}
+.comment-entry p{margin:8px 0 0;color:#c0d2df;font-size:14px;line-height:1.6;overflow-wrap:anywhere}
+.empty-comments{margin:0;padding:16px;color:#91aabe;font-size:13px;text-align:center;border:1px dashed #285574;border-radius:9px}
+@media(max-width:600px){.comment-form-bottom{align-items:flex-start;flex-direction:column}.comment-board{padding:16px}.comment-board-head{align-items:flex-start;flex-direction:column}}
+
+.steve-mini{display:none!important}
