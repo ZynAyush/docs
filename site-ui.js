@@ -200,7 +200,11 @@ document.querySelectorAll(".project-card[data-doc-url]").forEach(card => {
     const updateTopButton = () => topButton.classList.toggle("is-visible", window.scrollY > 300);
     updateTopButton();
     window.addEventListener("scroll", updateTopButton, { passive: true });
-    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+    topButton.addEventListener("click", () => {
+      const reduceMotion = window.matchMedia &&
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, left: 0, behavior: reduceMotion ? "auto" : "smooth" });
+    });
   }
 
   const languageSelect = document.getElementById("site-language-select");

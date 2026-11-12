@@ -1317,3 +1317,49 @@ html[data-theme="light"] .docs-index-open{color:#087f78!important}
   .docs-index-grid{grid-template-columns:1fr!important}
   .docs-index-card{min-height:170px!important}
 }
+
+/* Back-to-top: softer fade, longer glide and a restrained lift when revealed. */
+.backtop-float{
+  opacity:0;
+  visibility:hidden;
+  transform:translate3d(0,14px,0) scale(.88);
+  transform-origin:center;
+  transition:
+    opacity .42s ease,
+    transform .58s cubic-bezier(.16,1,.3,1),
+    visibility 0s linear .58s,
+    color .28s ease,
+    background-color .28s ease,
+    box-shadow .32s ease;
+  will-change:opacity,transform;
+}
+.backtop-float.is-visible{
+  opacity:1;
+  visibility:visible;
+  transform:translate3d(0,0,0) scale(1);
+  transition:
+    opacity .42s ease,
+    transform .58s cubic-bezier(.16,1,.3,1),
+    visibility 0s,
+    color .28s ease,
+    background-color .28s ease,
+    box-shadow .32s ease;
+}
+.backtop-float:hover{
+  transform:translate3d(0,-4px,0) scale(1.045);
+  box-shadow:0 10px 26px rgba(0,0,0,.24);
+}
+.backtop-float:active{
+  transform:translate3d(0,-1px,0) scale(.94);
+}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto!important}
+  .backtop-float,
+  .backtop-float.is-visible,
+  .backtop-float:hover,
+  .backtop-float:active{
+    transition:none!important;
+    transform:none!important;
+  }
+}
