@@ -13,4 +13,6 @@ Project licences remain in each source repository, not in this documentation rep
 
 ## Community
 
-- [Birb SMP Discord](https://discord.gg/5yq3xZjPhc)
+- [ZynAyush's Hub](https://discord.gg/gQzXVPCEp8)
+
+- [FAQ](https://zynayush.github.io/docs/faq.html)

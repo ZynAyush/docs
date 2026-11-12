@@ -18,3 +18,7 @@ Choose a project guide. Each page includes an overview, setup steps, compatibili
 - [Troubleshooting and reporting issues](guides/troubleshooting.md)
 
 Project licence files remain in their respective source repositories, not in this documentation area.
+
+## Help
+
+- [Frequently asked questions](../faq.html)
