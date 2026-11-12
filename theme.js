@@ -16,25 +16,11 @@
       if (icon) icon.textContent = next === "light" ? "☀" : "☾";
       if (label) label.textContent = next.toUpperCase();
     });
-    const frame = document.querySelector("iframe.giscus-frame");
-    if (frame && frame.contentWindow) {
-      frame.contentWindow.postMessage({ giscus: { setConfig: { theme: mode === "light" ? "light" : "dark_dimmed" } } }, "https://giscus.app");
-    }
     if (persist) {
       try { localStorage.setItem(key, mode); } catch (_) {}
     }
   };
   paint(getTheme());
-  const syncGiscus = () => {
-    const frame = document.querySelector("iframe.giscus-frame");
-    if (frame && frame.contentWindow) {
-      frame.contentWindow.postMessage({ giscus: { setConfig: { theme: getTheme() === "light" ? "light" : "dark_dimmed" } } }, "https://giscus.app");
-    }
-  };
-  if (document.body && "MutationObserver" in window) {
-    const observer = new MutationObserver(syncGiscus);
-    observer.observe(document.body, { childList: true, subtree: true });
-  }
   document.addEventListener("click", (event) => {
     const button = event.target.closest("[data-theme-toggle]");
     if (!button) return;
