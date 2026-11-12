@@ -1,6 +1,8 @@
-title: ZynAyush Docs
-description: Project documentation, setup guides and development notes.
+title: ZynAyush — Project Archive
+description: Minecraft mods, plugins, resource packs, guides and project updates by ZynAyush.
 markdown: kramdown
+baseurl: "/docs"
+url: "https://zynayush.github.io"
 defaults:
   - scope:
       path: "docs"

@@ -4,37 +4,37 @@
 
 **Plugin does not load**
 - Check that the JAR matches the server's exact Minecraft target.
-- Confirm the server is Paper or Purpur and Java 25 is available for the listed builds.
-- Review the first plugin error in the server startup log; include the complete stack trace when reporting it.
+- Confirm that the server runs Paper or Purpur and that Java 25 is available for the listed builds.
+- Find the first plugin error in the server startup log. Include the complete stack trace when reporting the issue.
 
 **Player cannot control a bot**
 - Check bot ownership and the relevant `bot.player`, `bot.use` or `bot.action` permissions.
-- Remember that permission and ownership are separate checks. An ordinary player cannot control another player's bot simply because they have a generic command permission.
+- Permission and ownership are separate checks. An ordinary player cannot control another player's bot just because they have a generic command permission.
 - If a player owns multiple bots, include the bot name in control commands.
 
 **Bot disappears or does not rejoin**
-- Review `owner-offline-timeout`, `rejoin`, `autosave`, `death` and `kill` settings.
-- Confirm snapshots are enabled for the event that removed the bot and persistent snapshots are enabled if restoration after restart is expected.
+- Review the `owner-offline-timeout`, `rejoin`, `autosave`, `death` and `kill` settings.
+- Confirm snapshots are enabled for the event that removed the bot. If you expect restoration after a restart, make sure persistent snapshots are enabled.
 - Original/admin-managed bots can have different timeout behavior from ordinary player-owned bots.
 
 **Physics, collision or pickup looks wrong**
 - Review `physics.enabled`, `collision.enabled`, `collision.rule` and the pickup section.
 - Check whether another plugin changes entity collisions, item pickup or player ticking.
-- Test with a minimal plugin set to isolate conflicts.
+- Test with a minimal plugin set to check for conflicts.
 
 **Hand or item display does not update**
-- Check the `hand-sync` settings and reproduce with a clean client/resource-pack setup.
+- Check the `hand-sync` settings and try to reproduce the issue with a clean client/resource-pack setup.
 
 ## Resource packs
 
 **Pack does not appear in the menu**
-- Confirm the ZIP is in the actual Minecraft `resourcepacks` directory and has not been nested inside an extra folder.
-- Re-download the version matching the game.
+- Confirm the ZIP is in the actual Minecraft `resourcepacks` directory and is not nested inside an extra folder.
+- Re-download the version that matches your game.
 
 **Some textures, font glyphs or fog changes are missing**
-- Move the pack above overlapping packs.
-- Disable other packs temporarily to identify a conflict.
-- For ZeroXFog, verify Sodium compatibility and the correct release files if you use Sodium.
+- Move the pack above any packs that overlap with it.
+- Temporarily disable other packs to check for conflicts.
+- For ZeroXFog, check Sodium compatibility and use the correct release files if you use Sodium.
 - For Smooth Fonts 32x, check whether a mod or another pack supplies its own font definition.
 - For Netherite Stones & Ores, check whether another pack overrides the same block texture or blockstate.
 
@@ -51,7 +51,7 @@ For a resource pack, include:
 - Minecraft version and pack version
 - Loader/rendering mods such as Sodium, if relevant
 - Resource-pack order
-- Screenshots showing expected vs actual appearance
-- Whether the issue remains when the pack is tested alone
+- Screenshots showing the expected and actual appearance
+- Whether the issue remains when you test the pack alone
 
-Report code/plugin issues in the [GitHub repository issue tracker](https://github.com/ZynAyush/minecraft-playerbots/issues) or use the relevant project's Modrinth page for pack feedback.
+Report code/plugin issues in the [GitHub repository issue tracker](https://github.com/ZynAyush/carpet-fake-players/issues), or use the relevant project's Modrinth page for pack feedback.
