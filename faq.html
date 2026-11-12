@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><title>FAQ — ZynAyush Project Archive</title><script>(function(){try{var t=localStorage.getItem("zynayush-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script><link rel="stylesheet" href="style.css?v=20261112-nocloud-cardlinks"><link rel="stylesheet" href="docs.css?v=20261112-theme-hover-final"></head>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><title>FAQ — ZynAyush Project Archive</title><script>(function(){var t="dark";try{var saved=localStorage.getItem("zynayush-theme");if(saved==="light"||saved==="dark"||saved==="oled")t=saved;}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script><link rel="stylesheet" href="style.css?v=20261112-oled-bug-translate"><link rel="stylesheet" href="docs.css?v=20261112-oled-bug-translate"></head>
 <body>
 <div class="site-sidebar-backdrop" data-sidebar-backdrop hidden></div>
 <aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation" aria-hidden="true">
@@ -37,8 +37,22 @@
   </div>
 </div>
 <canvas id="water" aria-hidden="true"></canvas><div class="shade"></div>
-<header class="site-header"><button class="sidebar-open" type="button" data-sidebar-open aria-controls="site-sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>MENU</span></button><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav><a href="index.html#projects">PROJECTS</a><a href="journal.html">UPDATES</a><a href="faq.html">FAQ</a><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">DISCORD ↗</a><a class="nav-github" href="https://github.com/ZynAyush">GITHUB ↗</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☀</span><span class="theme-toggle-label">LIGHT</span></button></nav></header>
-<main class="doc-wrap"><div class="doc-top"><a href="index.html">← PROJECT ARCHIVE</a><span class="eyebrow">HELP / FAQ</span></div>
+<header class="site-header"><button class="sidebar-open" type="button" data-sidebar-open aria-controls="site-sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>MENU</span></button><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav><a href="index.html#projects">PROJECTS</a><a href="journal.html">UPDATES</a><a href="faq.html">FAQ</a><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">DISCORD ↗</a><a class="nav-github" href="https://github.com/ZynAyush">GITHUB ↗</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☀</span></button></nav></header>
+<div class="bug-report-overlay" id="bug-report-panel" hidden aria-hidden="true">
+  <section class="bug-report-panel" role="dialog" aria-modal="true" aria-labelledby="bug-report-title">
+    <button class="bug-report-close" type="button" data-bug-close aria-label="Close report options">×</button>
+    <span class="bug-panel-kicker">ZYNAYUSH / SUPPORT</span>
+    <h2 id="bug-report-title">REPORT A BUG</h2>
+    <p>Choose where you want to send the report. Include the project version, Minecraft version and steps to reproduce the issue.</p>
+    <a class="bug-choice bug-choice-primary" id="bug-github-choice" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">
+      <span class="bug-choice-symbol">GH</span><span><strong>GitHub Issue</strong><small>Open the project's issue template</small></span><span class="bug-choice-arrow">↗</span>
+    </a>
+    <a class="bug-choice" href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">
+      <span class="bug-choice-symbol">DC</span><span><strong>Discord Server</strong><small>Ask for help in ZynAyush's Hub</small></span><span class="bug-choice-arrow">↗</span>
+    </a>
+    <small class="bug-panel-footnote">Please do not post passwords, tokens or other private information.</small>
+  </section>
+</div><main class="doc-wrap"><div class="doc-top"><a href="index.html">← PROJECT ARCHIVE</a><span class="eyebrow">HELP / FAQ</span></div>
 <section class="doc-hero"><p class="eyebrow">ANSWERS BEFORE YOU ASK</p><h1>FREQUENTLY ASKED QUESTIONS</h1><p class="lede">Quick answers for downloads, installation, compatibility, troubleshooting and contacting the project maintainer.</p><div class="doc-actions"><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">OPEN ZYNAYUSH'S HUB ↗</a></div></section>
 <section class="doc-section"><h2>01 / DOWNLOADS &amp; INSTALLATION</h2>
 <details class="faq-item" open><summary>Where do I download a project?</summary><p>Use the Modrinth link on its project card or documentation page. The Modrinth version list is the source of truth for the latest release and supported game versions.</p><p><a href="docs/carpet-fake-players.html">Carpet Fake Players guide</a> · <a href="https://modrinth.com/plugin/carpetfakeplayer/">Modrinth</a> · <a href="docs/zeroxfog.html">ZeroXFog guide</a> · <a href="https://modrinth.com/mod/zeroxfog">Modrinth</a> · <a href="docs/netherite-stones-ores.html">Netherite Stones &amp; Ores guide</a> · <a href="https://modrinth.com/mod/netherite-stones-ores">Modrinth</a> · <a href="docs/smooth-fonts-32x.html">Smooth Fonts 32x guide</a> · <a href="https://modrinth.com/resourcepack/smooth-fonts-32x">Modrinth</a></p><p><a href="https://modrinth.com/plugin/carpetfakeplayer/">Carpet Fake Players</a> · <a href="https://modrinth.com/mod/zeroxfog">ZeroXFog</a> · <a href="https://modrinth.com/mod/netherite-stones-ores">Netherite Stones / Ores</a> · <a href="https://modrinth.com/resourcepack/smooth-fonts-32x">Smooth Fonts 32x</a></p></details>
@@ -51,7 +65,24 @@
 <details class="faq-item"><summary>Can I redistribute or modify the projects?</summary><p>Check each project's Modrinth licence and its source repository's LICENSE file. The current resource-pack listings show All Rights Reserved; do not assume reuse permission.</p></details>
 </section>
 <section class="doc-section"><h2>03 / REPORTING ISSUES</h2>
-<details class="faq-item"><summary>How do I report a bug?</summary><p>Use the issue tracker belonging to the affected project. Include your Minecraft version, loader or server software, project version, relevant mods/plugins, error log and steps to reproduce the problem.</p><ul><li><a href="https://github.com/ZynAyush/minecraft-playerbots/issues/new/choose">Carpet Fake Players — report a bug</a></li><li><a href="https://github.com/ZynAyush/ZeroXFog/issues/new/choose">ZeroXFog — report a bug</a></li><li><a href="https://github.com/ZynAyush/Netherite-Stones-Ores/issues/new/choose">Netherite Stones / Ores — report a bug</a></li><li><a href="https://github.com/ZynAyush/Smooth-Fonts-32x/issues/new/choose">Smooth Fonts 32x — report a bug</a></li></ul></details>
+<details class="faq-item"><summary>How do I report a bug?</summary><p>Use the issue tracker belonging to the affected project. Include your Minecraft version, loader or server software, project version, relevant mods/plugins, error log and steps to reproduce the problem.</p><ul><li><a href="#bug-report-panel" data-bug-report data-github-issue="https://github.com/ZynAyush/minecraft-playerbots/issues/new/choose">Carpet Fake Players — report a bug</a></li><li><a href="#bug-report-panel" data-bug-report data-github-issue="https://github.com/ZynAyush/ZeroXFog/issues/new/choose">ZeroXFog — report a bug</a></li><li><a href="#bug-report-panel" data-bug-report data-github-issue="https://github.com/ZynAyush/Netherite-Stones-Ores/issues/new/choose">Netherite Stones / Ores — report a bug</a></li><li><a href="#bug-report-panel" data-bug-report data-github-issue="https://github.com/ZynAyush/Smooth-Fonts-32x/issues/new/choose">Smooth Fonts 32x — report a bug</a></li></ul></details>
 <details class="faq-item"><summary>Where can I ask a general question?</summary><p>Join <a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">ZynAyush's Hub</a> for questions, feedback and community discussion. For reproducible bugs, the relevant GitHub issue tracker is best.</p></details>
 </section></main>
-<footer class="doc-wrap doc-footer"><span>© 2026 ZYNAYUSH</span><a href="index.html">← BACK TO PROJECTS</a><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">ZYNAYUSH'S HUB ↗</a></footer><script src="water.js"></script><script src="theme.js?v=20261112-theme-hover-motion"></script><script src="site-ui.js?v=20261112-nocloud-cardlinks"></script></body></html>
+<footer class="doc-wrap doc-footer"><span>© 2026 ZYNAYUSH</span><a href="index.html">← BACK TO PROJECTS</a><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">ZYNAYUSH'S HUB ↗</a></footer><div class="site-language-bar">
+  <div class="site-language-inner">
+    <span class="language-caption">LANGUAGE</span>
+    <label class="visually-hidden" for="site-language-select">Translate this page</label>
+    <select id="site-language-select" aria-label="Choose page language">
+      <option value="">Translate this page…</option>
+      <option value="hi">हिन्दी · Hindi</option><option value="bn">বাংলা · Bengali</option>
+      <option value="ur">اردو · Urdu</option><option value="es">Español · Spanish</option>
+      <option value="fr">Français · French</option><option value="de">Deutsch · German</option>
+      <option value="pt">Português · Portuguese</option><option value="ja">日本語 · Japanese</option>
+      <option value="ko">한국어 · Korean</option><option value="zh-CN">简体中文 · Chinese</option>
+      <option value="ar">العربية · Arabic</option><option value="ru">Русский · Russian</option>
+    </select>
+    <button class="translate-page-button" type="button" data-translate-page>TRANSLATE ↗</button>
+    <small>Translation opens through Google Translate; wording may vary from the original.</small>
+  </div>
+</div>
+<button class="backtop-float" type="button" data-back-to-top aria-label="Back to top" title="Back to top">↑</button><script src="water.js"></script><script src="theme.js?v=20261112-oled-bug-translate"></script><script src="site-ui.js?v=20261112-oled-bug-translate"></script></body></html>

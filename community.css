@@ -54,3 +54,17 @@ html[data-theme="light"] .community-card{background:linear-gradient(145deg,#fff,
 html[data-theme="light"] .community-card-main h3{color:#172f43!important}
 html[data-theme="light"] .community-card-main p{color:#526c80!important}
 html[data-theme="light"] .community-tags span{color:#365c74!important;border-color:#b5cbd9!important}
+
+html[data-theme="light"] .community-wrap{color:#173d40!important}
+html[data-theme="light"] .community-copy h2{color:#173d40!important}
+html[data-theme="light"] .community-copy>p:not(.eyebrow){color:#5d7473!important}
+html[data-theme="light"] .community-card{background:linear-gradient(145deg,#fffefa,#f0f5ef)!important;border-color:#d5dfd5!important}
+html[data-theme="light"] .community-card-main h3{color:#173d40!important}
+html[data-theme="light"] .community-card-main p{color:#5d7473!important}
+html[data-theme="light"] .community-tags span{color:#356563!important;border-color:#c7d8ce!important}
+html[data-theme="oled"] .community-wrap{color:#f1f7f6!important}
+html[data-theme="oled"] .community-copy h2,
+html[data-theme="oled"] .community-card-main h3{color:#f1f7f6!important}
+html[data-theme="oled"] .community-copy>p:not(.eyebrow),
+html[data-theme="oled"] .community-card-main p{color:#9aa9a7!important}
+html[data-theme="oled"] .community-card{background:#07090a!important;border-color:#202627!important}

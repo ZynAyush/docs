@@ -2,41 +2,41 @@
   "use strict";
   const root = document.documentElement;
   const storageKey = "zynayush-theme";
-  const validTheme = value => value === "light" ? "light" : "dark";
+  const themes = ["dark", "light", "oled"];
+  const icons = { dark: "☾", light: "☼", oled: "◉" };
+  const nextMode = { dark: "light", light: "oled", oled: "dark" };
   const readTheme = () => {
     try {
       const saved = localStorage.getItem(storageKey);
-      if (saved === "light" || saved === "dark") return saved;
+      if (themes.includes(saved)) return saved;
     } catch (_) {}
-    return validTheme(root.getAttribute("data-theme"));
+    return "dark";
   };
-
-  const applyTheme = (theme, save = false) => {
-    const mode = validTheme(theme);
-    root.setAttribute("data-theme", mode);
-    root.style.colorScheme = mode;
+  const applyTheme = (mode, persist = false) => {
+    const current = themes.includes(mode) ? mode : "dark";
+    root.setAttribute("data-theme", current);
+    root.style.colorScheme = current === "oled" ? "dark" : current;
     root.classList.add("theme-animate");
     document.querySelectorAll("[data-theme-toggle]").forEach(button => {
-      const next = mode === "dark" ? "light" : "dark";
+      const next = nextMode[current];
       const icon = button.querySelector(".theme-toggle-icon");
-      const label = button.querySelector(".theme-toggle-label");
-      button.setAttribute("aria-pressed", String(mode === "light"));
-      button.setAttribute("aria-label", "Switch to " + next + " mode");
-      button.setAttribute("title", "Switch to " + next + " mode");
-      if (icon) icon.textContent = next === "light" ? "☀" : "☾";
-      if (label) label.textContent = next.toUpperCase();
+      button.setAttribute("aria-pressed", String(current !== "dark"));
+      button.setAttribute("aria-label", "Current theme: " + current.toUpperCase() + ". Click to switch to " + next.toUpperCase() + " mode.");
+      button.setAttribute("title", current.toUpperCase() + " mode · next: " + next.toUpperCase());
+      if (icon) icon.textContent = icons[current];
+      button.dataset.currentTheme = current;
     });
-    if (save) {
-      try { localStorage.setItem(storageKey, mode); } catch (_) {}
+    if (persist) {
+      try { localStorage.setItem(storageKey, current); } catch (_) {}
     }
-    window.clearTimeout(applyTheme.transitionTimer);
-    applyTheme.transitionTimer = window.setTimeout(() => root.classList.remove("theme-animate"), 520);
+    window.clearTimeout(applyTheme.timer);
+    applyTheme.timer = window.setTimeout(() => root.classList.remove("theme-animate"), 450);
   };
-
-  applyTheme(readTheme(), false);
+  applyTheme(readTheme());
   document.addEventListener("click", event => {
     const button = event.target.closest("[data-theme-toggle]");
     if (!button) return;
-    applyTheme(root.getAttribute("data-theme") === "light" ? "dark" : "light", true);
+    const current = root.getAttribute("data-theme") || "dark";
+    applyTheme(nextMode[current] || "dark", true);
   });
 })();

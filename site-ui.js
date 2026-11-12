@@ -153,3 +153,68 @@ document.querySelectorAll(".project-card[data-doc-url]").forEach(card => {
     }
   });
 });
+
+/* Global utility panels: bug reporting, back-to-top, and page translation. */
+(() => {
+  "use strict";
+  const bugPanel = document.getElementById("bug-report-panel");
+  const bugGithub = document.getElementById("bug-github-choice");
+  const bugClose = document.querySelector("[data-bug-close]");
+  let previousFocus = null;
+  const openBugPanel = trigger => {
+    if (!bugPanel || !bugGithub) return;
+    previousFocus = trigger;
+    const issueUrl = trigger && trigger.dataset.githubIssue;
+    bugGithub.href = issueUrl || "https://github.com/ZynAyush/docs/issues";
+    bugPanel.hidden = false;
+    bugPanel.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("bug-report-open");
+    if (bugClose) bugClose.focus();
+  };
+  const closeBugPanel = () => {
+    if (!bugPanel) return;
+    bugPanel.hidden = true;
+    bugPanel.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("bug-report-open");
+    if (previousFocus && previousFocus.focus) previousFocus.focus();
+  };
+  document.addEventListener("click", event => {
+    const trigger = event.target.closest("[data-bug-report]");
+    if (trigger) {
+      event.preventDefault();
+      openBugPanel(trigger);
+      return;
+    }
+    if (event.target.closest("[data-bug-close]")) {
+      closeBugPanel();
+      return;
+    }
+    if (bugPanel && event.target === bugPanel) closeBugPanel();
+  });
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape" && bugPanel && !bugPanel.hidden) closeBugPanel();
+  });
+
+  const topButton = document.querySelector("[data-back-to-top]");
+  if (topButton) {
+    const updateTopButton = () => topButton.classList.toggle("is-visible", window.scrollY > 300);
+    updateTopButton();
+    window.addEventListener("scroll", updateTopButton, { passive: true });
+    topButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }
+
+  const languageSelect = document.getElementById("site-language-select");
+  const translateButton = document.querySelector("[data-translate-page]");
+  if (translateButton && languageSelect) {
+    translateButton.addEventListener("click", () => {
+      const language = languageSelect.value;
+      if (!language) {
+        languageSelect.focus();
+        return;
+      }
+      const target = "https://translate.google.com/translate?sl=auto&tl=" +
+        encodeURIComponent(language) + "&u=" + encodeURIComponent(window.location.href);
+      window.location.assign(target);
+    });
+  }
+})();
