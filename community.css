@@ -42,3 +42,7 @@
 .community-card-main h3{font-size:19px;font-weight:800}
 .community-card-main p{font-size:15px;line-height:1.55}
 .community-tags span,.community-card-top,.community-card-bottom{font-size:11px;font-weight:700}
+
+html[data-theme="light"] .community-wrap{color:#14283a}
+html[data-theme="light"] .community-tags span{color:#315b75!important;border-color:#b5cadb!important}
+html[data-theme="light"] .discord-server-icon{border-color:#9eb9cc!important}

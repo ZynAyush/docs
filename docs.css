@@ -48,3 +48,11 @@
  .doc-section p,.doc-section li,.faq-item p,.faq-item li{font-size:17px}
  .faq-item summary{font-size:16px}
 }
+
+html[data-theme="light"] .doc-tags span{color:#27617f!important;border-color:#b5cadb!important}
+html[data-theme="light"] .doc-actions a{color:#087fae!important;border-color:#9dbfd3!important}
+html[data-theme="light"] .doc-actions a:first-child{background:#087eae!important;color:#fff!important}
+html[data-theme="light"] .doc-footer{border-color:#bfd1df!important;color:#42627a!important}
+html[data-theme="light"] .faq-item{border-color:#c1d2df!important;background:#fff!important}
+html[data-theme="light"] .faq-item summary{color:#173349!important}
+html[data-theme="light"] .doc-note{background:#e5eff6!important;border-color:#b5cadb!important}

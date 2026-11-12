@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><meta name="description" content="ZynAyush — Minecraft projects, mods, tools and documentation."><title>ZynAyush — Project Archive</title><link rel="stylesheet" href="style.css?v=20261112-skin-head"><link rel="stylesheet" href="community.css?v=20261112-final"></head><body>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#020818"><meta name="description" content="ZynAyush — Minecraft projects, mods, tools and documentation."><title>ZynAyush — Project Archive</title><script>(function(){try{var t=localStorage.getItem("zynayush-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script><link rel="stylesheet" href="style.css?v=20261112-theme-layout"><link rel="stylesheet" href="community.css?v=20261112-theme-layout"></head><body>
 <canvas id="water" aria-hidden="true"></canvas><div class="shade"></div>
-<header id="top" class="site-header"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64?v=20261112-skin" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav aria-label="Primary navigation"><a href="#projects">PROJECTS</a><a href="docs/">DOCS</a><a href="journal.html">UPDATES</a><a href="faq.html">FAQ</a><a href="about.html">ABOUT</a><a href="#community">COMMUNITY</a><a class="nav-github" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GITHUB ↗</a></nav></header>
+<header id="top" class="site-header"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64?v=20261112-skin" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav aria-label="Primary navigation"><a href="#projects">PROJECTS</a><a href="docs/">DOCS</a><a href="journal.html">UPDATES</a><a href="faq.html">FAQ</a><a href="about.html">ABOUT</a><a href="#community">COMMUNITY</a><a class="nav-github" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to light mode" aria-pressed="false"><span class="theme-toggle-icon" aria-hidden="true">☀</span><span class="theme-toggle-label">LIGHT</span></button></nav></header>
 <main>
 <section class="hero wrap"><div class="hero-copy"><p class="eyebrow"><i class="pulse"></i> INDEPENDENT DEVELOPER · MINECRAFT ECOSYSTEM</p><h1>BUILT IN<br><span class="cyan">BLOCKS.</span><br>MADE TO LAST.</h1><p class="hero-desc">Mods, plugins, resource packs and experiments — built with care, documented properly, and shared with the community.</p><div class="hero-actions"><a class="pixel-btn primary" href="#projects">▸ EXPLORE PROJECTS</a><a class="pixel-btn ghost" href="journal.html">VIEW UPDATES</a></div><div class="hero-meta"><span>JAVA · FABRIC · PAPER</span><span>EST. 2025</span><span>BUILDING IN PUBLIC</span></div></div><div class="hero-art"><div class="art-frame">
 <div class="art-top"><span>OVERWORLD / MAP_01</span><span class="live-dot">● MAP VIEW</span></div>
@@ -42,55 +42,37 @@
 
 <section id="comments" class="comments-section wrap section">
   <div class="comments-heading">
-    <div><p class="eyebrow">04 / COMMUNITY</p><h2>COMMENTS &amp; <span class="cyan">IDEAS.</span></h2><p class="comments-intro">Got feedback, a question or a project idea? Join the public discussion.</p></div>
+    <div><p class="eyebrow">04 / COMMUNITY</p><h2>COMMENTS &amp; <span class="cyan">IDEAS.</span></h2><p class="comments-intro">Questions, feedback and project ideas are welcome.</p></div>
     <div class="comments-preview">
-      <a class="comment-gif-link" href="https://tenor.com/view/sebie-sebieripper-seb-green-hair-minecraft-gif-7201596698260247596" target="_blank" rel="noopener noreferrer" aria-label="Open the Minecraft wave GIF on Tenor">
+      <a class="comment-gif-link" href="https://tenor.com/view/sebie-sebieripper-seb-green-hair-minecraft-gif-7201596698260247596" target="_blank" rel="noopener noreferrer" aria-label="Open Minecraft wave GIF on Tenor">
         <img class="comment-gif" src="https://media.tenor.com/Y_E2CpdtlCwAAAAj/sebie-sebieripper.gif" alt="Minecraft character waving hello, GIF via Tenor" width="150" height="115" loading="eager" decoding="async" onerror="this.hidden=true">
       </a>
       <div class="comment-emoji-row" aria-label="Comment reactions"><span>💡</span><span>👍</span><span>❤️</span><span>😂</span><span>🚀</span><span>✨</span></div>
-      <small>Emoji reactions and GIF links are supported in the discussion.</small>
+      <small>React with emojis or add a GIF to your comment.</small>
     </div>
   </div>
-  <div class="comment-board">
-    <div class="comment-board-head"><div><span class="discussion-kicker">COMMUNITY WALL</span><h3>Leave a comment</h3><p>Drop an idea, feedback or a quick hello.</p></div><span class="comment-count" id="comment-count">0 COMMENTS</span></div>
-    <form id="comment-form" class="comment-form">
-      <label for="comment-name">Name</label><input id="comment-name" name="name" maxlength="32" placeholder="Your name" required>
-      <label for="comment-message">Comment</label><textarea id="comment-message" name="message" maxlength="500" rows="3" placeholder="What's on your mind?" required></textarea>
-      <div class="comment-form-bottom"><small>These comments are visible only on this device. Other visitors cannot see them yet.</small><button type="submit" class="discussion-button">POST COMMENT ↗</button></div>
-      <p id="comment-feedback" class="comment-feedback" role="status" aria-live="polite"></p>
-    </form>
-    <div id="comment-list" class="comment-list" aria-live="polite"><p class="empty-comments">No comments yet. Start the conversation ✨</p></div>
+  <div class="giscus-shell">
+    <div class="giscus" aria-label="Public comments and replies"></div>
+    <div class="discussion-fallback-card">
+      <div><span class="discussion-kicker">GITHUB DISCUSSIONS · GENERAL</span><h3>ZynAyush Project Archive — Comments &amp; Feedback</h3><p>If the embedded comments do not load, continue the conversation in the original public discussion.</p></div>
+      <a class="discussion-button" href="https://github.com/ZynAyush/docs/discussions/1" target="_blank" rel="noopener noreferrer">OPEN COMMENTS ↗</a>
+    </div>
   </div>
-  <p class="comments-footnote">GIF source: <a href="https://tenor.com/view/sebie-sebieripper-seb-green-hair-minecraft-gif-7201596698260247596" target="_blank" rel="noopener noreferrer">Tenor</a>.</p>
+  <script src="https://giscus.app/client.js"
+    data-repo="ZynAyush/docs"
+    data-repo-id="R_kgDOVr-nIQ"
+    data-category="General"
+    data-category-id="DIC_kwDOVr-nIc4DK-ik"
+    data-mapping="number"
+    data-term="1"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="top"
+    data-theme="dark_dimmed"
+    data-lang="en"
+    crossorigin="anonymous"
+    async></script>
 </section>
-</main><footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64?v=20261112-skin" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH · BUILT BLOCK BY BLOCK</span><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">DISCORD ↗</a><a href="#top">BACK TO TOP ↑</a><a href="https://mc-heads.net/" target="_blank" rel="noopener noreferrer">AVATAR BY MCHEADS ↗</a></div></footer><script>
-(()=> {
- const key="zynayush-site-comments-v1";
- const form=document.getElementById("comment-form");
- if(!form) return;
- const name=document.getElementById("comment-name");
- const message=document.getElementById("comment-message");
- const list=document.getElementById("comment-list");
- const count=document.getElementById("comment-count");
- const feedback=document.getElementById("comment-feedback");
- const escapeText=(value)=>String(value).replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
- let comments=[];
- try { comments=JSON.parse(localStorage.getItem(key)||"[]"); if(!Array.isArray(comments)) comments=[]; } catch { comments=[]; }
- const render=()=>{
-   count.textContent=comments.length+" COMMENT"+(comments.length===1?"":"S");
-   list.innerHTML=comments.length?comments.slice().reverse().map(c=>'<article class="comment-entry"><div class="comment-entry-top"><strong>'+escapeText(c.name)+'</strong><time>'+escapeText(c.date)+'</time></div><p>'+escapeText(c.message).replace(/
-/g,"<br>")+'</p></article>').join(''):'<p class="empty-comments">No comments yet. Start the conversation ✨</p>';
- };
- form.addEventListener("submit",event=>{
-   event.preventDefault();
-   const n=name.value.trim(),m=message.value.trim();
-   if(!n||!m){feedback.textContent="Add your name and a comment first.";return;}
-   comments.push({name:n,message:m,date:new Date().toLocaleString()});
-   try { localStorage.setItem(key,JSON.stringify(comments.slice(-100))); }
-   catch { feedback.textContent="This browser could not save the comment."; return; }
-   message.value=""; feedback.textContent="Posted on this browser ✓"; render();
- });
- render();
-})();
-</script>
-<script src="water.js"></script></body></html>
+</main><footer class="site-footer"><div class="wrap footer-inner"><a class="logo" href="index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64?v=20261112-skin" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><span>© 2026 ZYNAYUSH · BUILT BLOCK BY BLOCK</span><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">DISCORD ↗</a><a href="#top">BACK TO TOP ↑</a><a href="https://mc-heads.net/" target="_blank" rel="noopener noreferrer">AVATAR BY MCHEADS ↗</a></div></footer>
+<script src="water.js"></script><script src="theme.js?v=20261112-theme-layout"></script></body></html>

@@ -328,3 +328,116 @@ nav{font-size:13px;font-weight:700}
   object-fit:cover!important;
   image-rendering:pixelated;
 }
+
+/* First-build layout proportions: centred 1160px canvas, balanced hero and 2x2 project collection. */
+@media(min-width:901px){
+  .wrap{width:min(1160px,calc(100% - 48px))!important}
+  .site-header{padding-left:max(24px,calc((100% - 1160px)/2))!important;padding-right:max(24px,calc((100% - 1160px)/2))!important}
+  .hero{min-height:610px!important;grid-template-columns:1.05fr .95fr!important;align-items:center!important;gap:48px!important;padding-top:72px!important;padding-bottom:75px!important}
+  .hero-art{width:100%!important;max-width:510px!important;justify-self:end!important}
+  .art-frame{width:100%!important;max-width:510px!important}
+  .pixel-ocean.minecraft-map{height:350px!important;min-height:350px!important;aspect-ratio:auto!important}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:20px!important}
+  .project-card{display:grid!important;grid-template-columns:43% minmax(0,1fr)!important;min-height:245px!important}
+  .project-visual{height:auto!important;min-height:245px!important;border-right:1px solid #164267!important;border-bottom:0!important}
+  .project-info{padding:20px 18px!important}
+}
+@media(max-width:900px){
+  .wrap{width:calc(100% - 36px)!important}
+  .hero{grid-template-columns:1fr!important;gap:34px!important}
+  .hero-art,.art-frame{width:min(100%,560px)!important;max-width:560px!important;margin-inline:auto!important}
+  .pixel-ocean.minecraft-map{height:auto!important;min-height:0!important;aspect-ratio:1.13!important}
+  .project-grid{grid-template-columns:1fr!important}
+}
+@media(max-width:430px){
+  .pixel-ocean.minecraft-map{aspect-ratio:1!important}
+}
+
+/* Theme switch control */
+.theme-toggle{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:7px!important;
+  padding:8px 11px!important;border:1px solid var(--cyan)!important;border-radius:999px!important;
+  background:var(--panel)!important;color:var(--white)!important;font:700 10px/1.1 var(--body)!important;
+  letter-spacing:.05em!important;white-space:nowrap!important;cursor:pointer!important;transition:background .2s,border-color .2s,transform .2s!important;
+}
+.theme-toggle:hover{transform:translateY(-1px);background:var(--panel2)!important}
+.theme-toggle-icon{font-size:14px;line-height:1}
+nav .theme-toggle{flex:0 0 auto}
+
+/* Light theme */
+html[data-theme="light"]{color-scheme:light;--bg:#edf4fa;--panel:#ffffff;--panel2:#e2edf6;--line:#b9ccdc;--cyan:#087fae;--blue:#087eae;--gold:#845019;--white:#14283a;--muted:#587085}
+html[data-theme="light"] body{background:var(--bg)!important;color:var(--white)!important}
+html[data-theme="light"] .shade{background:radial-gradient(ellipse at 50% 10%,rgba(255,255,255,.15),rgba(232,241,249,.86) 75%),linear-gradient(180deg,rgba(255,255,255,.2),#edf4fa)!important}
+html[data-theme="light"] #water{opacity:.08!important}
+html[data-theme="light"] .site-header{background:rgba(247,251,255,.92)!important;border-bottom:1px solid #bfd1df!important}
+html[data-theme="light"] nav{color:#36536a!important}
+html[data-theme="light"] nav a:hover{color:#006f9e!important}
+html[data-theme="light"] .hero-desc,
+html[data-theme="light"] .section-note,
+html[data-theme="light"] .project-info p,
+html[data-theme="light"] .community-copy>p:not(.eyebrow),
+html[data-theme="light"] .about p{color:#405d73!important}
+html[data-theme="light"] .hero-meta{color:#58758a!important}
+html[data-theme="light"] .project-card{background:linear-gradient(145deg,#fff,#eef5fa)!important;border-color:#bfd1df!important;box-shadow:0 7px 20px #2a476015!important}
+html[data-theme="light"] .project-info h3,
+html[data-theme="light"] .comments-heading h2{color:#14283a!important}
+html[data-theme="light"] .tags span{border-color:#b6cbdc!important;color:#42627a!important}
+html[data-theme="light"] .status-strip{background:#e2edf6!important;border-color:#b5cbdc!important}
+html[data-theme="light"] .status-inner h2,
+html[data-theme="light"] .about h2{color:#14283a!important}
+html[data-theme="light"] .status-items span{color:#587085!important}
+html[data-theme="light"] .community-card{background:linear-gradient(145deg,#fff,#eaf2f8)!important;border-color:#aac7da!important;box-shadow:0 12px 25px #23445a18!important}
+html[data-theme="light"] .community-card-top,
+html[data-theme="light"] .community-card-bottom{color:#42627a!important}
+html[data-theme="light"] .community-card-main h3{color:#14283a!important}
+html[data-theme="light"] .community-card-main p{color:#48657a!important}
+html[data-theme="light"] .comments-intro{color:#405d73!important}
+html[data-theme="light"] .comment-board{background:linear-gradient(145deg,#fff,#e9f2f8)!important;border-color:#b5cadb!important}
+html[data-theme="light"] .comment-board-head p,
+html[data-theme="light"] .comment-form-bottom small{color:#536d82!important}
+html[data-theme="light"] .comment-form label{color:#294459!important}
+html[data-theme="light"] .comment-form input,
+html[data-theme="light"] .comment-form textarea{background:#fff!important;color:#14283a!important;border-color:#b2c8d8!important}
+html[data-theme="light"] .comment-entry{background:#fff!important;border-color:#c1d2df!important}
+html[data-theme="light"] .comment-entry-top strong,
+html[data-theme="light"] .comment-entry p{color:#243c50!important}
+html[data-theme="light"] .empty-comments{color:#536d82!important;border-color:#b2c8d8!important}
+html[data-theme="light"] .site-footer{background:#e1edf6!important;border-color:#bfd1df!important;color:#3e5a70!important}
+html[data-theme="light"] .footer-inner{color:#3e5a70!important}
+html[data-theme="light"] .doc-wrap{color:#14283a!important}
+html[data-theme="light"] .doc-top{border-color:#bfd1df!important}
+html[data-theme="light"] .doc-hero{border-color:#bfd1df!important}
+html[data-theme="light"] .doc-hero h1{color:#14283a!important}
+html[data-theme="light"] .doc-hero .lede,
+html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li,
+html[data-theme="light"] .faq-item p,
+html[data-theme="light"] .faq-item li{color:#405d73!important}
+html[data-theme="light"] .doc-section{border-color:#c5d5e0!important}
+html[data-theme="light"] .doc-section h2{color:#845019!important}
+html[data-theme="light"] .doc-table{color:#294459!important}
+html[data-theme="light"] .doc-table th,
+html[data-theme="light"] .doc-table td{border-color:#c3d2df!important}
+html[data-theme="light"] .doc-note,
+html[data-theme="light"] .faq-item,
+html[data-theme="light"] .update-card,
+html[data-theme="light"] .updates-note{background:#fff!important;border-color:#c1d2df!important;color:#14283a!important}
+html[data-theme="light"] .update-body p,
+html[data-theme="light"] .updates-note p{color:#405d73!important}
+html[data-theme="light"] .update-meta{color:#516c82!important}
+html[data-theme="light"] .comment-fallback{color:#48657a!important}
+@media(max-width:700px){nav .theme-toggle{align-self:flex-start}}
+
+/* Public embedded comments with the previous discussion card kept as a fallback. */
+.giscus-shell{display:grid;gap:16px;margin-top:18px}
+.giscus{width:100%;min-height:170px}
+.giscus-frame{width:100%}
+.discussion-fallback-card{display:flex;justify-content:space-between;align-items:center;gap:22px;padding:20px 22px;border:1px solid #245b7b;border-radius:12px;background:linear-gradient(145deg,#09213a,#061528)}
+.discussion-fallback-card h3{font-size:18px;font-weight:850;margin:0 0 7px}
+.discussion-fallback-card p{margin:0;color:#afc4d5;font-size:13px;line-height:1.55}
+.discussion-fallback-card .discussion-button{flex:0 0 auto}
+.comments-preview{align-self:center}
+@media(max-width:700px){.discussion-fallback-card{align-items:flex-start;flex-direction:column;padding:17px}.discussion-fallback-card .discussion-button{white-space:normal}}
+html[data-theme="light"] .discussion-fallback-card{background:linear-gradient(145deg,#fff,#eaf2f8)!important;border-color:#b5cadb!important}
+html[data-theme="light"] .discussion-fallback-card h3{color:#14283a!important}
+html[data-theme="light"] .discussion-fallback-card p{color:#405d73!important}
