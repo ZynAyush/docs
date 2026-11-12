@@ -165,3 +165,25 @@ html[data-theme="light"] .doc-hero,html[data-theme="light"] .doc-section{border-
 html[data-theme="light"] .doc-section h2{color:#6f7f45!important}
 html[data-theme="light"] .doc-actions a{background:#fffaf1!important;color:#a4472b!important;border-color:#bd9d81!important}
 html[data-theme="light"] .doc-actions a:first-child{background:#a4472b!important;color:#fffaf1!important}
+
+
+/* Final light-theme override for command examples and all documentation surfaces. */
+html[data-theme="light"] .doc-code,
+html[data-theme="light"] .doc-section .doc-code,
+html[data-theme="light"] .doc-wrap .doc-code,
+html[data-theme="light"] .doc-section pre,
+html[data-theme="light"] .doc-wrap pre{
+  background:#eee4d1!important;
+  color:#65472d!important;
+  border:1px solid #d5c2a3!important;
+  border-left:4px solid #a4472b!important;
+  box-shadow:0 7px 18px rgba(81,61,39,.08)!important;
+}
+html[data-theme="light"] .doc-code code,
+html[data-theme="light"] .doc-section pre code,
+html[data-theme="light"] .doc-wrap pre code{color:#65472d!important}
+html[data-theme="light"] .doc-note{background:#e4e8d5!important;color:#52613e!important;border-color:#cbd3b5!important}
+html[data-theme="light"] .faq-item{background:#fff8eb!important;color:#44362a!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .docs-index-art{background:linear-gradient(145deg,#d5ddc3,#a9b99a)!important}
+html[data-theme="light"] .docs-index-art-smooth{background:linear-gradient(145deg,#e8dec9,#bdc6a6)!important}
+html[data-theme="light"] .smooth-font-sample{color:#684c37!important;text-shadow:0 3px 10px rgba(92,76,50,.12)!important}

@@ -767,18 +767,20 @@ html[data-theme="light"] .project-card .tags span{color:#365c74!important;border
 html[data-theme="light"] .project-card .card-links a{color:#087da9!important}
 html[data-theme="light"] .project-card:hover{box-shadow:0 15px 32px rgba(25,61,83,.13)!important}
 
-/* CSS-level hover/focus fallback: sidebar opens even if pointer-event JS is delayed. */
-body:has(.site-header>.sidebar-open:hover) .site-sidebar,
-body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar,
-body:has(.site-sidebar:hover) .site-sidebar,
-body:has(.site-sidebar:focus-within) .site-sidebar{
-  transform:translateX(0)!important;visibility:visible!important;
-}
-body:has(.site-header>.sidebar-open:hover) .site-sidebar-backdrop,
-body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar-backdrop,
-body:has(.site-sidebar:hover) .site-sidebar-backdrop,
-body:has(.site-sidebar:focus-within) .site-sidebar-backdrop{
-  display:block!important;visibility:visible!important;opacity:1!important;
+/* Hover fallback is intentionally desktop-only; touch drawers use explicit open state. */
+@media (hover:hover) and (pointer:fine){
+  body:has(.site-header>.sidebar-open:hover) .site-sidebar,
+  body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar,
+  body:has(.site-sidebar:hover) .site-sidebar,
+  body:has(.site-sidebar:focus-within) .site-sidebar{
+    transform:translateX(0)!important;visibility:visible!important;
+  }
+  body:has(.site-header>.sidebar-open:hover) .site-sidebar-backdrop,
+  body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar-backdrop,
+  body:has(.site-sidebar:hover) .site-sidebar-backdrop,
+  body:has(.site-sidebar:focus-within) .site-sidebar-backdrop{
+    display:block!important;visibility:visible!important;opacity:1!important;
+  }
 }
 
 /* More visible, lightweight entrance motion. */
@@ -1365,55 +1367,266 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
 }
 
 
-/* === Light mode component recolor: remove leftover Dark navy/cyan surfaces === */
-html[data-theme="light"] .project-visual{background:#d8d7bf!important;border-right:1px solid #c9c1a5!important;color:#3e4934!important}
-html[data-theme="light"] .bot-visual{background:radial-gradient(circle at 50% 48%,#bd8a63,#70513f 78%)!important}
-html[data-theme="light"] .fog-visual{background:linear-gradient(#c4d4c2,#9eae91 56%,#687c60)!important}
-html[data-theme="light"] .ore-visual{background:#b9b19e!important}
-html[data-theme="light"] .font-visual{background:radial-gradient(circle at center,#87936a,#485c43)!important}
-html[data-theme="light"] .visual-label,html[data-theme="light"] .visual-code{color:#fff7e8!important;text-shadow:0 1px 3px rgba(35,44,29,.3)!important}
-html[data-theme="light"] .bot-head{background:#e7d8bd!important;border-color:#6f5945!important;box-shadow:inset 0 -9px #c3ad8e,6px 6px 0 #594333!important}
+/* === Final mobile layout + touch drawer correction === */
+@media(max-width:600px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden!important}
+  .site-header{
+    display:grid!important;
+    grid-template-columns:auto minmax(0,1fr)!important;
+    grid-template-areas:"menu brand" "actions actions"!important;
+    align-items:center!important;
+    justify-content:initial!important;
+    gap:9px 13px!important;
+    width:100%!important;
+    min-height:0!important;
+    height:auto!important;
+    padding:12px 15px 13px!important;
+    flex-direction:initial!important;
+    flex-wrap:initial!important;
+  }
+  .site-header>.sidebar-open{
+    grid-area:menu!important;position:static!important;justify-self:start!important;
+    align-self:center!important;display:inline-flex!important;align-items:center!important;
+    min-width:42px!important;min-height:42px!important;padding:7px 8px!important;
+    margin:0!important;border:0!important;border-radius:8px!important;
+    background:transparent!important;box-shadow:none!important;transform:none!important;
+    font-size:10px!important;letter-spacing:.07em!important;white-space:nowrap!important;
+    touch-action:pan-y!important;-webkit-tap-highlight-color:transparent;
+  }
+  .site-header>.logo{
+    grid-area:brand!important;justify-self:start!important;min-width:0!important;
+    margin:0!important;gap:10px!important;font-size:13px!important;
+  }
+  .site-header .logo-skin-head{width:40px!important;height:40px!important;flex:0 0 40px!important}
+  .site-header .logo small{font-size:9px!important;letter-spacing:.09em!important;margin-top:4px!important}
+  .site-header>nav{
+    grid-area:actions!important;order:initial!important;display:flex!important;
+    flex-direction:row!important;align-items:center!important;justify-content:flex-end!important;
+    width:100%!important;min-width:0!important;margin:0!important;padding:0!important;
+    gap:10px!important;flex-wrap:nowrap!important;overflow:visible!important;
+    font-size:11px!important;
+  }
+  .site-header>nav>a:not(.nav-github){display:none!important}
+  .site-header>nav .nav-github{
+    display:inline-flex!important;align-items:center!important;justify-content:center!important;
+    padding:8px 12px!important;font-size:10px!important;white-space:nowrap!important;
+  }
+  .site-header>nav .theme-toggle{
+    display:grid!important;place-items:center!important;flex:0 0 42px!important;
+    width:42px!important;height:42px!important;min-width:42px!important;min-height:42px!important;
+    padding:0!important;border-radius:50%!important;
+  }
+  .wrap,.doc-wrap{width:calc(100% - 30px)!important;max-width:100%!important}
+  .hero{
+    display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+    gap:24px!important;min-height:0!important;padding:38px 0 42px!important;
+  }
+  .hero-copy{width:100%!important;min-width:0!important;max-width:100%!important}
+  .hero .eyebrow{font-size:10px!important;line-height:1.55!important;letter-spacing:.055em!important;flex-wrap:wrap!important}
+  .hero h1{font-size:clamp(35px,9.7vw,46px)!important;line-height:1.06!important;letter-spacing:-.065em!important;overflow-wrap:normal!important}
+  .hero-desc{font-size:16px!important;line-height:1.65!important;max-width:100%!important}
+  .hero-meta{display:flex!important;flex-wrap:wrap!important;gap:8px 14px!important;font-size:10px!important;line-height:1.5!important}
+  .hero .pixel-btn{min-height:46px!important;padding:12px 14px!important;font-size:11px!important}
+  .hero-art,.art-frame{width:100%!important;max-width:100%!important;margin:0 auto!important}
+  .pixel-ocean.minecraft-map{width:100%!important;height:auto!important;min-height:0!important;aspect-ratio:1.12!important}
+  .project-grid,.about-grid,.docs-index-grid{grid-template-columns:1fr!important}
+  .project-card{grid-template-columns:1fr!important;min-height:0!important}
+  .project-visual{height:155px!important;min-height:155px!important;border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .project-info{padding:17px!important}
+  .project-info h3{font-size:17px!important}
+  .project-info p{font-size:14px!important;line-height:1.6!important}
+  .section{padding:48px 0!important}
+  .section-head{display:block!important}
+  .site-sidebar{width:min(320px,88vw)!important;padding:20px 16px!important;padding-top:max(20px,env(safe-area-inset-top))!important}
+  .site-sidebar-backdrop{touch-action:pan-y}
+  .sidebar-link{min-height:44px!important;padding:12px!important;font-size:14px!important}
+  .sidebar-close{width:40px!important;height:40px!important;font-size:25px!important}
+  .site-language-inner{justify-content:flex-start!important}
+  .site-language-inner small{text-align:left!important}
+}
+@media(max-width:380px){
+  .site-header{padding-inline:11px!important;gap:7px 9px!important}
+  .site-header .logo-skin-head{width:34px!important;height:34px!important;flex-basis:34px!important}
+  .site-header>.logo{font-size:12px!important}
+  .hero h1{font-size:clamp(32px,9.5vw,38px)!important}
+  .hero-desc{font-size:15px!important}
+}
+
+/* Light mode is parchment, clay and olive — deliberately unlike Dark/OLED blue-cyan. */
+html[data-theme="light"]{
+  color-scheme:light!important;
+  --bg:#f6efe3!important;--panel:#fffaf1!important;--panel2:#eee2cf!important;--line:#d9c7ad!important;
+  --cyan:#a4472b!important;--blue:#80533d!important;--gold:#6f7f45!important;
+  --white:#34291f!important;--muted:#756454!important;
+}
+html[data-theme="light"] body{background:#f6efe3!important;color:#34291f!important}
+html[data-theme="light"] .shade{background:radial-gradient(ellipse at 50% 5%,#fffdf7 0%,#f6efe3 72%,#e9dfcf 100%)!important}
+html[data-theme="light"] #water{opacity:.012!important;filter:grayscale(1) sepia(.18)!important}
+html[data-theme="light"] .site-header{background:rgba(255,250,241,.97)!important;border-bottom:1px solid #d9c7ad!important;box-shadow:0 7px 24px rgba(84,57,32,.07)!important}
+html[data-theme="light"] .site-header .logo,html[data-theme="light"] .site-header .logo span,
+html[data-theme="light"] nav,html[data-theme="light"] nav a,html[data-theme="light"] .footer-inner,
+html[data-theme="light"] .site-footer{color:#44362a!important}
+html[data-theme="light"] h1,html[data-theme="light"] h2,html[data-theme="light"] h3,html[data-theme="light"] h4,
+html[data-theme="light"] .project-info h3,html[data-theme="light"] .section-head h2,
+html[data-theme="light"] .doc-hero h1{color:#34291f!important}
+html[data-theme="light"] p,html[data-theme="light"] li,html[data-theme="light"] .hero-desc,
+html[data-theme="light"] .section-note,html[data-theme="light"] .project-info p,
+html[data-theme="light"] .doc-section p,html[data-theme="light"] .doc-section li,
+html[data-theme="light"] .faq-item p,html[data-theme="light"] .about p{color:#756454!important}
+html[data-theme="light"] .eyebrow,html[data-theme="light"] .doc-section h2,
+html[data-theme="light"] .discussion-kicker{color:#6f7f45!important}
+html[data-theme="light"] .cyan,html[data-theme="light"] .card-links a,
+html[data-theme="light"] .doc-actions a,html[data-theme="light"] .update-links a,
+html[data-theme="light"] nav a:hover{color:#a4472b!important}
+html[data-theme="light"] .project-card,html[data-theme="light"] .status-strip,
+html[data-theme="light"] .community-card,html[data-theme="light"] .discussion-card,
+html[data-theme="light"] .discussion-fallback-card,html[data-theme="light"] .update-card,
+html[data-theme="light"] .updates-note,html[data-theme="light"] .faq-item,
+html[data-theme="light"] .doc-note,html[data-theme="light"] .about-grid article,
+html[data-theme="light"] .docs-index-card{
+  background:#fffaf1!important;border-color:#d9c7ad!important;
+  box-shadow:0 9px 25px rgba(84,57,32,.07)!important;
+}
+html[data-theme="light"] .project-info,html[data-theme="light"] .project-card .project-info{background:#fffaf1!important;color:#34291f!important}
+html[data-theme="light"] .pixel-btn.primary,html[data-theme="light"] .discussion-button,
+html[data-theme="light"] .disclaimer-accept{background:#a4472b!important;color:#fffaf1!important;border-color:#a4472b!important}
+html[data-theme="light"] .pixel-btn:not(.primary){background:#fffaf1!important;color:#a4472b!important;border-color:#bd8b6f!important}
+html[data-theme="light"] .nav-github{border-color:#a4472b!important;color:#a4472b!important}
+html[data-theme="light"] .theme-toggle{background:#eee2cf!important;color:#6f7f45!important;border:1px solid #d9c7ad!important}
+html[data-theme="light"] .site-header>.sidebar-open{color:#6f7f45!important;background:transparent!important;border:0!important}
+html[data-theme="light"] .site-sidebar{background:#fffaf1!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .sidebar-head{border-color:#d9c7ad!important}
+html[data-theme="light"] .sidebar-link{color:#44362a!important}
+html[data-theme="light"] .sidebar-link:hover,html[data-theme="light"] .sidebar-link:focus-visible{background:#eee2cf!important;color:#a4472b!important}
+html[data-theme="light"] .sidebar-divider{background:#d9c7ad!important}
+html[data-theme="light"] .sidebar-section-label{color:#6f7f45!important}
+html[data-theme="light"] .site-sidebar-backdrop{background:rgba(50,36,24,.34)!important}
+html[data-theme="light"] .disclaimer-card,html[data-theme="light"] .bug-report-panel{background:#fffaf1!important;color:#34291f!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .disclaimer-card h2,html[data-theme="light"] .bug-report-panel h2,
+html[data-theme="light"] .bug-choice strong{color:#34291f!important}
+html[data-theme="light"] .disclaimer-card p,html[data-theme="light"] .bug-report-panel p,
+html[data-theme="light"] .bug-choice small{color:#756454!important}
+html[data-theme="light"] .ticker{background:#e9e4d2!important;color:#4d5938!important;border-color:#d5c8a8!important}
+html[data-theme="light"] .ticker b{color:#a4472b!important}
+html[data-theme="light"] .site-footer,html[data-theme="light"] .site-language-bar{background:#eee7d8!important;color:#514333!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .site-language-bar select{background:#fffaf1!important;color:#34291f!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .translate-page-button{color:#a4472b!important;border-color:#a4472b!important}
+html[data-theme="light"] .backtop-float{background:#fffaf1!important;color:#a4472b!important;border-color:#fffaf1!important}
+html[data-theme="light"] .doc-top,html[data-theme="light"] .doc-hero,html[data-theme="light"] .doc-section{border-color:#d9c7ad!important}
+html[data-theme="light"] .doc-hero .lede,html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li{color:#756454!important}
+html[data-theme="light"] .doc-table,html[data-theme="light"] .doc-table th,
+html[data-theme="light"] .doc-table td{border-color:#d9c7ad!important;color:#514333!important}
+html[data-theme="light"] .docs-index-kind{color:#6f7f45!important}
+html[data-theme="light"] .docs-index-open{color:#a4472b!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map{border-color:#bda98b!important;box-shadow:0 14px 36px rgba(84,57,32,.14)!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .marker-dot{background:#a4472b!important;border-color:#fffaf1!important;box-shadow:0 0 0 5px rgba(164,71,43,.18),0 0 17px rgba(164,71,43,.55)!important}
+
+
+/* === Light palette completion: remove leftover Dark-mode navy surfaces === */
+html[data-theme="light"] .art-frame{
+  background:#fff8eb!important;
+  border:1px solid #cbb99b!important;
+  box-shadow:0 18px 42px rgba(79,58,35,.15),0 3px 0 rgba(164,71,43,.08)!important;
+}
+html[data-theme="light"] .art-top,
+html[data-theme="light"] .art-bottom{
+  background:#e9dfca!important;
+  color:#647044!important;
+  border-color:#d1c1a1!important;
+}
+html[data-theme="light"] .art-top .live-dot{color:#6f7f45!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map{
+  background-color:#d2cbb7!important;
+  border-color:#c7b797!important;
+}
+html[data-theme="light"] .pixel-ocean.minecraft-map:after{opacity:.28!important}
+html[data-theme="light"] .floating-label{
+  background:#a4472b!important;color:#fff8eb!important;
+  box-shadow:4px 4px 0 rgba(111,127,69,.25)!important;
+}
+
+/* Project artwork panels become warm stone/sage surfaces, not dark blue blocks. */
+html[data-theme="light"] .project-visual{
+  background:linear-gradient(145deg,#e8dfca,#d4d2bb)!important;
+  border-color:#c8b99c!important;color:#44362a!important;
+}
+html[data-theme="light"] .bot-visual{
+  background:radial-gradient(circle at 50% 42%,#f5ead6 0%,#d9dfc8 58%,#c6cfb5 100%)!important;
+}
+html[data-theme="light"] .fog-visual{
+  background:linear-gradient(180deg,#d8e2d1 0%,#bbcbb9 56%,#8eaa91 100%)!important;
+}
+html[data-theme="light"] .ore-visual{
+  background:linear-gradient(145deg,#e4d9c5,#c9c2ad)!important;
+}
+html[data-theme="light"] .project-visual .visual-label{
+  color:#53633e!important;text-shadow:none!important;
+}
+html[data-theme="light"] .project-visual .visual-code{
+  color:#8d4a32!important;text-shadow:none!important;
+}
+html[data-theme="light"] .project-icon-real{
+  background:#fffaf1!important;border-color:#c7b797!important;
+  box-shadow:0 8px 20px rgba(83,62,38,.16)!important;
+}
+html[data-theme="light"] .bot-head{
+  border-color:#786b57!important;box-shadow:inset 0 -9px #a49b84,6px 6px 0 rgba(111,94,65,.2)!important;
+}
 html[data-theme="light"] .bot-head i{background:#a4472b!important;box-shadow:28px 0 #a4472b!important}
-html[data-theme="light"] .bot-body{background:#9a8468!important;border-color:#6f5945!important}
-html[data-theme="light"] .bot-shadow{background:#6f5945!important}
-html[data-theme="light"] .fog-moon{background:#fff5dc!important;box-shadow:0 0 25px rgba(255,240,198,.75)!important}
-html[data-theme="light"] .fog-horizon{background:linear-gradient(150deg,transparent 22%,#647856 23% 34%,transparent 35%),linear-gradient(25deg,#526b4b 0 43%,transparent 44%)!important}
-html[data-theme="light"] .ore-block{background:repeating-linear-gradient(0deg,#b9b19e 0 24px,#928b79 24px 48px),repeating-linear-gradient(90deg,transparent 0 24px,#776f60 24px 48px)!important;border-color:#665b4a!important;box-shadow:10px 10px 0 #817762!important}
+html[data-theme="light"] .bot-body{border-color:#786b57!important;background:#a9ad99!important}
+html[data-theme="light"] .bot-shadow{background:rgba(90,77,56,.2)!important}
+html[data-theme="light"] .ore-block{border-color:#786b57!important;box-shadow:8px 8px 0 rgba(90,77,56,.22)!important}
 html[data-theme="light"] .ore-block b{background:#a4472b!important;box-shadow:0 0 8px rgba(164,71,43,.35)!important}
-html[data-theme="light"] .font-sample{color:#fff8e9!important;text-shadow:4px 4px #344a35!important}
-html[data-theme="light"] .font-sample small{color:#f0d18c!important}
-html[data-theme="light"] .project-info h3{color:#344a35!important}
-html[data-theme="light"] .tags span{color:#657448!important;border-color:#c8c3a9!important;background:#f2ead9!important}
-html[data-theme="light"] .number{color:#9a7450!important}
-html[data-theme="light"] .project-card{background:#fffaf1!important;border-color:#d9c7ad!important;box-shadow:0 8px 25px rgba(70,58,38,.09)!important}
-html[data-theme="light"] .project-card:hover{border-color:#9b9b70!important;box-shadow:0 14px 28px rgba(70,58,38,.13)!important}
 
-/* World map frame: parchment UI around the retained map image. */
-html[data-theme="light"] .art-frame{background:#eee5d4!important;border:1px solid #c7b99f!important;box-shadow:0 12px 30px rgba(83,63,39,.16)!important}
-html[data-theme="light"] .art-top,html[data-theme="light"] .art-bottom{background:#e8ddc8!important;color:#657448!important}
-html[data-theme="light"] .art-bottom{border-top:1px solid #c7b99f!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map{background:#9da47a!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map .map-texture{filter:sepia(.16) saturate(.78) hue-rotate(-18deg) brightness(1.12)!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map:after{background:linear-gradient(180deg,rgba(248,238,215,.08),rgba(83,91,55,.12))!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map .marker-label{background:#fff8e9!important;color:#44362a!important;border-color:#a4472b!important;box-shadow:0 4px 12px rgba(83,63,39,.2)!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map .marker-dot{background:#a4472b!important;border-color:#fff8e9!important;box-shadow:0 0 0 5px rgba(164,71,43,.18),0 0 17px rgba(164,71,43,.44)!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map .coord{color:#fff8e9!important;text-shadow:1px 1px #596348!important}
-html[data-theme="light"] .pixel-ocean.minecraft-map .crosshair{color:#fff8e9!important;text-shadow:0 0 8px #a4472b!important}
-html[data-theme="light"] .floating-label{background:#6f7f45!important;color:#fff8e9!important;box-shadow:5px 5px 0 #d8c9ae!important}
-
-/* Secondary surfaces: documentation, status panels and utility blocks. */
-html[data-theme="light"] .status-strip{background:#ece5d5!important;border-color:#d8c9ae!important}
-html[data-theme="light"] .site-footer{background:#e8dfcf!important;border-top-color:#c9b99e!important}
-html[data-theme="light"] .doc-tags span{background:#f1e8d8!important;color:#657448!important;border-color:#c8bda7!important}
-html[data-theme="light"] .doc-actions a{background:#fffaf1!important;color:#a4472b!important;border-color:#bd9d81!important}
-html[data-theme="light"] .doc-actions a:first-child{background:#a4472b!important;color:#fffaf1!important;border-color:#a4472b!important}
-html[data-theme="light"] .doc-table th{background:#e8dfcf!important;color:#657448!important}
-html[data-theme="light"] .doc-table td{background:#fffaf1!important}
-html[data-theme="light"] .doc-note{background:#eee7d8!important;border-color:#cfc2a8!important;color:#5d644b!important}
-html[data-theme="light"] .faq-item{background:#fffaf1!important;border-color:#d9c7ad!important}
-html[data-theme="light"] .faq-item summary{color:#657448!important}
-html[data-theme="light"] .faq-item summary:after{color:#a4472b!important}
-html[data-theme="light"] .about-focus-grid article{background:#fffaf1!important;border-color:#d9c7ad!important}
-html[data-theme="light"] .about-project-list{border-top-color:#d9c7ad!important}
-html[data-theme="light"] .about-project-list a{border-bottom-color:#d9c7ad!important}
-html[data-theme="light"] .site-language-bar{background:#e8dfcf!important;border-top-color:#c9b99e!important}
+/* Docs and FAQ panels: keep all examples readable on a light surface. */
+html[data-theme="light"] .doc-code,
+html[data-theme="light"] .doc-wrap .doc-code,
+html[data-theme="light"] .doc-section .doc-code,
+html[data-theme="light"] .doc-section pre,
+html[data-theme="light"] .doc-wrap pre{
+  display:block!important;
+  background:#eee4d1!important;
+  color:#65472d!important;
+  border:1px solid #d5c2a3!important;
+  border-left:4px solid #a4472b!important;
+  box-shadow:0 7px 18px rgba(81,61,39,.08)!important;
+}
+html[data-theme="light"] .doc-code code,
+html[data-theme="light"] .doc-wrap pre code,
+html[data-theme="light"] .doc-section pre code{color:#65472d!important}
+html[data-theme="light"] .doc-code .token,
+html[data-theme="light"] .doc-wrap pre .token{color:#805b33!important}
+html[data-theme="light"] .doc-note{
+  background:#e4e8d5!important;border-color:#cbd3b5!important;color:#52613e!important;
+}
+html[data-theme="light"] .faq-item{
+  background:#fff8eb!important;border-color:#d9c7ad!important;color:#44362a!important;
+}
+html[data-theme="light"] .faq-item summary{color:#6f7f45!important}
+html[data-theme="light"] .docs-index-art{
+  background:linear-gradient(145deg,#d5ddc3,#a9b99a)!important;
+  border-color:#cbb99b!important;
+}
+html[data-theme="light"] .docs-index-art-smooth{
+  background:linear-gradient(145deg,#e8dec9,#bdc6a6)!important;
+}
+html[data-theme="light"] .smooth-font-sample{
+  color:#684c37!important;text-shadow:0 3px 10px rgba(92,76,50,.12)!important;
+}
+html[data-theme="light"] .about-focus-grid article,
+html[data-theme="light"] .about-grid article{
+  background:linear-gradient(145deg,#fff8eb,#e9e7d6)!important;
+  border-color:#d9c7ad!important;
+}
+html[data-theme="light"] .about-focus-grid h3,
+html[data-theme="light"] .about-grid h3{color:#44362a!important}
+html[data-theme="light"] .about-focus-grid p,
+html[data-theme="light"] .about-grid p{color:#756454!important}
+html[data-theme="light"] .status-strip,
+html[data-theme="light"] .comment-board,
+html[data-theme="light"] .discussion-card-clean{
+  background:#fff8eb!important;border-color:#d9c7ad!important;color:#44362a!important;
+}
+html[data-theme="light"] .status-items b,
+html[data-theme="light"] .comment-board h3{color:#6f7f45!important}
