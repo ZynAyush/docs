@@ -1,2 +1,11 @@
 title: ZynAyush Docs
- description: Project documentation, setup guides and development notes.
+description: Project documentation, setup guides and development notes.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+defaults:
+  - scope:
+      path: "docs"
+    values:
+      layout: page

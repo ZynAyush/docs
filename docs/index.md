@@ -1,20 +1,23 @@
-# Project documentation
+---
+title: Project documentation
+permalink: /docs/
+---
 
-This section documents the currently linked Modrinth projects and their corresponding source repositories. The feature descriptions below are based on the published project READMEs, checked-in source layout, plugin descriptor and shipped configuration.
+This section documents the currently linked Modrinth projects and their corresponding source repositories. Feature descriptions are based on published project READMEs, checked-in source layout, plugin descriptor and shipped configuration.
 
 ## Projects
 
 ### Plugin
-- [Carpet Fake Players](projects/carpet-fake-players.md) — Paper/Purpur fake-player management, ownership, actions, inventories, persistence, physics, permissions, configuration and commands.
+- [Carpet Fake Players](projects/carpet-fake-players.html) — Paper/Purpur fake-player management, ownership, actions, inventories, persistence, physics, permissions, configuration and commands.
 
 ### Resource packs
-- [ZeroXFog](projects/zeroxfog.md) — removes dimensional and distance fog, including supported Sodium shader paths.
-- [Netherite Stones & Ores](projects/netherite-stones-ores.md) — applies Netherite Block-style textures to supported stone and ore blocks.
-- [Smooth Fonts 32x](projects/smooth-fonts-32x.md) — replaces Minecraft font atlases and font definitions with a smooth 32x-style interface font.
+- [ZeroXFog](projects/zeroxfog.html) — removes dimensional and distance fog, including supported Sodium shader paths.
+- [Netherite Stones & Ores](projects/netherite-stones-ores.html) — applies Netherite Block-style textures to supported stone and ore blocks.
+- [Smooth Fonts 32x](projects/smooth-fonts-32x.html) — replaces Minecraft font atlases and font definitions with a smooth 32x-style interface font.
 
 ## General guides
-- [Installation and compatibility](guides/installation.md)
-- [Troubleshooting and reporting issues](guides/troubleshooting.md)
+- [Installation and compatibility](guides/installation.html)
+- [Troubleshooting and reporting issues](guides/troubleshooting.html)
 
 ## Accuracy note
 
