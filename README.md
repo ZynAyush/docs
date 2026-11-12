@@ -2,13 +2,11 @@
 
 A custom documentation and project hub with a Minecraft-inspired pixel-art ocean aesthetic.
 
-## Pages
-- `index.html` — project archive and links
-- `journal.html` — development log
-- `style.css` — responsive visual system
-- `water.js` — lightweight animated water particles
+## Website
+- `index.html` — project hub
+- `docs/` — individual project documentation pages
+- `journal.html` — development journal
+- `style.css` / `docs.css` — responsive visual system
+- `water.js` — animated background accents
 
-## Deploy
-Hosted using GitHub Pages from the root of `main`.
-
-Project licences remain in their respective source repositories, not on this documentation site.
+Project licences remain in each source repository, not in this documentation repository.
