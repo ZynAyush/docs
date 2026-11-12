@@ -16,3 +16,16 @@
 .discord-join:hover{filter:brightness(1.2);transform:translateY(-2px);box-shadow:0 0 15px #5865f277}
 @media(max-width:760px){.community-wrap{grid-template-columns:1fr;gap:25px}.community-card{padding:0 15px}.community-card-top,.community-card-bottom{font-size:6px}.community-card-main h3{font-size:10px}.community-card-bottom{align-items:flex-start;flex-direction:column}.community-tags span{font-size:6px}}
 .community-card{border-radius:12px;box-shadow:none}.discord-join{border-radius:7px}
+
+/* Final sizing pass: keep the Hub block and card captions readable. */
+.visual-code{font:600 10px/1.35 var(--pixel);letter-spacing:0;overflow-wrap:anywhere}
+.community-copy h2{font:750 clamp(23px,2.7vw,32px)/1.2 var(--pixel);letter-spacing:-.04em}
+.community-copy>p:not(.eyebrow){font:400 16px/1.65 var(--body);max-width:510px}
+.community-tags span{font:600 10px/1.3 var(--pixel);padding:7px 9px}
+.community-card-top,.community-card-bottom{font:600 10px/1.4 var(--pixel);gap:12px;padding:14px 0}
+.community-card-main{gap:18px;padding:22px 0}
+.community-card-main h3{font:700 17px/1.3 var(--pixel);margin:0 0 7px}
+.community-card-main p{font:400 14px/1.5 var(--body);margin:0}
+.discord-server-icon{display:block;width:80px;height:80px;flex:0 0 80px;object-fit:cover;border-radius:18px;border:1px solid #5a7a9c;box-shadow:0 5px 16px #0004}
+.discord-join{font:650 11px/1.2 var(--pixel);border-radius:7px;padding:11px 14px}
+@media(max-width:760px){.community-card-main{gap:14px}.discord-server-icon{width:68px;height:68px;flex-basis:68px}.community-card-top,.community-card-bottom{font-size:9px}.community-tags span{font-size:9px}}
