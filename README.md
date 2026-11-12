@@ -1,16 +1,14 @@
-# ZynAyush Documentation
+# ZynAyush — Project Archive
 
-Public home for project guides, setup notes, release notes and development journal.
+A custom documentation and project hub with a Minecraft-inspired pixel-art ocean aesthetic.
 
-## Website
+## Pages
+- `index.html` — project archive and links
+- `journal.html` — development log
+- `style.css` — responsive visual system
+- `water.js` — lightweight animated water particles
 
-GitHub Pages serves this repository. The landing page is `index.html`; the journal is `blog.html`.
+## Deploy
+Hosted using GitHub Pages from the root of `main`.
 
-## Projects
-
-- [Carpet Fake Players](https://modrinth.com/plugin/playerbots)
-- [ZeroXFog](https://modrinth.com/resourcepack/zeroxfog)
-- [Netherite Stones / Ores](https://modrinth.com/resourcepack/netherite-ores)
-- [Smooth Fonts 32x](https://modrinth.com/resourcepack/smooth-font-32x)
-
-Project licensing is maintained in each source repository, not in this documentation repository.
+Project licences remain in their respective source repositories, not on this documentation site.
