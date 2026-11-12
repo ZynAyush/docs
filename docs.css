@@ -95,3 +95,56 @@ html[data-theme="oled"] .doc-note,
 html[data-theme="oled"] .faq-item{background:#07090a!important;border-color:#202627!important;color:#f1f7f6!important}
 html[data-theme="oled"] .faq-item summary{color:#f1f7f6!important}
 html[data-theme="oled"] .doc-footer{border-color:#202627!important;color:#9aa9a7!important}
+
+.about-hero h1{max-width:900px}
+.about-focus-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.about-focus-grid article{position:relative;min-height:190px;padding:22px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(145deg,var(--panel2),var(--panel))}
+.about-card-index{display:inline-block;margin-bottom:18px;color:var(--gold);font-size:11px;font-weight:850;letter-spacing:.13em}
+.about-focus-grid h3{margin:0 0 10px;font-size:16px;font-weight:850}
+.about-focus-grid p{margin:0;color:var(--muted);font-size:14px;line-height:1.65}
+.about-project-list{display:grid;gap:0;border-top:1px solid var(--line);margin-top:18px}
+.about-project-list a{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:17px 4px;border-bottom:1px solid var(--line);transition:padding .2s,color .2s}
+.about-project-list a:hover{padding-left:12px;color:var(--cyan)}
+.about-project-list strong{font-size:15px;font-weight:800}
+.about-project-list span{font-size:13px;color:var(--muted);text-align:right}
+.about-principles{display:grid;gap:12px;padding-left:22px}
+.about-principles li{padding-left:4px}
+.about-principles strong{color:var(--cyan)}
+.docs-index-hero{padding-bottom:34px}
+.docs-index-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;padding:24px 0 44px}
+.docs-index-card{display:grid;grid-template-columns:35% minmax(0,1fr);min-height:200px;overflow:hidden;border:1px solid var(--line);border-radius:13px;background:linear-gradient(145deg,var(--panel2),var(--panel));transition:transform .25s,border-color .25s,box-shadow .25s}
+.docs-index-card:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 14px 32px rgba(0,0,0,.15)}
+.docs-index-art{position:relative;display:grid;place-items:center;min-width:0;background:radial-gradient(circle at 50% 42%,#143b51,#07172a 76%);border-right:1px solid var(--line)}
+.docs-index-art img{width:78px;height:78px;object-fit:contain;border-radius:12px}
+.docs-index-art>span:last-child{position:absolute;left:11px;bottom:10px;color:#b7cede;font-size:9px;font-weight:800;letter-spacing:.1em}
+.docs-index-art-smooth{background:linear-gradient(145deg,#183b50,#07182b)}
+.smooth-font-sample{color:#ecfbff;font:800 52px/1 Georgia,serif;text-shadow:0 5px 18px #47caff66}
+.docs-index-copy{display:flex;flex-direction:column;align-items:flex-start;padding:19px}
+.docs-index-kind{font-size:9px;font-weight:850;letter-spacing:.13em;color:var(--gold)}
+.docs-index-copy h2{margin:8px 0 7px;font-size:18px;font-weight:850;line-height:1.25;color:var(--white)}
+.docs-index-copy p{margin:0 0 15px;color:var(--muted);font-size:13px;line-height:1.6}
+.docs-index-open{margin-top:auto;color:var(--cyan);font-size:10px;font-weight:850;letter-spacing:.07em}
+.docs-index-support{margin-top:16px}
+html[data-theme="light"] .about-focus-grid article,
+html[data-theme="light"] .docs-index-card{background:#fffdf5!important;border-color:#d5dece!important}
+html[data-theme="light"] .about-focus-grid h3,
+html[data-theme="light"] .docs-index-copy h2{color:#193d3b!important}
+html[data-theme="light"] .about-focus-grid p,
+html[data-theme="light"] .docs-index-copy p,
+html[data-theme="light"] .about-project-list span{color:#536e68!important}
+html[data-theme="light"] .about-principles strong,
+html[data-theme="light"] .docs-index-open{color:#087f78!important}
+html[data-theme="oled"] .about-focus-grid article,
+html[data-theme="oled"] .docs-index-card{background:#07090a!important;border-color:#202627!important}
+html[data-theme="oled"] .about-focus-grid h3,
+html[data-theme="oled"] .docs-index-copy h2{color:#f1f7f6!important}
+html[data-theme="oled"] .about-focus-grid p,
+html[data-theme="oled"] .docs-index-copy p{color:#9aa9a7!important}
+@media(max-width:600px){
+ .about-focus-grid,.docs-index-grid{grid-template-columns:1fr!important}
+ .docs-index-card{grid-template-columns:31% minmax(0,1fr);min-height:175px}
+ .docs-index-copy{padding:14px}
+ .docs-index-copy h2{font-size:16px}
+ .about-project-list a{align-items:flex-start;flex-direction:column;gap:5px}
+ .about-project-list span{text-align:left}
+}

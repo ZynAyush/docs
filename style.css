@@ -1117,3 +1117,203 @@ html[data-theme="oled"] .translate-page-button:hover{background:#57e1d8;color:#0
 .sidebar-close{border:0!important;outline:0!important;box-shadow:none!important;background:transparent!important}
 html[data-theme="light"] .sidebar-close{border:0!important;background:transparent!important}
 html[data-theme="oled"] .sidebar-close{border:0!important;background:transparent!important}
+
+/* Premium Light mode: deliberately warm/ivory + turquoise + antique gold. */
+html[data-theme="light"]{
+  --bg:#f7f4e9;--panel:#fffdf5;--panel2:#e9f1e9;--line:#d5dece;
+  --cyan:#087f78;--blue:#0b827b;--gold:#b18432;--white:#193d3b;--muted:#536e68;
+  color-scheme:light;
+}
+html[data-theme="light"] body{background:#f7f4e9!important;color:#193d3b!important}
+html[data-theme="light"] .shade{background:radial-gradient(ellipse at 50% 8%,#fffef8 0%,#f7f4e9 70%,#e9efe4 100%)!important}
+html[data-theme="light"] #water{opacity:.018!important;filter:grayscale(.6) sepia(.12)}
+html[data-theme="light"] .site-header{background:rgba(255,253,245,.96)!important;border-bottom:1px solid #d5dece!important}
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .status-strip,
+html[data-theme="light"] .community-card,
+html[data-theme="light"] .discussion-card,
+html[data-theme="light"] .discussion-fallback-card,
+html[data-theme="light"] .update-card,
+html[data-theme="light"] .updates-note,
+html[data-theme="light"] .faq-item,
+html[data-theme="light"] .doc-note,
+html[data-theme="light"] .about-grid article,
+html[data-theme="light"] .docs-index-card{
+  background:#fffdf5!important;border-color:#d5dece!important;
+  box-shadow:0 9px 26px rgba(54,82,55,.07)!important;
+}
+html[data-theme="light"] h1,html[data-theme="light"] h2,html[data-theme="light"] h3,
+html[data-theme="light"] .project-info h3,html[data-theme="light"] .community-card-main h3,
+html[data-theme="light"] .discussion-card h3{color:#193d3b!important}
+html[data-theme="light"] p,html[data-theme="light"] li,
+html[data-theme="light"] .hero-desc,html[data-theme="light"] .section-note,
+html[data-theme="light"] .project-info p,html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li,html[data-theme="light"] .community-copy>p:not(.eyebrow),
+html[data-theme="light"] .discussion-card p{color:#536e68!important}
+html[data-theme="light"] .eyebrow,html[data-theme="light"] .doc-section h2,
+html[data-theme="light"] .discussion-kicker{color:#a57827!important}
+html[data-theme="light"] .cyan,html[data-theme="light"] .card-links a,
+html[data-theme="light"] .doc-actions a,html[data-theme="light"] .update-links a{color:#087f78!important}
+html[data-theme="light"] .pixel-btn.primary,html[data-theme="light"] .discussion-button,
+html[data-theme="light"] .disclaimer-accept{background:#087f78!important;color:#fffdf5!important;border-color:#087f78!important}
+html[data-theme="light"] .theme-toggle{color:#a57827!important}
+html[data-theme="light"] .site-sidebar{background:#fffdf5!important;border-color:#d5dece!important}
+html[data-theme="light"] .sidebar-link{color:#244d49!important}
+html[data-theme="light"] .sidebar-link:hover{background:#e6efe6!important;color:#087f78!important}
+html[data-theme="light"] .disclaimer-card,html[data-theme="light"] .bug-report-panel{background:#fffdf5!important;color:#193d3b!important;border-color:#d5dece!important}
+html[data-theme="light"] .disclaimer-card h2,html[data-theme="light"] .bug-report-panel h2,
+html[data-theme="light"] .bug-choice strong{color:#193d3b!important}
+html[data-theme="light"] .disclaimer-card p,html[data-theme="light"] .bug-report-panel p,
+html[data-theme="light"] .bug-choice small{color:#536e68!important}
+html[data-theme="light"] .ticker{background:#e6eee3!important;color:#355c52!important;border-color:#d2dfd1!important}
+html[data-theme="light"] .ticker b{color:#a57827!important}
+html[data-theme="light"] .site-footer,html[data-theme="light"] .site-language-bar{background:#ecefe3!important;color:#35574f!important;border-color:#d5dece!important}
+html[data-theme="light"] .site-language-bar select{background:#fffdf5!important;color:#193d3b!important;border-color:#cad8c9!important}
+html[data-theme="light"] .backtop-float{background:#fffdf5!important;color:#087f78!important;border-color:#fffdf5!important}
+html[data-theme="light"] .doc-top,html[data-theme="light"] .doc-hero,html[data-theme="light"] .doc-section{border-color:#d5dece!important}
+html[data-theme="light"] .doc-hero h1{color:#193d3b!important}
+html[data-theme="light"] .doc-hero .lede,html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li{color:#536e68!important}
+html[data-theme="light"] .doc-table,html[data-theme="light"] .doc-table th,
+html[data-theme="light"] .doc-table td{border-color:#d5dece!important;color:#35574f!important}
+html[data-theme="light"] .docs-index-kind{color:#a57827!important}
+html[data-theme="light"] .docs-index-open{color:#087f78!important}
+
+/* Device profiles — phone, foldable, tablet, laptop, desktop and TV. */
+@media(max-width:360px){
+  .site-header{padding:10px 10px!important;gap:7px!important;min-height:68px!important}
+  .site-header>.sidebar-open{font-size:9px!important;padding:6px!important}
+  .site-header>.logo{gap:7px!important}
+  .site-header .logo-skin-head{width:30px!important;height:30px!important;flex-basis:30px!important}
+  .site-header nav{gap:9px!important;font-size:10px!important}
+  .site-header .theme-toggle{width:30px!important;height:30px!important;flex-basis:30px!important}
+  .wrap,.doc-wrap{width:calc(100% - 22px)!important}
+  .hero{padding-top:28px!important;padding-bottom:32px!important;gap:22px!important}
+  .hero h1{font-size:clamp(30px,11vw,40px)!important}
+  .hero-desc{font-size:14px!important}
+  .pixel-ocean.minecraft-map{aspect-ratio:1!important}
+  .project-grid{grid-template-columns:1fr!important}
+  .project-card{grid-template-columns:1fr!important}
+  .project-visual{height:142px!important;min-height:142px!important;border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .project-info{padding:15px!important}
+  .site-language-inner{justify-content:flex-start!important}
+  .site-language-inner select{min-width:0;flex:1}
+}
+@media(min-width:361px) and (max-width:600px){
+  .site-header{height:auto!important;min-height:76px!important;padding:12px 14px!important;gap:10px!important;flex-wrap:wrap!important}
+  .site-header nav{order:3;width:100%;margin:0!important;gap:12px!important;flex-wrap:wrap!important;font-size:11px!important}
+  .wrap,.doc-wrap{width:calc(100% - 30px)!important}
+  .hero{grid-template-columns:1fr!important;padding:38px 0 42px!important;gap:26px!important}
+  .hero h1{font-size:clamp(37px,10vw,48px)!important}
+  .hero-art,.art-frame{width:100%!important;max-width:100%!important}
+  .pixel-ocean.minecraft-map{aspect-ratio:1.08!important;height:auto!important;min-height:0!important}
+  .project-grid{grid-template-columns:1fr!important}
+  .project-card{grid-template-columns:39% minmax(0,1fr)!important;min-height:195px!important}
+  .project-visual{height:auto!important;min-height:195px!important}
+  .project-info{padding:14px!important}
+  .project-info h3{font-size:15px!important}
+  .project-info p{font-size:13px!important}
+  .card-links{gap:8px!important;flex-wrap:wrap!important}
+  .comments-section{padding-block:38px!important}
+  .site-language-inner{justify-content:flex-start!important}
+  .site-language-inner small{text-align:left!important}
+}
+@media(min-width:601px) and (max-width:900px){
+  .site-header{height:auto!important;min-height:76px!important;padding:14px 22px!important;flex-wrap:wrap!important}
+  .site-header nav{order:3;width:100%;margin:0!important;justify-content:space-between!important;gap:14px!important}
+  .wrap,.doc-wrap{width:calc(100% - 48px)!important}
+  .hero{grid-template-columns:1fr!important;gap:32px!important;padding-block:48px!important}
+  .hero-copy{max-width:700px}
+  .hero-art,.art-frame{width:min(100%,600px)!important;max-width:600px!important;margin-inline:auto!important}
+  .pixel-ocean.minecraft-map{aspect-ratio:1.2!important;min-height:0!important;height:auto!important}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .project-card{grid-template-columns:1fr!important;min-height:0!important}
+  .project-visual{height:160px!important;min-height:160px!important;border-right:0!important;border-bottom:1px solid var(--line)!important}
+  .project-info{padding:17px!important}
+  .about-grid,.docs-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(min-width:901px) and (max-width:1440px){
+  .wrap,.doc-wrap{width:min(1160px,calc(100% - 56px))!important}
+  .hero{grid-template-columns:1.05fr .95fr!important;gap:40px!important}
+  .hero-art,.art-frame{max-width:510px!important}
+  .pixel-ocean.minecraft-map{height:350px!important;min-height:350px!important}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(min-width:1441px) and (max-width:1919px){
+  .wrap,.doc-wrap{width:min(1380px,calc(100% - 84px))!important}
+  .hero{grid-template-columns:1.05fr .95fr!important;gap:58px!important}
+  .hero-art,.art-frame{max-width:600px!important}
+  .pixel-ocean.minecraft-map{height:410px!important;min-height:410px!important}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:24px!important}
+  .hero h1{font-size:clamp(58px,4.1vw,76px)!important}
+  .hero-desc{font-size:20px!important}
+  .doc-hero .lede{font-size:20px!important}
+  .doc-section p,.doc-section li{font-size:18px!important}
+}
+@media(min-width:1920px){
+  .wrap,.doc-wrap{width:min(1640px,calc(100% - 160px))!important}
+  .site-header{padding-inline:max(80px,calc((100% - 1640px)/2))!important;height:94px!important}
+  .site-header nav{gap:30px!important;font-size:15px!important}
+  .hero{grid-template-columns:1.05fr .95fr!important;gap:80px!important;min-height:760px!important}
+  .hero-art,.art-frame{max-width:700px!important}
+  .pixel-ocean.minecraft-map{height:480px!important;min-height:480px!important}
+  .hero h1{font-size:clamp(72px,4.2vw,96px)!important}
+  .hero-desc{font-size:23px!important;max-width:700px}
+  .project-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:30px!important}
+  .project-info{padding:28px!important}
+  .project-info h3{font-size:22px!important}
+  .project-info p{font-size:18px!important;line-height:1.7!important}
+  .doc-hero h1{font-size:clamp(64px,4vw,82px)!important}
+  .doc-hero .lede,.doc-section p,.doc-section li{font-size:21px!important;line-height:1.75!important}
+  .docs-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:25px!important}
+  .site-language-inner{width:min(1640px,100%)}
+}
+
+/* Foldable / dual-screen devices: use the two panes as a deliberate split canvas. */
+@media (horizontal-viewport-segments:2){
+  .site-header{padding-left:max(16px,env(viewport-segment-left 0 0, 0px))!important}
+  .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:22px!important}
+  .hero-copy{padding-inline:clamp(12px,2vw,30px)}
+  .hero-art{max-width:100%!important}
+  .project-grid,.about-grid,.docs-index-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  .site-sidebar{max-width:min(310px,calc(100vw - 24px))}
+}
+
+/* Respect landscape phones/tablets and foldable narrow panes. */
+@media(max-height:520px) and (orientation:landscape){
+  .site-header{min-height:62px!important;height:auto!important;padding-block:7px!important}
+  .hero{padding-block:20px!important;min-height:0!important}
+  .pixel-ocean.minecraft-map{height:250px!important;min-height:250px!important}
+  .disclaimer-card{max-height:84vh!important}
+}
+
+/* Device capability tuning and motion accessibility. */
+@media(hover:none) and (pointer:coarse){
+  .project-card:hover{transform:none!important}
+  .project-card:active{transform:scale(.99)!important}
+  .site-header>.sidebar-open{min-width:40px;min-height:40px}
+  .theme-toggle{min-width:42px;min-height:42px}
+}
+@media(prefers-reduced-motion:reduce){
+  .ticker div{animation:none!important}
+  .hero-art{animation:none!important}
+}
+
+/* TV / remote navigation ergonomics */
+@media(min-width:1920px) and (hover:none){
+  .site-header>.sidebar-open,.site-header .theme-toggle,.pixel-btn,
+  .discussion-button,.translate-page-button,.backtop-float{
+    min-width:48px;min-height:48px;
+  }
+  a:focus-visible,button:focus-visible,select:focus-visible{
+    outline:3px solid var(--gold)!important;outline-offset:4px!important;
+  }
+  .site-sidebar{width:380px!important;padding:32px 25px!important}
+  .sidebar-link{font-size:17px!important;padding:15px!important}
+  .disclaimer-card{width:min(760px,80vw)!important;padding:44px!important}
+  .disclaimer-card p{font-size:17px!important}
+}
+@media(max-width:600px){
+  .docs-index-grid{grid-template-columns:1fr!important}
+  .docs-index-card{min-height:170px!important}
+}

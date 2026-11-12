@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#020818"><meta name="description" content="Official project guides for ZynAyush Minecraft mods, plugins and resource packs."><title>Documentation Library — ZynAyush</title><script>(function(){var t="dark";try{var saved=localStorage.getItem("zynayush-theme");if(saved==="light"||saved==="dark"||saved==="oled")t=saved;}catch(e){}document.documentElement.setAttribute("data-theme",t);})();</script><link rel="stylesheet" href="../style.css?v=20261113-device-profiles"><link rel="stylesheet" href="../docs.css?v=20261113-device-profiles"></head><body>
+<div class="site-sidebar-backdrop" data-sidebar-backdrop hidden></div>
+<aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation" aria-hidden="true">
+  <div class="sidebar-head"><span class="sidebar-kicker">ZYNAYUSH / ARCHIVE</span><button type="button" class="sidebar-close" data-sidebar-close aria-label="Close navigation">×</button></div>
+  <a class="sidebar-link" href="../index.html">⌂ <span>Home</span></a>
+  <a class="sidebar-link" href="../index.html#projects">▦ <span>Projects</span></a>
+  <a class="sidebar-link" href="../about.html">◉ <span>About</span></a>
+  <a class="sidebar-link" href="../journal.html">↗ <span>Updates</span></a>
+  <a class="sidebar-link" href="../faq.html">? <span>FAQ</span></a>
+  <a class="sidebar-link" href="../docs/">▤ <span>Documentation index</span></a>
+  <div class="sidebar-divider"></div>
+  <span class="sidebar-section-label">PROJECT DOCUMENTATION</span>
+  <a class="sidebar-link sidebar-sub" href="../docs/carpet-fake-players.html">Carpet Fake Players</a>
+  <a class="sidebar-link sidebar-sub" href="../docs/zeroxfog.html">ZeroXFog</a>
+  <a class="sidebar-link sidebar-sub" href="../docs/netherite-stones-ores.html">Netherite Stones &amp; Ores</a>
+  <a class="sidebar-link sidebar-sub" href="../docs/smooth-fonts-32x.html">Smooth Fonts 32x</a>
+  <div class="sidebar-divider"></div>
+  <a class="sidebar-link" href="../index.html#community">Community</a>
+  <a class="sidebar-link" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+</aside>
+
+<div class="disclaimer-overlay" id="site-disclaimer" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title" aria-describedby="disclaimer-copy">
+  <div class="disclaimer-card">
+    <span class="disclaimer-kicker">PLEASE READ BEFORE CONTINUING</span>
+    <h2 id="disclaimer-title">A QUICK DISCLAIMER.</h2>
+    <div id="disclaimer-copy">
+      <p><strong>Independent project archive.</strong> This website and its projects are not affiliated with, endorsed by, or associated with Mojang Studios or Microsoft. Minecraft is a trademark of Microsoft.</p>
+      <p><strong>Use downloads responsibly.</strong> Mods, plugins, resource packs and other files are provided as described on their project pages. Compatibility may vary. Back up your worlds and files before installing anything, and review each download and its source before use.</p>
+      <p><strong>No warranty or guaranteed support.</strong> Projects and website content are provided on an “as is” basis. Features, availability, compatibility and documentation may change. No guarantee is made that every project will be error-free or suitable for every setup.</p>
+      <p><strong>External services.</strong> Links to GitHub, Modrinth, Discord and other third-party services are governed by their own terms and privacy policies. This site does not control those services.</p>
+      <p class="disclaimer-last">By selecting Accept &amp; Continue, you confirm that you have read and understood this notice.</p>
+    </div>
+    <button type="button" class="disclaimer-accept" data-disclaimer-accept>ACCEPT &amp; CONTINUE <span aria-hidden="true">→</span></button>
+    <small class="disclaimer-note">This notice will stay here until you accept it on this browser.</small>
+  </div>
+</div>
+<canvas id="water" aria-hidden="true"></canvas><div class="shade"></div><header class="site-header"><button class="sidebar-open" type="button" data-sidebar-open aria-controls="site-sidebar" aria-expanded="false"><span aria-hidden="true">☰</span><span>MENU</span></button><a class="logo" href="../index.html"><img class="logo-mark logo-skin-head" src="https://mc-heads.net/avatar/ZynAyush/64" alt="ZynAyush Minecraft skin head" width="38" height="38" loading="eager" decoding="async"><span>ZYNAYUSH<small>PROJECT ARCHIVE</small></span></a><nav aria-label="Primary navigation"><a href="../index.html#projects">PROJECTS</a><a href="./" aria-current="page">DOCS</a><a href="../journal.html">UPDATES</a><a href="../faq.html">FAQ</a><a href="../about.html">ABOUT</a><a href="../index.html#community">COMMUNITY</a><a class="nav-github" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><span class="theme-toggle-icon" aria-hidden="true">☾</span></button></nav></header><div class="bug-report-overlay" id="bug-report-panel" hidden aria-hidden="true">
+  <section class="bug-report-panel" role="dialog" aria-modal="true" aria-labelledby="bug-report-title">
+    <button class="bug-report-close" type="button" data-bug-close aria-label="Close report options">×</button>
+    <span class="bug-panel-kicker">ZYNAYUSH / SUPPORT</span>
+    <h2 id="bug-report-title">REPORT A BUG</h2>
+    <p>Choose where you want to send the report. Include the project version, Minecraft version and steps to reproduce the issue.</p>
+    <a class="bug-choice bug-choice-primary" id="bug-github-choice" href="https://github.com/ZynAyush" target="_blank" rel="noopener noreferrer">
+      <span class="bug-choice-symbol">GH</span><span><strong>GitHub Issue</strong><small>Open the project's issue template</small></span><span class="bug-choice-arrow">↗</span>
+    </a>
+    <a class="bug-choice" href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">
+      <span class="bug-choice-symbol">DC</span><span><strong>Discord Server</strong><small>Ask for help in ZynAyush's Hub</small></span><span class="bug-choice-arrow">↗</span>
+    </a>
+    <small class="bug-panel-footnote">Please do not post passwords, tokens or other private information.</small>
+  </section>
+</div><main class="doc-wrap docs-index-page">
+  <div class="doc-top"><a href="../index.html">← PROJECT ARCHIVE</a><span class="eyebrow">DOCUMENTATION / PROJECT LIBRARY</span></div>
+  <section class="doc-hero docs-index-hero">
+    <p class="eyebrow">GUIDES · INSTALLATION · PROJECT DETAILS</p>
+    <h1>PROJECT <span class="cyan">DOCUMENTATION.</span></h1>
+    <p class="lede">Choose a project to open its guide. Each page brings together what it does, compatibility notes, installation details and support links.</p>
+    <div class="doc-tags"><span>4 PROJECT GUIDES</span><span>DIRECT LINKS</span><span>REGULARLY UPDATED</span></div>
+  </section>
+  <section class="docs-index-grid" aria-label="Project documentation">
+    <a class="docs-index-card" href="carpet-fake-players.html">
+      <div class="docs-index-art"><img src="https://cdn.modrinth.com/data/L8evXdbb/b25c16734bd08689176496c551555b85061075b8_96.webp" alt="Carpet Fake Players icon" loading="lazy"><span>SERVER TOOL / 01</span></div>
+      <div class="docs-index-copy"><span class="docs-index-kind">PAPER · PURPUR</span><h2>Carpet Fake Players</h2><p>Server-side fake-player bots with ownership, player-like actions and configurable management.</p><span class="docs-index-open">OPEN DOCUMENTATION ↗</span></div>
+    </a>
+    <a class="docs-index-card" href="zeroxfog.html">
+      <div class="docs-index-art"><img src="https://cdn.modrinth.com/data/1tFrosnS/ad51d5766613ddfe6bbc9d1b2521cd3254c62cef_96.webp" alt="ZeroXFog icon" loading="lazy"><span>CLIENT MOD / 02</span></div>
+      <div class="docs-index-copy"><span class="docs-index-kind">MINECRAFT · FOG</span><h2>ZeroXFog</h2><p>A project focused on reducing visual fog and improving visibility in supported Minecraft environments.</p><span class="docs-index-open">OPEN DOCUMENTATION ↗</span></div>
+    </a>
+    <a class="docs-index-card" href="netherite-stones-ores.html">
+      <div class="docs-index-art"><img src="https://cdn.modrinth.com/data/BaTJVnz4/166fdd85ebb6b893e1f134e477b42828d3693efb_96.webp" alt="Netherite Stones and Ores icon" loading="lazy"><span>WORLD CONTENT / 03</span></div>
+      <div class="docs-index-copy"><span class="docs-index-kind">MINECRAFT · ORES</span><h2>Netherite Stones &amp; Ores</h2><p>Project guide for the Netherite-themed stone and ore content, installation and supported setup.</p><span class="docs-index-open">OPEN DOCUMENTATION ↗</span></div>
+    </a>
+    <a class="docs-index-card" href="smooth-fonts-32x.html">
+      <div class="docs-index-art docs-index-art-smooth"><span class="smooth-font-sample">Aa</span><span>RESOURCE PACK / 04</span></div>
+      <div class="docs-index-copy"><span class="docs-index-kind">RESOURCE PACK · 32X</span><h2>Smooth Fonts 32x</h2><p>A font-focused resource pack with setup notes and release information.</p><span class="docs-index-open">OPEN DOCUMENTATION ↗</span></div>
+    </a>
+  </section>
+  <section class="doc-section docs-index-support">
+    <h2>NEED HELP?</h2>
+    <p>For a project-specific issue, open that guide and use its report options. For general questions, visit the community hub.</p>
+    <div class="doc-actions"><a href="../faq.html">HELP &amp; FAQ ↗</a><a href="https://discord.gg/gQzXVPCEp8" target="_blank" rel="noopener noreferrer">COMMUNITY HUB ↗</a></div>
+  </section>
+</main><footer class="doc-wrap doc-footer"><span>© 2026 ZYNAYUSH</span><a href="../index.html">← BACK TO PROJECTS</a></footer><div class="site-language-bar">
+  <div class="site-language-inner">
+    <span class="language-caption">LANGUAGE</span>
+    <label class="visually-hidden" for="site-language-select">Translate this page</label>
+    <select id="site-language-select" aria-label="Choose page language">
+      <option value="">Translate this page…</option>
+      <option value="hi">हिन्दी · Hindi</option><option value="bn">বাংলা · Bengali</option>
+      <option value="ur">اردو · Urdu</option><option value="es">Español · Spanish</option>
+      <option value="fr">Français · French</option><option value="de">Deutsch · German</option>
+      <option value="pt">Português · Portuguese</option><option value="ja">日本語 · Japanese</option>
+      <option value="ko">한국어 · Korean</option><option value="zh-CN">简体中文 · Chinese</option>
+      <option value="ar">العربية · Arabic</option><option value="ru">Русский · Russian</option>
+    </select>
+    <button class="translate-page-button" type="button" data-translate-page>TRANSLATE ↗</button>
+    <small>Translation opens through Google Translate; wording may vary from the original.</small>
+  </div>
+</div>
+<button class="backtop-float" type="button" data-back-to-top aria-label="Back to top" title="Back to top">↑</button><script src="../water.js"></script><script src="../theme.js?v=20261113-device-profiles"></script><script src="../site-ui.js?v=20261113-device-profiles"></script></body></html>
