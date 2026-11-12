@@ -2,7 +2,7 @@
 
 **Type:** Minecraft Java resource pack  
 **Latest source-tracked release:** 1.2, published 10 October 2026  
-**Links:** [Modrinth](https://modrinth.com/resourcepack/smooth-font-32x) · [Source and release provenance](https://github.com/ZynAyush/Smooth-Fonts-32x)
+**Links:** [Modrinth](https://modrinth.com/resourcepack/smooth-fonts-32x) · [Source and release provenance](https://github.com/ZynAyush/Smooth-Fonts-32x)
 
 Smooth Fonts 32x replaces Minecraft's default font presentation with a clean, smooth 32x-style font while retaining a familiar vanilla interface. Its purpose is to make text across the game UI easier to read and visually more consistent.
 
@@ -20,7 +20,7 @@ It does not add new gameplay mechanics, change chat features, translate text, or
 
 ## Installation
 
-1. Download the ZIP from [Modrinth](https://modrinth.com/resourcepack/smooth-font-32x/versions).
+1. Download the ZIP from [Modrinth](https://modrinth.com/resourcepack/smooth-fonts-32x/versions).
 2. Open Minecraft Java Edition's Resource Packs menu.
 3. Select **Open Pack Folder** and place the ZIP inside.
 4. Return to the game, enable Smooth Fonts 32x and place it above other packs that replace the same font files.

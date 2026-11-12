@@ -16,9 +16,9 @@ Do not use a JAR built for a different Minecraft target. Paper and Purpur are th
 
 The following packs are client-side and are installed in Minecraft Java Edition's resource-pack folder:
 
-- [ZeroXFog](https://modrinth.com/resourcepack/zeroxfog)
-- [Netherite Stones & Ores](https://modrinth.com/resourcepack/netherite-stones-ores)
-- [Smooth Fonts 32x](https://modrinth.com/resourcepack/smooth-font-32x)
+- [ZeroXFog](https://modrinth.com/mod/zeroxfog)
+- [Netherite Stones & Ores](https://modrinth.com/resourcepack/netherite-ores)
+- [Smooth Fonts 32x](https://modrinth.com/resourcepack/smooth-fonts-32x)
 
 General steps:
 

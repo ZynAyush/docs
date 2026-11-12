@@ -2,7 +2,7 @@
 
 **Type:** Minecraft Java resource pack  
 **Latest source-tracked release:** 1.2, published 10 October 2026  
-**Links:** [Modrinth](https://modrinth.com/resourcepack/zeroxfog) · [Source and release provenance](https://github.com/ZynAyush/ZeroXFog)
+**Links:** [Modrinth](https://modrinth.com/mod/zeroxfog) · [Source and release provenance](https://github.com/ZynAyush/ZeroXFog)
 
 ZeroXFog reduces or removes the fog effects that obscure distant scenery and dimension views. The goal is to improve visual clarity while retaining the familiar Minecraft presentation.
 
@@ -21,7 +21,7 @@ ZeroXFog is a client-side visual resource pack. It does not alter world generati
 
 ## Installation
 
-1. Download the current ZIP from [Modrinth](https://modrinth.com/resourcepack/zeroxfog/versions).
+1. Download the current ZIP from [Modrinth](https://modrinth.com/mod/zeroxfog/versions).
 2. Open Minecraft Java Edition's Resource Packs menu.
 3. Choose **Open Pack Folder** and place the ZIP there without extracting it.
 4. Return to the game, enable ZeroXFog and move it above packs that override the same shader resources.

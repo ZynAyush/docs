@@ -2,7 +2,7 @@
 
 **Type:** Minecraft Java resource pack  
 **Latest source-tracked release:** 1.1, published 1 November 2026  
-**Links:** [Modrinth](https://modrinth.com/resourcepack/netherite-stones-ores) · [Source and release provenance](https://github.com/ZynAyush/Netherite-Stones-Ores)
+**Links:** [Modrinth](https://modrinth.com/resourcepack/netherite-ores) · [Source and release provenance](https://github.com/ZynAyush/Netherite-Stones-Ores)
 
 Netherite Stones & Ores applies a Netherite Block-inspired appearance to supported stone and ore blocks. It is a visual pack for players who want a consistent netherite-themed look across the affected blocks.
 
@@ -20,7 +20,7 @@ This is a client-side resource pack. It does not turn blocks into Netherite Bloc
 
 ## Installation
 
-1. Download the ZIP from [Modrinth](https://modrinth.com/resourcepack/netherite-stones-ores/versions).
+1. Download the ZIP from [Modrinth](https://modrinth.com/resourcepack/netherite-ores/versions).
 2. Open Minecraft Java Edition's Resource Packs menu.
 3. Select **Open Pack Folder** and place the ZIP inside.
 4. Return to Minecraft and enable the pack.
