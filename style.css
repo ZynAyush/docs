@@ -1363,4 +1363,57 @@ html{scroll-behavior:smooth;scroll-padding-top:24px}
     transform:none!important;
   }
 }
-\n\n/* === Light mode component recolor: remove leftover Dark navy/cyan surfaces === */\nhtml[data-theme="light"] .project-visual{background:#d8d7bf!important;border-right:1px solid #c9c1a5!important;color:#3e4934!important}\nhtml[data-theme="light"] .bot-visual{background:radial-gradient(circle at 50% 48%,#bd8a63,#70513f 78%)!important}\nhtml[data-theme="light"] .fog-visual{background:linear-gradient(#c4d4c2,#9eae91 56%,#687c60)!important}\nhtml[data-theme="light"] .ore-visual{background:#b9b19e!important}\nhtml[data-theme="light"] .font-visual{background:radial-gradient(circle at center,#87936a,#485c43)!important}\nhtml[data-theme="light"] .visual-label,html[data-theme="light"] .visual-code{color:#fff7e8!important;text-shadow:0 1px 3px rgba(35,44,29,.3)!important}\nhtml[data-theme="light"] .bot-head{background:#e7d8bd!important;border-color:#6f5945!important;box-shadow:inset 0 -9px #c3ad8e,6px 6px 0 #594333!important}\nhtml[data-theme="light"] .bot-head i{background:#a4472b!important;box-shadow:28px 0 #a4472b!important}\nhtml[data-theme="light"] .bot-body{background:#9a8468!important;border-color:#6f5945!important}\nhtml[data-theme="light"] .bot-shadow{background:#6f5945!important}\nhtml[data-theme="light"] .fog-moon{background:#fff5dc!important;box-shadow:0 0 25px rgba(255,240,198,.75)!important}\nhtml[data-theme="light"] .fog-horizon{background:linear-gradient(150deg,transparent 22%,#647856 23% 34%,transparent 35%),linear-gradient(25deg,#526b4b 0 43%,transparent 44%)!important}\nhtml[data-theme="light"] .ore-block{background:repeating-linear-gradient(0deg,#b9b19e 0 24px,#928b79 24px 48px),repeating-linear-gradient(90deg,transparent 0 24px,#776f60 24px 48px)!important;border-color:#665b4a!important;box-shadow:10px 10px 0 #817762!important}\nhtml[data-theme="light"] .ore-block b{background:#a4472b!important;box-shadow:0 0 8px rgba(164,71,43,.35)!important}\nhtml[data-theme="light"] .font-sample{color:#fff8e9!important;text-shadow:4px 4px #344a35!important}\nhtml[data-theme="light"] .font-sample small{color:#f0d18c!important}\nhtml[data-theme="light"] .project-info h3{color:#344a35!important}\nhtml[data-theme="light"] .tags span{color:#657448!important;border-color:#c8c3a9!important;background:#f2ead9!important}\nhtml[data-theme="light"] .number{color:#9a7450!important}\nhtml[data-theme="light"] .project-card{background:#fffaf1!important;border-color:#d9c7ad!important;box-shadow:0 8px 25px rgba(70,58,38,.09)!important}\nhtml[data-theme="light"] .project-card:hover{border-color:#9b9b70!important;box-shadow:0 14px 28px rgba(70,58,38,.13)!important}\n\n/* World map frame: parchment UI around the retained map image. */\nhtml[data-theme="light"] .art-frame{background:#eee5d4!important;border:1px solid #c7b99f!important;box-shadow:0 12px 30px rgba(83,63,39,.16)!important}\nhtml[data-theme="light"] .art-top,html[data-theme="light"] .art-bottom{background:#e8ddc8!important;color:#657448!important}\nhtml[data-theme="light"] .art-bottom{border-top:1px solid #c7b99f!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map{background:#9da47a!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map .map-texture{filter:sepia(.16) saturate(.78) hue-rotate(-18deg) brightness(1.12)!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map:after{background:linear-gradient(180deg,rgba(248,238,215,.08),rgba(83,91,55,.12))!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map .marker-label{background:#fff8e9!important;color:#44362a!important;border-color:#a4472b!important;box-shadow:0 4px 12px rgba(83,63,39,.2)!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map .marker-dot{background:#a4472b!important;border-color:#fff8e9!important;box-shadow:0 0 0 5px rgba(164,71,43,.18),0 0 17px rgba(164,71,43,.44)!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map .coord{color:#fff8e9!important;text-shadow:1px 1px #596348!important}\nhtml[data-theme="light"] .pixel-ocean.minecraft-map .crosshair{color:#fff8e9!important;text-shadow:0 0 8px #a4472b!important}\nhtml[data-theme="light"] .floating-label{background:#6f7f45!important;color:#fff8e9!important;box-shadow:5px 5px 0 #d8c9ae!important}\n\n/* Secondary surfaces: documentation, status panels and utility blocks. */\nhtml[data-theme="light"] .status-strip{background:#ece5d5!important;border-color:#d8c9ae!important}\nhtml[data-theme="light"] .site-footer{background:#e8dfcf!important;border-top-color:#c9b99e!important}\nhtml[data-theme="light"] .doc-tags span{background:#f1e8d8!important;color:#657448!important;border-color:#c8bda7!important}\nhtml[data-theme="light"] .doc-actions a{background:#fffaf1!important;color:#a4472b!important;border-color:#bd9d81!important}\nhtml[data-theme="light"] .doc-actions a:first-child{background:#a4472b!important;color:#fffaf1!important;border-color:#a4472b!important}\nhtml[data-theme="light"] .doc-table th{background:#e8dfcf!important;color:#657448!important}\nhtml[data-theme="light"] .doc-table td{background:#fffaf1!important}\nhtml[data-theme="light"] .doc-note{background:#eee7d8!important;border-color:#cfc2a8!important;color:#5d644b!important}\nhtml[data-theme="light"] .faq-item{background:#fffaf1!important;border-color:#d9c7ad!important}\nhtml[data-theme="light"] .faq-item summary{color:#657448!important}\nhtml[data-theme="light"] .faq-item summary:after{color:#a4472b!important}\nhtml[data-theme="light"] .about-focus-grid article{background:#fffaf1!important;border-color:#d9c7ad!important}\nhtml[data-theme="light"] .about-project-list{border-top-color:#d9c7ad!important}\nhtml[data-theme="light"] .about-project-list a{border-bottom-color:#d9c7ad!important}\nhtml[data-theme="light"] .site-language-bar{background:#e8dfcf!important;border-top-color:#c9b99e!important}\n
+
+
+/* === Light mode component recolor: remove leftover Dark navy/cyan surfaces === */
+html[data-theme="light"] .project-visual{background:#d8d7bf!important;border-right:1px solid #c9c1a5!important;color:#3e4934!important}
+html[data-theme="light"] .bot-visual{background:radial-gradient(circle at 50% 48%,#bd8a63,#70513f 78%)!important}
+html[data-theme="light"] .fog-visual{background:linear-gradient(#c4d4c2,#9eae91 56%,#687c60)!important}
+html[data-theme="light"] .ore-visual{background:#b9b19e!important}
+html[data-theme="light"] .font-visual{background:radial-gradient(circle at center,#87936a,#485c43)!important}
+html[data-theme="light"] .visual-label,html[data-theme="light"] .visual-code{color:#fff7e8!important;text-shadow:0 1px 3px rgba(35,44,29,.3)!important}
+html[data-theme="light"] .bot-head{background:#e7d8bd!important;border-color:#6f5945!important;box-shadow:inset 0 -9px #c3ad8e,6px 6px 0 #594333!important}
+html[data-theme="light"] .bot-head i{background:#a4472b!important;box-shadow:28px 0 #a4472b!important}
+html[data-theme="light"] .bot-body{background:#9a8468!important;border-color:#6f5945!important}
+html[data-theme="light"] .bot-shadow{background:#6f5945!important}
+html[data-theme="light"] .fog-moon{background:#fff5dc!important;box-shadow:0 0 25px rgba(255,240,198,.75)!important}
+html[data-theme="light"] .fog-horizon{background:linear-gradient(150deg,transparent 22%,#647856 23% 34%,transparent 35%),linear-gradient(25deg,#526b4b 0 43%,transparent 44%)!important}
+html[data-theme="light"] .ore-block{background:repeating-linear-gradient(0deg,#b9b19e 0 24px,#928b79 24px 48px),repeating-linear-gradient(90deg,transparent 0 24px,#776f60 24px 48px)!important;border-color:#665b4a!important;box-shadow:10px 10px 0 #817762!important}
+html[data-theme="light"] .ore-block b{background:#a4472b!important;box-shadow:0 0 8px rgba(164,71,43,.35)!important}
+html[data-theme="light"] .font-sample{color:#fff8e9!important;text-shadow:4px 4px #344a35!important}
+html[data-theme="light"] .font-sample small{color:#f0d18c!important}
+html[data-theme="light"] .project-info h3{color:#344a35!important}
+html[data-theme="light"] .tags span{color:#657448!important;border-color:#c8c3a9!important;background:#f2ead9!important}
+html[data-theme="light"] .number{color:#9a7450!important}
+html[data-theme="light"] .project-card{background:#fffaf1!important;border-color:#d9c7ad!important;box-shadow:0 8px 25px rgba(70,58,38,.09)!important}
+html[data-theme="light"] .project-card:hover{border-color:#9b9b70!important;box-shadow:0 14px 28px rgba(70,58,38,.13)!important}
+
+/* World map frame: parchment UI around the retained map image. */
+html[data-theme="light"] .art-frame{background:#eee5d4!important;border:1px solid #c7b99f!important;box-shadow:0 12px 30px rgba(83,63,39,.16)!important}
+html[data-theme="light"] .art-top,html[data-theme="light"] .art-bottom{background:#e8ddc8!important;color:#657448!important}
+html[data-theme="light"] .art-bottom{border-top:1px solid #c7b99f!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map{background:#9da47a!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .map-texture{filter:sepia(.16) saturate(.78) hue-rotate(-18deg) brightness(1.12)!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map:after{background:linear-gradient(180deg,rgba(248,238,215,.08),rgba(83,91,55,.12))!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .marker-label{background:#fff8e9!important;color:#44362a!important;border-color:#a4472b!important;box-shadow:0 4px 12px rgba(83,63,39,.2)!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .marker-dot{background:#a4472b!important;border-color:#fff8e9!important;box-shadow:0 0 0 5px rgba(164,71,43,.18),0 0 17px rgba(164,71,43,.44)!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .coord{color:#fff8e9!important;text-shadow:1px 1px #596348!important}
+html[data-theme="light"] .pixel-ocean.minecraft-map .crosshair{color:#fff8e9!important;text-shadow:0 0 8px #a4472b!important}
+html[data-theme="light"] .floating-label{background:#6f7f45!important;color:#fff8e9!important;box-shadow:5px 5px 0 #d8c9ae!important}
+
+/* Secondary surfaces: documentation, status panels and utility blocks. */
+html[data-theme="light"] .status-strip{background:#ece5d5!important;border-color:#d8c9ae!important}
+html[data-theme="light"] .site-footer{background:#e8dfcf!important;border-top-color:#c9b99e!important}
+html[data-theme="light"] .doc-tags span{background:#f1e8d8!important;color:#657448!important;border-color:#c8bda7!important}
+html[data-theme="light"] .doc-actions a{background:#fffaf1!important;color:#a4472b!important;border-color:#bd9d81!important}
+html[data-theme="light"] .doc-actions a:first-child{background:#a4472b!important;color:#fffaf1!important;border-color:#a4472b!important}
+html[data-theme="light"] .doc-table th{background:#e8dfcf!important;color:#657448!important}
+html[data-theme="light"] .doc-table td{background:#fffaf1!important}
+html[data-theme="light"] .doc-note{background:#eee7d8!important;border-color:#cfc2a8!important;color:#5d644b!important}
+html[data-theme="light"] .faq-item{background:#fffaf1!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .faq-item summary{color:#657448!important}
+html[data-theme="light"] .faq-item summary:after{color:#a4472b!important}
+html[data-theme="light"] .about-focus-grid article{background:#fffaf1!important;border-color:#d9c7ad!important}
+html[data-theme="light"] .about-project-list{border-top-color:#d9c7ad!important}
+html[data-theme="light"] .about-project-list a{border-bottom-color:#d9c7ad!important}
+html[data-theme="light"] .site-language-bar{background:#e8dfcf!important;border-top-color:#c9b99e!important}
