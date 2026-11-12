@@ -570,3 +570,185 @@ html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{
 @media(max-width:430px){
  .pixel-ocean.minecraft-map .map-marker{left:53%!important;top:18%!important}
 }
+
+/* === Theme system repair: balanced, full-site light palette === */
+html[data-theme="light"]{
+  color-scheme:light!important;
+  --bg:#edf4f8;--panel:#ffffff;--panel2:#e2edf4;--line:#c2d2dd;
+  --cyan:#087da9;--blue:#087eae;--gold:#92551e;--white:#172f43;--muted:#526c80;
+}
+html[data-theme="dark"]{color-scheme:dark}
+html[data-theme="light"] body{
+  background:#edf4f8!important;color:#172f43!important;
+}
+html[data-theme="light"] .shade{
+  background:radial-gradient(ellipse at 50% 8%,rgba(255,255,255,.96),rgba(237,244,248,.91) 76%),linear-gradient(180deg,#f8fbfd,#eaf2f7)!important;
+}
+html[data-theme="light"] #water{opacity:.035!important;filter:brightness(1.8) saturate(.55)}
+html[data-theme="light"] .site-header{
+  background:rgba(247,251,254,.97)!important;border-bottom:1px solid #c5d4df!important;
+  box-shadow:0 5px 22px rgba(26,57,78,.06)!important;
+}
+html[data-theme="light"] .site-header .logo,
+html[data-theme="light"] .site-header .logo span,
+html[data-theme="light"] nav,
+html[data-theme="light"] nav a,
+html[data-theme="light"] .footer-inner,
+html[data-theme="light"] .site-footer{color:#29485e!important}
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] .project-info h3,
+html[data-theme="light"] .section-head h2,
+html[data-theme="light"] .status-inner h2,
+html[data-theme="light"] .about h2,
+html[data-theme="light"] .community-copy h2,
+html[data-theme="light"] .comments-heading h2{color:#172f43!important}
+html[data-theme="light"] p,
+html[data-theme="light"] li,
+html[data-theme="light"] .hero-desc,
+html[data-theme="light"] .section-note,
+html[data-theme="light"] .project-info p,
+html[data-theme="light"] .community-copy>p:not(.eyebrow),
+html[data-theme="light"] .about p,
+html[data-theme="light"] .hero-meta{color:#526c80!important}
+html[data-theme="light"] .eyebrow{color:#87521f!important}
+html[data-theme="light"] .project-card,
+html[data-theme="light"] .status-strip,
+html[data-theme="light"] .community-card,
+html[data-theme="light"] .comment-board,
+html[data-theme="light"] .discussion-fallback-card,
+html[data-theme="light"] .update-card,
+html[data-theme="light"] .updates-note,
+html[data-theme="light"] .faq-item,
+html[data-theme="light"] .doc-note{
+  background:linear-gradient(145deg,#ffffff,#edf4f8)!important;
+  border-color:#c5d5e0!important;
+  box-shadow:0 8px 22px rgba(33,67,88,.055)!important;
+}
+html[data-theme="light"] .project-visual,
+html[data-theme="light"] .project-visual-icon,
+html[data-theme="light"] .fog-visual{color:#eef8ff}
+html[data-theme="light"] .project-info{background:transparent!important}
+html[data-theme="light"] .tags span,
+html[data-theme="light"] .community-tags span{color:#365c74!important;border-color:#b5cbd9!important}
+html[data-theme="light"] .status-items span,
+html[data-theme="light"] .community-card-top,
+html[data-theme="light"] .community-card-bottom{color:#526c80!important}
+html[data-theme="light"] .community-card-main h3{color:#172f43!important}
+html[data-theme="light"] .community-card-main p{color:#526c80!important}
+html[data-theme="light"] .comments-intro,
+html[data-theme="light"] .comments-preview small,
+html[data-theme="light"] .comment-emoji-row{color:#526c80!important}
+html[data-theme="light"] .comment-entry{background:#fff!important;border-color:#c5d5e0!important}
+html[data-theme="light"] .comment-entry-top strong,
+html[data-theme="light"] .comment-entry p{color:#29485e!important}
+html[data-theme="light"] .comment-entry-top time,
+html[data-theme="light"] .empty-comments{color:#60798b!important}
+html[data-theme="light"] .comment-form label{color:#29485e!important}
+html[data-theme="light"] .comment-form input,
+html[data-theme="light"] .comment-form textarea{background:#fff!important;color:#172f43!important;border-color:#b8ccd9!important}
+html[data-theme="light"] .comment-form-bottom small{color:#627c8e!important}
+html[data-theme="light"] .site-footer{background:#e2edf4!important;border-top-color:#c2d2dd!important}
+html[data-theme="light"] .ticker{background:#dcebf3!important;border-color:#bed3e0!important;color:#36576e!important}
+html[data-theme="light"] .ticker b{color:#087da9!important}
+html[data-theme="light"] .pixel-btn:not(.primary){background:#fff!important;color:#087da9!important;border-color:#1685ad!important}
+html[data-theme="light"] .pixel-btn.primary{background:#087eae!important;color:#fff!important;border-color:#39b9e7!important}
+html[data-theme="light"] .theme-toggle{background:#fff!important;color:#24465d!important;border-color:#8fb8cd!important}
+html[data-theme="light"] .theme-toggle:hover{background:#e2f1f8!important}
+html[data-theme="light"] .sidebar-open{background:#fff!important;color:#24465d!important;border-color:#9bbccd!important}
+html[data-theme="light"] .sidebar-close{background:#eaf2f7!important;color:#24465d!important;border-color:#c1d3de!important}
+html[data-theme="light"] .site-sidebar{background:#f8fbfd!important;border-right-color:#c3d5e0!important;box-shadow:18px 0 50px rgba(27,61,83,.16)!important}
+html[data-theme="light"] .sidebar-head{border-bottom-color:#d0dce5!important}
+html[data-theme="light"] .sidebar-link{color:#29485e!important}
+html[data-theme="light"] .sidebar-link:hover,
+html[data-theme="light"] .sidebar-link:focus-visible{background:#e5f1f7!important;color:#087da9!important}
+html[data-theme="light"] .sidebar-divider{background:#d0dce5!important}
+html[data-theme="light"] .sidebar-section-label{color:#607b8d!important}
+html[data-theme="light"] .disclaimer-card{background:linear-gradient(145deg,#fff,#edf4f8)!important;color:#172f43!important;border-color:#9dc3d7!important}
+html[data-theme="light"] .disclaimer-card h2,
+html[data-theme="light"] .disclaimer-card p strong{color:#172f43!important}
+html[data-theme="light"] .disclaimer-card p{color:#526c80!important}
+html[data-theme="light"] .disclaimer-card .disclaimer-last{color:#087da9!important}
+html[data-theme="light"] .disclaimer-note{color:#60798b!important}
+html[data-theme="light"] .disclaimer-accept{background:#087eae!important;color:#fff!important;border-color:#249ac5!important}
+html[data-theme="light"] .update-meta{color:#526c80!important}
+html[data-theme="light"] .update-type{background:#e6f3f8!important;color:#087da9!important;border-color:#a8c8d8!important}
+html[data-theme="light"] .update-links a{color:#087da9!important}
+html[data-theme="light"] .doc-wrap{color:#172f43!important}
+html[data-theme="light"] .doc-top{border-bottom-color:#c5d5e0!important}
+html[data-theme="light"] .doc-hero{border-bottom-color:#c5d5e0!important}
+html[data-theme="light"] .doc-hero h1{color:#172f43!important}
+html[data-theme="light"] .doc-hero .lede,
+html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li,
+html[data-theme="light"] .faq-item p,
+html[data-theme="light"] .faq-item li{color:#526c80!important}
+html[data-theme="light"] .doc-section{border-bottom-color:#c5d5e0!important}
+html[data-theme="light"] .doc-section h2{color:#87521f!important}
+html[data-theme="light"] .doc-tags span{color:#365c74!important;border-color:#b5cbd9!important}
+html[data-theme="light"] .doc-actions a{color:#087da9!important;border-color:#9dbfd3!important}
+html[data-theme="light"] .doc-actions a:first-child{background:#087eae!important;color:#fff!important}
+html[data-theme="light"] .doc-table{color:#29485e!important}
+html[data-theme="light"] .doc-table th,
+html[data-theme="light"] .doc-table td{border-color:#c5d5e0!important}
+html[data-theme="light"] .about-grid article{background:linear-gradient(145deg,#fff,#edf4f8)!important;border-color:#c5d5e0!important}
+html[data-theme="light"] .about-grid h3{color:#172f43!important}
+html[data-theme="light"] .about-grid p{color:#526c80!important}
+html[data-theme="light"] .updates-note{border-left-color:#087da9!important}
+html[data-theme="light"] .giscus-shell{color:#172f43}
+html.theme-animate body,
+html.theme-animate .site-header,
+html.theme-animate .site-footer,
+html.theme-animate .project-card,
+html.theme-animate .status-strip,
+html.theme-animate .community-card,
+html.theme-animate .site-sidebar,
+html.theme-animate .theme-toggle{transition:background-color .38s ease,color .38s ease,border-color .38s ease,box-shadow .38s ease!important}
+
+/* Sidebar hover/focus affordance and improved panel motion. */
+.site-header>.sidebar-open{z-index:9002!important;position:relative!important;transition:transform .2s ease,background .2s ease,border-color .2s ease,box-shadow .2s ease!important}
+.site-header>.sidebar-open:hover,
+.site-header>.sidebar-open:focus-visible{transform:translateY(-1px) scale(1.035)!important;border-color:var(--cyan)!important;box-shadow:0 5px 16px rgba(73,191,255,.18)!important;outline:none}
+.site-sidebar{transition:transform .3s cubic-bezier(.2,.8,.2,1),visibility .3s,background .3s!important}
+.site-sidebar.is-open .sidebar-link{animation:sidebarItemIn .28s both}
+.site-sidebar.is-open .sidebar-link:nth-of-type(2){animation-delay:25ms}
+.site-sidebar.is-open .sidebar-link:nth-of-type(3){animation-delay:45ms}
+.site-sidebar.is-open .sidebar-link:nth-of-type(4){animation-delay:65ms}
+.site-sidebar.is-open .sidebar-link:nth-of-type(5){animation-delay:85ms}
+.site-sidebar.is-open .sidebar-link:nth-of-type(6){animation-delay:105ms}
+@keyframes sidebarItemIn{from{opacity:0;transform:translateX(-9px)}to{opacity:1;transform:translateX(0)}}
+
+/* More restrained motion across the interface. */
+.theme-toggle-icon{display:inline-block;transition:transform .35s ease}
+.theme-toggle:hover .theme-toggle-icon{transform:rotate(35deg) scale(1.12)}
+.logo-skin-head{transition:transform .25s ease,box-shadow .25s ease}
+.logo:hover .logo-skin-head{transform:rotate(-5deg) scale(1.07);box-shadow:0 0 18px rgba(73,191,255,.35)!important}
+nav a{position:relative}
+nav a:not(.nav-github)::after{content:"";position:absolute;left:0;right:100%;bottom:-5px;height:2px;background:var(--cyan);transition:right .22s ease}
+nav a:not(.nav-github):hover::after{right:0}
+.pixel-btn,.discussion-button,.disclaimer-accept{transition:transform .22s ease,filter .22s ease,box-shadow .22s ease!important}
+.pixel-btn:hover,.discussion-button:hover,.disclaimer-accept:hover{transform:translateY(-2px)!important;filter:brightness(1.06);box-shadow:0 8px 22px rgba(45,174,225,.18)}
+.project-card{transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease!important}
+.project-card:hover{transform:translateY(-5px)!important;box-shadow:0 14px 30px rgba(0,0,0,.16)!important}
+.project-card:nth-child(2){animation-delay:.07s!important}
+.project-card:nth-child(3){animation-delay:.14s!important}
+.project-card:nth-child(4){animation-delay:.21s!important}
+.hero-art{animation:heroMapFloat 8s ease-in-out infinite}
+@keyframes heroMapFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.map-compass{transition:transform .35s ease,background .35s ease}
+.pixel-ocean:hover .map-compass{transform:rotate(12deg)}
+.map-status{transition:transform .25s ease,border-color .25s ease}
+.pixel-ocean:hover .map-status{transform:translateY(-2px);border-color:#80e4ff!important}
+@keyframes softGlowPulse{0%,100%{box-shadow:0 0 0 4px rgba(82,216,255,.18),0 0 13px rgba(82,216,255,.55)}50%{box-shadow:0 0 0 8px rgba(82,216,255,.08),0 0 20px rgba(82,216,255,.8)}}
+.marker-dot{animation:softGlowPulse 2.6s ease-in-out infinite!important}
+@keyframes ideaCloudBob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-5px) rotate(1deg)}}
+.idea-cloud{animation:ideaCloudBob 5.4s ease-in-out infinite!important}
+html.motion-ready .motion-reveal{opacity:0;transform:translateY(16px);transition:opacity .62s ease,transform .62s cubic-bezier(.2,.8,.2,1);transition-delay:var(--reveal-delay,0ms)}
+html.motion-ready .motion-reveal.is-visible{opacity:1;transform:translateY(0)}
+@media(hover:none){.project-card:hover{transform:none!important}.pixel-ocean:hover .map-compass{transform:none}}
+@media(prefers-reduced-motion:reduce){
+  *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  html.motion-ready .motion-reveal{opacity:1!important;transform:none!important}
+}

@@ -56,3 +56,16 @@ html[data-theme="light"] .doc-footer{border-color:#bfd1df!important;color:#42627
 html[data-theme="light"] .faq-item{border-color:#c1d2df!important;background:#fff!important}
 html[data-theme="light"] .faq-item summary{color:#173349!important}
 html[data-theme="light"] .doc-note{background:#e5eff6!important;border-color:#b5cadb!important}
+
+html[data-theme="light"] .doc-wrap{color:#172f43!important}
+html[data-theme="light"] .doc-hero h1{color:#172f43!important}
+html[data-theme="light"] .doc-hero .lede,
+html[data-theme="light"] .doc-section p,
+html[data-theme="light"] .doc-section li{color:#526c80!important}
+html[data-theme="light"] .doc-section h2{color:#87521f!important}
+html[data-theme="light"] .doc-note,
+html[data-theme="light"] .faq-item{background:#fff!important;color:#29485e!important;border-color:#c5d5e0!important}
+html[data-theme="light"] .faq-item summary{color:#29485e!important}
+html[data-theme="light"] .faq-item p,
+html[data-theme="light"] .faq-item li{color:#526c80!important}
+html[data-theme="light"] .doc-footer{border-color:#c5d5e0!important;color:#526c80!important}

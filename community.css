@@ -46,3 +46,11 @@
 html[data-theme="light"] .community-wrap{color:#14283a}
 html[data-theme="light"] .community-tags span{color:#315b75!important;border-color:#b5cadb!important}
 html[data-theme="light"] .discord-server-icon{border-color:#9eb9cc!important}
+
+html[data-theme="light"] .community-wrap{color:#172f43!important}
+html[data-theme="light"] .community-copy h2{color:#172f43!important}
+html[data-theme="light"] .community-copy>p:not(.eyebrow){color:#526c80!important}
+html[data-theme="light"] .community-card{background:linear-gradient(145deg,#fff,#edf4f8)!important;border-color:#c5d5e0!important}
+html[data-theme="light"] .community-card-main h3{color:#172f43!important}
+html[data-theme="light"] .community-card-main p{color:#526c80!important}
+html[data-theme="light"] .community-tags span{color:#365c74!important;border-color:#b5cbd9!important}

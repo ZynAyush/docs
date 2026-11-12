@@ -8,6 +8,7 @@
   const openButton = document.querySelector("[data-sidebar-open]");
   const closeButton = document.querySelector("[data-sidebar-close]");
   const root = document.documentElement;
+  let closeTimer = 0;
 
   let accepted = false;
   try { accepted = localStorage.getItem(disclaimerKey) === "yes"; } catch (_) {}
@@ -31,24 +32,82 @@
     });
   }
 
-  const setSidebar = (open) => {
+  const cancelClose = () => {
+    if (closeTimer) window.clearTimeout(closeTimer);
+    closeTimer = 0;
+  };
+  const setSidebar = (open, focus = false, returnFocus = false) => {
     if (!sidebar || !backdrop) return;
+    cancelClose();
     sidebar.classList.toggle("is-open", open);
     sidebar.setAttribute("aria-hidden", String(!open));
     backdrop.hidden = !open;
     if (openButton) openButton.setAttribute("aria-expanded", String(open));
     root.classList.toggle("sidebar-open-state", open);
-    if (open && closeButton) closeButton.focus();
-    if (!open && openButton) openButton.focus();
+    if (open && focus && closeButton) closeButton.focus();
+    if (!open && returnFocus && openButton) openButton.focus();
   };
-  if (openButton) openButton.addEventListener("click", () => setSidebar(true));
-  if (closeButton) closeButton.addEventListener("click", () => setSidebar(false));
-  if (backdrop) backdrop.addEventListener("click", () => setSidebar(false));
-  if (sidebar) sidebar.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setSidebar(false)));
+  const scheduleClose = () => {
+    cancelClose();
+    closeTimer = window.setTimeout(() => {
+      const pointerInside = (sidebar && sidebar.matches(":hover")) ||
+        (openButton && openButton.matches(":hover"));
+      const focusInside = (sidebar && sidebar.contains(document.activeElement)) ||
+        (openButton && openButton === document.activeElement);
+      if (!pointerInside && !focusInside) setSidebar(false, false, false);
+    }, 240);
+  };
+
+  if (openButton) {
+    openButton.addEventListener("pointerenter", event => {
+      if (event.pointerType !== "touch") setSidebar(true, false, false);
+    });
+    openButton.addEventListener("pointerleave", event => {
+      if (event.pointerType !== "touch") scheduleClose();
+    });
+    openButton.addEventListener("focus", () => setSidebar(true, false, false));
+    openButton.addEventListener("blur", () => window.setTimeout(() => {
+      if (!sidebar || !sidebar.contains(document.activeElement)) scheduleClose();
+    }, 0));
+    openButton.addEventListener("click", () => {
+      // Click remains the touch/mobile control; on desktop it pins/toggles the panel.
+      setSidebar(!sidebar.classList.contains("is-open"), false, false);
+    });
+  }
+  if (sidebar) {
+    sidebar.addEventListener("pointerenter", cancelClose);
+    sidebar.addEventListener("pointerleave", scheduleClose);
+    sidebar.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setSidebar(false, false, false)));
+  }
+  if (closeButton) closeButton.addEventListener("click", () => setSidebar(false, false, true));
+  if (backdrop) backdrop.addEventListener("click", () => setSidebar(false, false, false));
   document.addEventListener("keydown", event => {
     if (event.key === "Escape") {
-      if (sidebar && sidebar.classList.contains("is-open")) setSidebar(false);
+      if (sidebar && sidebar.classList.contains("is-open")) setSidebar(false, false, true);
       else if (overlay && !overlay.hidden) event.preventDefault();
     }
   });
+
+  // Subtle scroll-in motion for sections and documentation, with graceful fallback.
+  const revealTargets = document.querySelectorAll(
+    ".section-head, .project-card, .status-inner, .community-wrap, .doc-hero, .doc-section, .update-card, .updates-note, .comments-heading, .comments-preview, .discussion-fallback-card"
+  );
+  if (revealTargets.length && "IntersectionObserver" in window) {
+    root.classList.add("motion-ready");
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: "0px 0px -28px 0px" });
+    revealTargets.forEach((element, index) => {
+      element.classList.add("motion-reveal");
+      if (element.classList.contains("project-card")) {
+        element.style.setProperty("--reveal-delay", (index % 4) * 65 + "ms");
+      }
+      revealObserver.observe(element);
+    });
+  }
 })();
