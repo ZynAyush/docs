@@ -8,10 +8,11 @@
 .community-card-top,.community-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:17px 0;color:#91cce9;font:7px var(--pixel)}
 .community-card-top{border-bottom:1px solid #164267}.community-online{color:#74f3ac}
 .community-card-main{display:flex;align-items:center;gap:19px;padding:28px 0}
-.discord-mark{display:grid;place-items:center;width:70px;height:70px;background:#5865f2;color:white;border:4px solid #b9c8ff;box-shadow:5px 5px 0 #071225;font:27px var(--pixel);flex:0 0 auto}
+.discord-mark{display:grid;place-items:center;width:64px;height:64px;background:#5865f2;color:white;border-radius:14px;font:700 22px var(--pixel);flex:0 0 auto}.discord-server-icon{width:64px;height:64px;object-fit:cover;border-radius:14px;border:1px solid #5a7a9c;flex:0 0 64px}
 .community-card-main h3{font:12px/1.8 var(--pixel);margin:0 0 10px}
 .community-card-main p{font-size:21px;color:#a9bfd0;margin:0}
 .community-card-bottom{border-top:1px solid #164267}
 .discord-join{display:inline-block;background:#5865f2;border:2px solid #aeb8ff;color:white;padding:13px 15px;font:8px var(--pixel);white-space:nowrap;transition:.15s}
 .discord-join:hover{filter:brightness(1.2);transform:translateY(-2px);box-shadow:0 0 15px #5865f277}
 @media(max-width:760px){.community-wrap{grid-template-columns:1fr;gap:25px}.community-card{padding:0 15px}.community-card-top,.community-card-bottom{font-size:6px}.community-card-main h3{font-size:10px}.community-card-bottom{align-items:flex-start;flex-direction:column}.community-tags span{font-size:6px}}
+.community-card{border-radius:12px;box-shadow:none}.discord-join{border-radius:7px}

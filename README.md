@@ -16,3 +16,11 @@ Project licences remain in each source repository, not in this documentation rep
 - [ZynAyush's Hub](https://discord.gg/gQzXVPCEp8)
 
 - [FAQ](https://zynayush.github.io/docs/faq.html)
+
+## Project guides
+
+- [Carpet Fake Players](https://zynayush.github.io/docs/docs/carpet-fake-players.html)
+- [ZeroXFog](https://zynayush.github.io/docs/docs/zeroxfog.html)
+- [Netherite Stones & Ores](https://zynayush.github.io/docs/docs/netherite-stones-ores.html)
+- [Smooth Fonts 32x](https://zynayush.github.io/docs/docs/smooth-fonts-32x.html)
+
