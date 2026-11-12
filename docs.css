@@ -30,3 +30,12 @@
 .doc-actions a:hover{transform:translateY(-2px)}
 .doc-actions a{transition:transform .2s ease,background .2s ease}
 @media(prefers-reduced-motion:reduce){.doc-actions a{transition:none}}
+
+@media(min-width:1500px){
+ .doc-wrap{width:min(1280px,calc(100% - 80px))}
+ .doc-hero{padding:78px 0 54px}.doc-hero .lede{font-size:19px;line-height:1.7}
+ .doc-section p,.doc-section li,.faq-item p,.faq-item li{font-size:18px;line-height:1.7}
+ .doc-section h2{font-size:20px}.doc-tags span{font-size:12px}
+ .doc-actions a{font-size:13px;padding:14px 16px}.doc-table{font-size:17px}
+ .doc-note{font-size:17px}.faq-item summary{font-size:17px}
+}

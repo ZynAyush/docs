@@ -29,3 +29,10 @@
 .discord-server-icon{display:block;width:80px;height:80px;flex:0 0 80px;object-fit:cover;border-radius:18px;border:1px solid #5a7a9c;box-shadow:0 5px 16px #0004}
 .discord-join{font:650 11px/1.2 var(--pixel);border-radius:7px;padding:11px 14px}
 @media(max-width:760px){.community-card-main{gap:14px}.discord-server-icon{width:68px;height:68px;flex-basis:68px}.community-card-top,.community-card-bottom{font-size:9px}.community-tags span{font-size:9px}}
+
+.comments-heading .eyebrow{margin-bottom:12px}
+.about-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:24px}
+.about-grid article{padding:18px;border:1px solid #194b6d;border-radius:10px;background:linear-gradient(145deg,#081c32,#041020)}
+.about-grid h3{font:750 15px/1.35 var(--body);color:#eef8ff;margin:0 0 10px}
+.about-grid p{font:400 15px/1.6 var(--body);color:#b6c9d9;margin:0}
+@media(max-width:760px){.about-grid{grid-template-columns:1fr}}

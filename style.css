@@ -81,3 +81,82 @@ h3{font:700 18px/1.3 var(--pixel);letter-spacing:-.025em}
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:28px;padding-top:42px}.hero-art{max-width:600px;width:100%;margin:0 auto}.pixel-ocean{height:275px}.project-grid{grid-template-columns:1fr}.project-card{grid-template-columns:36% 1fr}.site-header{padding:0 18px;gap:10px}.site-header nav{gap:10px;flex-wrap:wrap;justify-content:flex-end}.logo{font-size:12px}.hero-meta{margin-top:26px}}
 @media(max-width:430px){.project-card{grid-template-columns:1fr}.project-visual{min-height:170px;border-right:0;border-bottom:1px solid #16517c}.card-links{font-size:10px}.art-top,.art-bottom{font-size:9px}.idea-cloud{left:49%;top:10%}.map-marker{left:57%;top:57%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+/* Map-first hero and comfortable reading scale */
+body{font-size:18px;line-height:1.65}
+.wrap{width:min(1320px,calc(100% - 56px))}
+.site-header{height:auto;min-height:78px;padding:12px max(28px,calc((100% - 1320px)/2));gap:22px}
+nav{font:650 13px/1.35 var(--body);gap:20px;flex-wrap:wrap}
+.hero{grid-template-columns:minmax(310px,.82fr) minmax(420px,1.18fr);gap:46px;min-height:0;padding-top:54px;padding-bottom:58px}
+.hero-desc{font:400 18px/1.65 var(--body)}
+.hero-meta{font:650 11px/1.5 var(--body)}
+.eyebrow{font:700 11px/1.4 var(--body);letter-spacing:.08em}
+.pixel-btn{font:650 13px/1.3 var(--body);padding:14px 18px}
+.art-frame{border:1px solid #1b4b6c;border-radius:14px;overflow:hidden}
+.art-top,.art-bottom{font:650 11px/1.4 var(--body)}
+.pixel-ocean.minecraft-map{height:auto;min-height:340px;aspect-ratio:1.13;overflow:hidden;background:#081b2c;isolation:isolate}
+.map-texture{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;image-rendering:pixelated;display:block;z-index:0}
+.minecraft-map:after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(180deg,rgba(2,8,24,.04),rgba(2,8,24,.14))}
+.map-marker{position:absolute;left:54%;top:57%;z-index:5;display:flex;flex-direction:column;align-items:center;gap:8px;transform:translate(-50%,-50%)}
+.marker-label{font:750 13px/1.2 var(--body);color:#effaff;background:#04172b;border:1px solid #78d9ff;border-radius:7px;padding:7px 11px;white-space:nowrap;box-shadow:0 4px 12px #001a2b88}
+.marker-dot{width:12px;height:12px;border-radius:50%;background:#5ce0ff;border:2px solid #e4fbff;box-shadow:0 0 0 5px #52d8ff36,0 0 17px #52d8ff;animation:markerPulse 2.4s ease-in-out infinite}
+.idea-cloud{position:absolute;left:60%;top:12%;z-index:6;min-width:92px;padding:11px 17px;border-radius:23px;background:#f3f7ff;color:#10243a;text-align:center;box-shadow:0 5px 14px #001a2c66;transform:rotate(-2deg);animation:cloudFloat 5s ease-in-out infinite}
+.idea-cloud:before,.idea-cloud:after{content:"";position:absolute;border-radius:50%;background:#f3f7ff}
+.idea-cloud:before{width:11px;height:11px;left:20px;bottom:-7px}.idea-cloud:after{width:6px;height:6px;left:12px;bottom:-15px}
+.idea-cloud span{font:750 13px/1.15 var(--body)}
+.map-compass{position:absolute;right:16px;top:14px;z-index:4;width:28px;height:28px;border:1px solid #ffffff66;border-radius:50%;display:grid;place-items:center;color:#fff;background:#031a2caa;font:700 11px var(--body)}
+.steve-render{position:absolute;left:50%;top:50%;width:94px;height:150px;object-fit:contain;transform:translate(-50%,-43%);image-rendering:pixelated;filter:drop-shadow(0 8px 9px #0008)}
+.fog-visual{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 50%,#163952,#07192b 72%)}
+.zeroxfog-art{display:block;max-width:116px;max-height:116px;width:44%;height:44%;object-fit:contain;border-radius:15px;filter:drop-shadow(0 8px 13px #0007)}
+.project-visual{min-height:220px}
+.project-info h3{font:750 15px/1.4 var(--body)}
+.project-info p{font:400 16px/1.6 var(--body)}
+.tags span,.card-links{font:650 11px/1.4 var(--body)}
+.netherite-block-image{width:104px;height:104px;max-width:78%;object-fit:contain}
+.community-card-main p,.community-copy>p:not(.eyebrow){font:400 16px/1.65 var(--body)}
+.community-card-main h3{font:750 18px/1.3 var(--body)}
+.comments-section{padding-top:48px;padding-bottom:78px}
+.comments-heading{display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:start;margin-bottom:22px}
+.comments-heading h2{font:800 clamp(25px,3vw,38px)/1.15 var(--body);letter-spacing:-.04em}
+.comments-tools p{margin:0 0 10px;color:#b7c8d9;font:400 16px/1.6 var(--body)}
+.comment-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.comment-emojis{font-size:19px;letter-spacing:4px}
+.gif-link{display:inline-flex;align-items:center;padding:9px 12px;border:1px solid #347497;border-radius:8px;color:#92ddff;font:650 12px/1.2 var(--body);transition:background .2s,border-color .2s}
+.gif-link:hover{background:#0b2b45;border-color:#72d8ff}
+.comments-tools small{display:block;margin-top:9px;color:#89a6bd;font:400 13px/1.5 var(--body)}
+.discussion-shell{padding:20px;border:1px solid #194b6d;border-radius:13px;background:rgba(4,17,32,.88);min-height:180px}
+.giscus{width:100%;min-height:110px}.giscus-frame{width:100%}
+.comments-fallback{margin:12px 2px 0;color:#8ca9be;font:400 13px/1.5 var(--body)}
+.comments-fallback a{color:#75d7ff}
+@media(min-width:1500px){
+ body{font-size:21px}.wrap{width:min(1480px,calc(100% - 76px))}
+ .site-header{padding-left:max(38px,calc((100% - 1480px)/2));padding-right:max(38px,calc((100% - 1480px)/2))}
+ nav{font-size:14px;gap:23px}h1{font-size:clamp(54px,4vw,68px)}
+ .hero{grid-template-columns:minmax(360px,.76fr) minmax(560px,1.24fr);gap:54px;padding-top:62px;padding-bottom:66px}
+ .hero-desc{font-size:20px}.pixel-ocean.minecraft-map{min-height:390px}
+ .section{padding-top:78px;padding-bottom:78px}
+ .project-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+ .project-card{display:flex;flex-direction:column;min-width:0}
+ .project-visual{min-height:148px;height:148px;border-right:0;border-bottom:1px solid #164267}
+ .project-info{padding:19px 18px 22px;display:flex;flex-direction:column;flex:1}
+ .project-info h3{font-size:17px}.project-info p{font-size:17px;min-height:78px}
+ .card-links{gap:11px;font-size:12px}.tags span{font-size:12px}
+ .netherite-block-image{width:94px;height:94px}.steve-render{height:130px;width:82px}
+ .comments-tools p{font-size:18px}.doc-wrap{width:min(1280px,calc(100% - 80px))}
+}
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;gap:34px}.hero-art{width:min(100%,650px);margin:0 auto}
+ .pixel-ocean.minecraft-map{aspect-ratio:1.2;min-height:300px}.comments-heading{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:700px){
+ .wrap{width:calc(100% - 30px)}.site-header{padding:14px 15px;align-items:flex-start;flex-direction:column}
+ nav{justify-content:flex-start;gap:14px;font-size:12px}.hero{padding-top:40px;padding-bottom:42px}
+ .pixel-ocean.minecraft-map{aspect-ratio:1.04;min-height:280px}.project-info p{font-size:15px}
+ .comments-section{padding-top:38px;padding-bottom:52px}.discussion-shell{padding:12px}
+}
+@media(max-width:430px){
+ .pixel-ocean.minecraft-map{aspect-ratio:1;min-height:260px}
+ .map-marker{left:53%;top:58%}.idea-cloud{left:58%;top:9%}
+ .steve-render{width:82px;height:126px}
+}
+@media(prefers-reduced-motion:reduce){.marker-dot,.idea-cloud,.project-card{animation:none!important;transition:none!important}}
