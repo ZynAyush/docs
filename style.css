@@ -235,3 +235,6 @@ nav{font-size:13px;font-weight:700}
 @media(prefers-reduced-motion:reduce){
  .discussion-button{transition:none}
 }
+
+.project-icon-fallback{display:grid;place-items:center;width:88px;height:88px;border:1px solid #3c7193;border-radius:15px;background:linear-gradient(145deg,#123b57,#07182a);color:#cceeff;font-size:17px;font-weight:850;letter-spacing:.04em;box-shadow:0 8px 20px #0006}
+@media(min-width:1500px){.project-icon-fallback{width:86px;height:86px}}
