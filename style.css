@@ -798,3 +798,41 @@ html[data-theme="light"] .site-sidebar-backdrop{background:rgba(26,48,64,.20)!im
 @media(prefers-reduced-motion:reduce){
  .hero .eyebrow,.hero h1,.hero-desc,.hero .pixel-btn{animation:none!important}
 }
+
+/* Restore the ZynAyush marker to the original open-water position. */
+.pixel-ocean.minecraft-map .map-marker{
+  top:57%!important;
+  left:54%!important;
+}
+
+.idea-cloud{display:none!important}
+
+/* Minimal menu control: no enclosing border or button box. */
+.site-header>.sidebar-open{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  padding:7px 8px!important;
+  color:var(--white)!important;
+}
+.site-header>.sidebar-open:hover,
+.site-header>.sidebar-open:focus-visible{
+  border:0!important;
+  outline:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+  color:var(--cyan)!important;
+  transform:translateY(-1px)!important;
+}
+html[data-theme="light"] .site-header>.sidebar-open{
+  color:#29485e!important;
+  border:0!important;
+  box-shadow:none!important;
+  background:transparent!important;
+}
+html[data-theme="light"] .site-header>.sidebar-open:hover,
+html[data-theme="light"] .site-header>.sidebar-open:focus-visible{
+  color:#087da9!important;
+  background:transparent!important;
+}

@@ -61,6 +61,11 @@
   };
 
   if (openButton) {
+    openButton.addEventListener("mouseenter", () => {
+      lastInputWasKeyboard = false;
+      setSidebar(true, false, false);
+    });
+    openButton.addEventListener("mouseleave", () => scheduleClose());
     openButton.addEventListener("pointerenter", event => {
       if (event.pointerType !== "touch") {
         lastInputWasKeyboard = false;
@@ -95,6 +100,8 @@
     if (sidebar && sidebar.contains(event.target) && !sidebar.contains(event.relatedTarget)) scheduleClose();
   });
   if (sidebar) {
+    sidebar.addEventListener("mouseenter", cancelClose);
+    sidebar.addEventListener("mouseleave", scheduleClose);
     sidebar.addEventListener("pointerenter", cancelClose);
     sidebar.addEventListener("pointerleave", scheduleClose);
     sidebar.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setSidebar(false, false, false)));
@@ -131,3 +138,18 @@
     });
   }
 })();
+/* Whole project card opens its documentation; nested source/download links keep their own actions. */
+document.querySelectorAll(".project-card[data-doc-url]").forEach(card => {
+  card.style.cursor = "pointer";
+  card.addEventListener("click", event => {
+    if (event.target.closest("a,button")) return;
+    window.location.href = card.dataset.docUrl;
+  });
+  card.addEventListener("keydown", event => {
+    if (event.target !== card) return;
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      window.location.href = card.dataset.docUrl;
+    }
+  });
+});
