@@ -488,3 +488,51 @@ html[data-theme="light"] .sidebar-divider{background:#c1d2df}
 html[data-theme="light"] .sidebar-section-label{color:#58758a}
 @media(max-width:700px){.sidebar-open{top:84px;left:10px;padding:9px 10px}.disclaimer-card{padding:21px}}
 @media(prefers-reduced-motion:reduce){.site-sidebar{transition:none}}
+
+/* Map identity: the label rises directly from the glowing location dot. */
+.pixel-ocean.minecraft-map>.map-marker{
+  top:18%!important;left:53%!important;gap:4px!important;
+  flex-direction:column!important;align-items:center!important;
+}
+.pixel-ocean.minecraft-map>.map-marker .marker-label{
+  position:relative;z-index:2;transform-origin:center bottom;
+  animation:markerNameRise .72s cubic-bezier(.2,.8,.2,1) both;
+}
+.pixel-ocean.minecraft-map>.map-marker .marker-label:after{
+  content:"";position:absolute;left:50%;bottom:-7px;width:2px;height:7px;
+  background:linear-gradient(#78d9ff,#5ce0ff);transform:translateX(-50%);
+}
+.pixel-ocean.minecraft-map>.map-marker .marker-dot{position:relative;z-index:3;margin-top:1px}
+@keyframes markerNameRise{
+  0%{opacity:0;transform:translateY(15px) scale(.92)}
+  75%{opacity:1;transform:translateY(-2px) scale(1.015)}
+  100%{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* Put the menu trigger immediately to the left of the skin-head logo. */
+.site-header{display:flex!important;align-items:center!important;gap:13px!important}
+.site-header>.sidebar-open{
+  position:static!important;left:auto!important;top:auto!important;z-index:20;
+  flex:0 0 auto;padding:9px 10px!important;margin:0!important;
+  border-radius:7px!important;box-shadow:none!important;backdrop-filter:none!important;
+}
+.site-header>.logo{flex:0 0 auto}
+.site-header>nav{margin-left:auto}
+@media(max-width:900px){
+  .site-header{flex-wrap:wrap!important;gap:10px!important}
+  .site-header>nav{order:3;width:100%;margin-left:0;flex-wrap:wrap}
+  .site-header>.logo{margin-right:auto}
+}
+@media(max-width:430px){
+  .site-header{padding-left:14px!important;padding-right:14px!important}
+  .site-header>.sidebar-open{padding:8px 9px!important;font-size:10px!important}
+}
+
+/* Remove visible scrollbar rails while keeping wheel, touch, keyboard and trackpad scrolling. */
+html,body,*{
+  scrollbar-width:none!important;
+  -ms-overflow-style:none!important;
+}
+html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{
+  display:none!important;width:0!important;height:0!important;background:transparent!important;
+}
