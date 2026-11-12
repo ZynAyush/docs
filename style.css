@@ -752,3 +752,49 @@ html.motion-ready .motion-reveal.is-visible{opacity:1;transform:translateY(0)}
   *,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
   html.motion-ready .motion-reveal{opacity:1!important;transform:none!important}
 }
+
+/* Light theme correction: project cards use the same bright surface as other light-mode panels. */
+html[data-theme="light"] .project-grid>.project-card,
+html[data-theme="light"] .project-card{
+  background:#ffffff!important;background-image:none!important;
+  border:1px solid #c8d8e2!important;
+  box-shadow:0 9px 24px rgba(25,61,83,.08)!important;
+}
+html[data-theme="light"] .project-card .project-info{background:#ffffff!important;color:#172f43!important}
+html[data-theme="light"] .project-card .project-info h3{color:#172f43!important}
+html[data-theme="light"] .project-card .project-info p{color:#526c80!important}
+html[data-theme="light"] .project-card .tags span{color:#365c74!important;border-color:#b5cbd9!important}
+html[data-theme="light"] .project-card .card-links a{color:#087da9!important}
+html[data-theme="light"] .project-card:hover{box-shadow:0 15px 32px rgba(25,61,83,.13)!important}
+
+/* CSS-level hover/focus fallback: sidebar opens even if pointer-event JS is delayed. */
+body:has(.site-header>.sidebar-open:hover) .site-sidebar,
+body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar,
+body:has(.site-sidebar:hover) .site-sidebar,
+body:has(.site-sidebar:focus-within) .site-sidebar{
+  transform:translateX(0)!important;visibility:visible!important;
+}
+body:has(.site-header>.sidebar-open:hover) .site-sidebar-backdrop,
+body:has(.site-header>.sidebar-open:focus-visible) .site-sidebar-backdrop,
+body:has(.site-sidebar:hover) .site-sidebar-backdrop,
+body:has(.site-sidebar:focus-within) .site-sidebar-backdrop{
+  display:block!important;visibility:visible!important;opacity:1!important;
+}
+
+/* More visible, lightweight entrance motion. */
+html.motion-ready .project-card{animation:none!important}
+html.motion-ready .hero .eyebrow,
+html.motion-ready .hero h1,
+html.motion-ready .hero-desc,
+html.motion-ready .hero-meta,
+html.motion-ready .hero .pixel-btn,
+html.motion-ready .art-frame{will-change:opacity,transform}
+.hero .eyebrow{animation:heroTextIn .48s .03s both}
+.hero h1{animation:heroTextIn .62s .09s both}
+.hero-desc{animation:heroTextIn .62s .17s both}
+.hero .pixel-btn{animation:heroTextIn .55s .24s both}
+@keyframes heroTextIn{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+html[data-theme="light"] .site-sidebar-backdrop{background:rgba(26,48,64,.20)!important}
+@media(prefers-reduced-motion:reduce){
+ .hero .eyebrow,.hero h1,.hero-desc,.hero .pixel-btn{animation:none!important}
+}

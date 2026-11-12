@@ -9,6 +9,7 @@
   const closeButton = document.querySelector("[data-sidebar-close]");
   const root = document.documentElement;
   let closeTimer = 0;
+  let lastInputWasKeyboard = false;
 
   let accepted = false;
   try { accepted = localStorage.getItem(disclaimerKey) === "yes"; } catch (_) {}
@@ -52,28 +53,47 @@
     closeTimer = window.setTimeout(() => {
       const pointerInside = (sidebar && sidebar.matches(":hover")) ||
         (openButton && openButton.matches(":hover"));
-      const focusInside = (sidebar && sidebar.contains(document.activeElement)) ||
-        (openButton && openButton === document.activeElement);
-      if (!pointerInside && !focusInside) setSidebar(false, false, false);
+      const keyboardFocusInside = lastInputWasKeyboard &&
+        ((sidebar && sidebar.contains(document.activeElement)) ||
+         (openButton && openButton === document.activeElement));
+      if (!pointerInside && !keyboardFocusInside) setSidebar(false, false, false);
     }, 240);
   };
 
   if (openButton) {
     openButton.addEventListener("pointerenter", event => {
-      if (event.pointerType !== "touch") setSidebar(true, false, false);
+      if (event.pointerType !== "touch") {
+        lastInputWasKeyboard = false;
+        setSidebar(true, false, false);
+      }
     });
     openButton.addEventListener("pointerleave", event => {
       if (event.pointerType !== "touch") scheduleClose();
     });
-    openButton.addEventListener("focus", () => setSidebar(true, false, false));
-    openButton.addEventListener("blur", () => window.setTimeout(() => {
-      if (!sidebar || !sidebar.contains(document.activeElement)) scheduleClose();
-    }, 0));
+    openButton.addEventListener("focus", () => {
+      if (lastInputWasKeyboard) setSidebar(true, false, false);
+    });
     openButton.addEventListener("click", () => {
-      // Click remains the touch/mobile control; on desktop it pins/toggles the panel.
-      setSidebar(!sidebar.classList.contains("is-open"), false, false);
+      const touchMode = window.matchMedia && window.matchMedia("(hover: none)").matches;
+      if (touchMode) setSidebar(!sidebar.classList.contains("is-open"), false, false);
+      else setSidebar(true, false, false);
     });
   }
+  document.addEventListener("pointerdown", () => { lastInputWasKeyboard = false; }, true);
+  document.addEventListener("keydown", event => {
+    if (event.key === "Tab" || event.key.startsWith("Arrow")) lastInputWasKeyboard = true;
+  }, true);
+  document.addEventListener("pointerover", event => {
+    if (openButton && openButton.contains(event.target) && event.pointerType !== "touch") {
+      lastInputWasKeyboard = false;
+      setSidebar(true, false, false);
+    }
+    if (sidebar && sidebar.contains(event.target)) cancelClose();
+  });
+  document.addEventListener("pointerout", event => {
+    if (openButton && openButton.contains(event.target) && !openButton.contains(event.relatedTarget)) scheduleClose();
+    if (sidebar && sidebar.contains(event.target) && !sidebar.contains(event.relatedTarget)) scheduleClose();
+  });
   if (sidebar) {
     sidebar.addEventListener("pointerenter", cancelClose);
     sidebar.addEventListener("pointerleave", scheduleClose);
@@ -90,7 +110,7 @@
 
   // Subtle scroll-in motion for sections and documentation, with graceful fallback.
   const revealTargets = document.querySelectorAll(
-    ".section-head, .project-card, .status-inner, .community-wrap, .doc-hero, .doc-section, .update-card, .updates-note, .comments-heading, .comments-preview, .discussion-fallback-card"
+    ".hero .eyebrow, .hero h1, .hero-desc, .hero-meta, .hero .pixel-btn, .art-frame, .section-head, .project-card, .status-inner, .community-wrap, .doc-hero, .doc-section, .update-card, .updates-note, .comments-heading, .comments-preview, .discussion-fallback-card"
   );
   if (revealTargets.length && "IntersectionObserver" in window) {
     root.classList.add("motion-ready");
