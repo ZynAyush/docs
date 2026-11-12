@@ -536,3 +536,37 @@ html,body,*{
 html::-webkit-scrollbar,body::-webkit-scrollbar,*::-webkit-scrollbar{
   display:none!important;width:0!important;height:0!important;background:transparent!important;
 }
+
+/* Final marker rendering correction: keep the identity above the glowing pin and above the map texture. */
+.pixel-ocean.minecraft-map .map-marker{
+  position:absolute!important;left:53%!important;top:17%!important;
+  z-index:40!important;display:flex!important;flex-direction:column!important;
+  align-items:center!important;justify-content:flex-start!important;gap:4px!important;
+  width:max-content!important;height:auto!important;visibility:visible!important;
+  opacity:1!important;transform:translate(-50%,-50%)!important;pointer-events:none!important;
+}
+.pixel-ocean.minecraft-map .map-marker .marker-label{
+  display:block!important;position:relative!important;z-index:42!important;
+  visibility:visible!important;opacity:1!important;
+  color:#effaff!important;background:#04172b!important;
+  border:1px solid #78d9ff!important;border-radius:7px!important;
+  padding:7px 11px!important;font:750 13px/1.2 var(--body)!important;
+  white-space:nowrap!important;box-shadow:0 4px 12px #001a2b88!important;
+  animation:markerNameRise .8s cubic-bezier(.2,.8,.2,1) both!important;
+}
+.pixel-ocean.minecraft-map .map-marker .marker-label:after{
+  content:""!important;position:absolute!important;left:50%!important;
+  bottom:-9px!important;width:2px!important;height:9px!important;
+  background:#5ce0ff!important;transform:translateX(-50%)!important;
+}
+.pixel-ocean.minecraft-map .map-marker .marker-dot{
+  display:block!important;position:relative!important;z-index:43!important;
+  width:14px!important;height:14px!important;min-width:14px!important;
+  border-radius:50%!important;background:#5ce0ff!important;
+  border:2px solid #e4fbff!important;
+  box-shadow:0 0 0 5px #52d8ff36,0 0 17px #52d8ff!important;
+}
+.pixel-ocean.minecraft-map .idea-cloud{z-index:41!important;top:12%!important}
+@media(max-width:430px){
+ .pixel-ocean.minecraft-map .map-marker{left:53%!important;top:18%!important}
+}
