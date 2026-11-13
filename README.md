@@ -1,6 +1,6 @@
 # ZynAyush — Project Archive
 
-The site brings my Minecraft projects, guides, downloads and updates together in one place. It is a static website hosted with GitHub Pages.
+This site brings my Minecraft projects, guides, downloads and updates together in one place. It is a static website hosted with GitHub Pages.
 
 ## Pages
 

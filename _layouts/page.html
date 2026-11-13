@@ -1,26 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} — ZynAyush</title>
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>{{ page.title }} — ZynAyush</title>
+<link href="{{ '/style.css' | relative_url }}" rel="stylesheet"/>
 </head>
 <body>
-  <header class="wrap top">
-    <a class="brand" href="{{ '/home/' | relative_url }}">ZYN<span>AYUSH</span></a>
-    <nav aria-label="Main navigation">
-      <a href="{{ '/docs/' | relative_url }}">Documentation</a>
-      <a href="{{ '/updates/' | relative_url }}">Updates</a>
-      <a href="https://github.com/ZynAyush">GitHub</a>
-    </nav>
-  </header>
-  <main class="wrap doc-content">
-    <p class="eyebrow">PROJECT DOCUMENTATION</p>
-    <h1>{{ page.title }}</h1>
+<header class="wrap top">
+<a class="brand" href="{{ '/home/' | relative_url }}">ZYN<span>AYUSH</span></a>
+<nav aria-label="Main navigation">
+<a href="{{ '/docs/' | relative_url }}">Documentation</a>
+<a href="{{ '/updates/' | relative_url }}">Updates</a>
+<a href="https://github.com/ZynAyush">GitHub</a>
+</nav>
+</header>
+<main class="wrap doc-content">
+<p class="eyebrow">PROJECT DOCUMENTATION</p>
+<h1>{{ page.title }}</h1>
     {{ content }}
     <p class="back"><a href="{{ '/docs/' | relative_url }}">← All documentation</a></p>
-  </main>
-  <footer class="wrap footer"><span>© ZynAyush</span><span>Independent Minecraft projects.</span></footer>
+</main>
+<footer class="wrap footer"><span>© ZynAyush</span><span>Independent Minecraft projects.</span></footer>
 </body>
 </html>

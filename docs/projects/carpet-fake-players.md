@@ -14,13 +14,13 @@ Carpet Fake Players adds server-side fake players that you can spawn and control
 
 - Spawn a fake player with a name you choose, or use the configured default name prefix.
 - Players with the required permissions can own and manage their own bots.
-- The shipped configuration sets both a server-wide live-bot cap and a per-player cap. The current 26.3 defaults are 50 bots total and 3 per player. You can set the per-player cap from 1 to 5.
-- Command permission and ownership are checked separately. A command permission does not automatically let a player control someone else's bot.
-- Operators and admins can manage bots and create administrator-managed original bots. Access to original bots can be granted or revoked.
+- The default configuration sets a total live-bot limit for the server and a limit for each player. The current 26.3 defaults are 50 bots total and 3 per player. You can set the per-player limit from 1 to 5.
+- Command permission and ownership are checked separately. Having command permission does not automatically let a player control someone else's bot.
+- Operators and admins can manage bots and create administrator-managed original bots. They can grant or revoke access to original bots.
 
 ### 2. Player-like server physics
 
-For supported behavior, the plugin runs server-side player and entity ticking rather than treating every bot as a static display. You can configure gravity, collision, velocity, fall damage and knockback handling. Collision behavior can also be controlled with the plugin's collision setting and scoreboard-team rule. Keep physics enabled for normal movement and interaction. Disable it only for bots that are meant to be non-physical.
+The plugin supports normal behavior by using server-side player and entity ticking, rather than treating every bot as a static display. You can configure gravity, collision, velocity, fall damage and knockback handling. You can also control collision behavior with the plugin's collision setting and scoreboard-team rule. Keep physics enabled for normal movement and interaction. Disable it only for bots that should be non-physical.
 
 ### 3. Combat and repeated actions
 
@@ -30,30 +30,30 @@ For supported behavior, the plugin runs server-side player and entity ticking ra
 
 `/bot use` triggers an interaction with the bot's held item. It supports single, continuous and interval modes, as well as a stop action. Configuration options control reach, whether a successful use swings the bot's hand, whether held block items and non-block items can be used, and whether mining can be used as a fallback when a right-click does not consume the target interaction.
 
-The plugin can synchronize the bot's visible hand and equipment for viewers. Hotbar and offhand selection are controlled independently. A bot can drop its selected item, a stack or its inventory.
+The plugin can sync the bot's visible hand and equipment for viewers. Hotbar and offhand selection are controlled separately. A bot can drop its selected item, a stack or its inventory.
 
 ### 5. Inventory, death and persistence
 
-- You can configure what happens to inventory and experience on death.
+- You can choose what happens to inventory and experience on death.
 - The shipped 26.3 configuration keeps inventory and level on death and disables XP-orb drops by default.
 - Persistent bots can be autosaved at regular intervals.
 - Rejoin snapshots can be saved when a bot quits, is kicked or dies.
 - Snapshots can persist across server restarts. An owner or operator can restore a saved bot with `/bot rejoin`.
-- When the relevant setting is enabled, a killed bot's inventory can be preserved for a later spawn with the same name.
+- When this setting is enabled, a killed bot's inventory can be saved for a later spawn with the same name.
 
 Persistence settings are separate: spawn defaults, death behavior, kill behavior, autosave and rejoin snapshots each have their own settings. Review the generated configuration before changing them.
 
 ### 6. Skin and sneaking
 
-A bot can use a player skin by name, and its sneaking can be turned on or off. Configuration can force the visible sneaking pose and keep it fixed until the owner turns it off.
+Bots can use a player skin by name, and you can turn their sneaking on or off. Configuration can force the visible sneaking pose and keep it fixed until the owner turns it off.
 
 ### 7. Item pickup
 
-Pickup can use the normal server-player physics path or the plugin's fallback bridge. The fallback settings control pickup radius, check interval, the maximum number of item entities processed per check, pickup-delay handling, item-owner restrictions and preferred hotbar placement. Defaults respect normal pickup delays and ownership restrictions rather than instantly collecting every item.
+Pickup can use the normal server-player physics path or the plugin's fallback bridge. The fallback settings control pickup radius, check interval, the maximum number of item entities processed per check, pickup-delay handling, item-owner restrictions and preferred hotbar placement. By default, normal pickup delays and ownership restrictions apply, so items are not collected instantly.
 
 ### 8. Messages and integrations
 
-- Join and leave messages can announce when fake players arrive or depart.
+- Join and leave messages can announce when fake players arrive or leave.
 - Advancement announcements can use separate formatting and can be limited to advancements vanilla would normally announce.
 - AuthMe compatibility can be configured.
 - LuckPerms support can hide or override inherited group prefixes in bot display names and list names.
@@ -85,7 +85,7 @@ The main command is `/bot`.
 | `/bot original revoke <player>` | Revoke original-bot management access. |
 | `/bot reload` | Reload configuration. |
 
-If a player owns exactly one active bot, some control commands can omit its name. If they own multiple bots, specify which one to control.
+If a player has exactly one active bot, some control commands can leave out its name. If they have more than one bot, specify which one to control.
 
 ## Permissions
 
@@ -133,7 +133,7 @@ File: `plugins/Carpet Fake Players/config.yml`. The current 26.3 source includes
 | `collision` | Player-style collision and collision team or rule. |
 | `messages` | Prefix and success, error and warning colors. |
 
-Most settings have comments in the shipped YAML. Some require a server restart; do not assume a reload applies restart-only settings.
+Most settings have comments in the shipped YAML. Some require a server restart, so do not assume that reloading applies settings that need a restart.
 
 ## Installation and version matching
 
@@ -141,8 +141,8 @@ Most settings have comments in the shipped YAML. Some require a server restart; 
 2. Download the plugin release for the server's exact Minecraft version.
 3. Put the JAR in `plugins/`.
 4. Start the server and review `plugins/Carpet Fake Players/config.yml`.
-5. Assign players only the permissions they need.
-6. Test spawning, ownership and persistence on a staging server before enabling the plugin on a busy production server.
+5. Give players only the permissions they need.
+6. Test spawning, ownership and persistence on a staging server before using the plugin on a busy production server.
 
 Paper and Purpur are the listed server platforms. The repository does not claim standalone Spigot/Bukkit or Folia support. See the [installation guide](../guides/installation.md) and [source README](https://github.com/ZynAyush/carpet-fake-players/blob/main/README.md).
 

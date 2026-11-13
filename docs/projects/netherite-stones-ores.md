@@ -4,27 +4,27 @@
 **Latest source-tracked release:** 1.1, published 1 November 2026  
 **Links:** [Modrinth](https://modrinth.com/resourcepack/netherite-ores) · [Source and release provenance](https://github.com/ZynAyush/Netherite-Stones-Ores)
 
-Netherite Stones & Ores gives supported stone and ore blocks a Netherite Block-style look. It is a visual pack for players who want the affected blocks to share one netherite-themed appearance.
+Netherite Stones & Ores gives supported stone and ore blocks the look of Netherite Block. This visual pack is for players who want the affected blocks to share a netherite-themed appearance.
 
 ## Features
 
-- **Stone-family textures:** Block textures for stone, granite, diorite, andesite, tuff, gravel, deepslate and cobbled deepslate.
-- **Ore textures:** Coal, copper, diamond, emerald, gold, iron, lapis and redstone ores, including their deepslate variants where provided.
-- **Bedrock texture:** A bedrock texture replacement is included.
+- **Stone-family textures:** Includes block textures for stone, granite, diorite, andesite, tuff, gravel, deepslate and cobbled deepslate.
+- **Ore textures:** Includes coal, copper, diamond, emerald, gold, iron, lapis and redstone ores, plus their deepslate variants where provided.
+- **Bedrock texture:** Includes a replacement bedrock texture.
 - **Blockstate mappings:** Blockstate JSON for stone, deepslate and bedrock assigns the replacement assets to the intended block models.
-- **Uniform theme:** All listed replacements use the same Netherite Block visual theme, so the affected stone and ore set stays visually consistent.
+- **Uniform theme:** All listed replacements use the same Netherite Block visual theme, keeping the affected stone and ore set visually consistent.
 
 ## What it does not do
 
-This is a client-side resource pack. It does not turn blocks into Netherite Block items, change their drops, alter mining speed, change hardness, modify world generation or change the server's block data. Only the rendered appearance changes.
+This is a client-side resource pack. It does not turn blocks into Netherite Block items, change their drops, alter mining speed or hardness, modify world generation or change the server's block data. Only the rendered appearance changes.
 
 ## Installation
 
 1. Download the ZIP from [Modrinth](https://modrinth.com/resourcepack/netherite-ores/versions).
-2. Open Minecraft Java Edition's Resource Packs menu.
-3. Select **Open Pack Folder** and place the ZIP inside.
-4. Return to Minecraft and enable the pack.
-5. Place it above other packs that change the same block textures or blockstates.
+2. Open the Resource Packs menu in Minecraft Java Edition.
+3. Select **Open Pack Folder** and put the ZIP inside.
+4. Go back to Minecraft and enable the pack.
+5. Move it above other packs that change the same block textures or blockstates.
 
 ## Compatibility and release notes
 
