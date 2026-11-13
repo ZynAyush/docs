@@ -1630,3 +1630,37 @@ html[data-theme="light"] .discussion-card-clean{
 }
 html[data-theme="light"] .status-items b,
 html[data-theme="light"] .comment-board h3{color:#6f7f45!important}
+
+/* Mobile header alignment: keep menu, brand, GitHub and theme control on one balanced row. */
+@media (max-width:600px){
+  .site-header{
+    display:grid!important;
+    grid-template-columns:auto minmax(0,1fr) auto!important;
+    grid-template-areas:"menu brand actions"!important;
+    align-items:center!important;
+    justify-content:initial!important;
+    column-gap:clamp(7px,2.2vw,12px)!important;
+    row-gap:0!important;
+    min-height:68px!important;
+    height:auto!important;
+    padding:10px 14px!important;
+  }
+  .site-header>.sidebar-open{grid-area:menu!important;min-width:0!important;width:auto!important;min-height:42px!important;padding:6px 4px!important;font-size:10px!important;gap:5px!important}
+  .site-header>.logo{grid-area:brand!important;min-width:0!important;justify-self:start!important;gap:8px!important;font-size:12px!important;white-space:nowrap!important}
+  .site-header .logo-skin-head{width:36px!important;height:36px!important;flex:0 0 36px!important}
+  .site-header .logo small{font-size:8px!important;letter-spacing:.08em!important;margin-top:3px!important}
+  .site-header>nav{grid-area:actions!important;width:auto!important;min-width:0!important;justify-self:end!important;display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:8px!important;margin:0!important;padding:0!important}
+  .site-header>nav>a:not(.nav-github){display:none!important}
+  .site-header>nav .nav-github{padding:8px 10px!important;font-size:9px!important;white-space:nowrap!important;min-height:38px!important}
+  .site-header>nav .theme-toggle{flex:0 0 36px!important;width:36px!important;height:36px!important;min-width:36px!important;min-height:36px!important}
+}
+@media(max-width:380px){
+  .site-header{padding-inline:9px!important;column-gap:6px!important}
+  .site-header>.sidebar-open{font-size:9px!important}
+  .site-header>.logo{font-size:11px!important;gap:6px!important}
+  .site-header .logo-skin-head{width:32px!important;height:32px!important;flex-basis:32px!important}
+  .site-header .logo small{font-size:7px!important;letter-spacing:.06em!important}
+  .site-header>nav{gap:5px!important}
+  .site-header>nav .nav-github{padding:7px 8px!important;font-size:8px!important}
+  .site-header>nav .theme-toggle{flex-basis:33px!important;width:33px!important;height:33px!important;min-width:33px!important;min-height:33px!important}
+}
