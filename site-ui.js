@@ -118,7 +118,7 @@
   if (closeButton) closeButton.addEventListener("click", () => setSidebar(false, false, true));
   if (backdrop) backdrop.addEventListener("click", () => setSidebar(false, false, false));
 
-  // Mobile drawer gestures: swipe from the left edge to open, swipe left to close.
+  // Touch drawer gestures: swipe right from anywhere to open, swipe left to close.
   let touchStart = null;
   document.addEventListener("touchstart", event => {
     if (event.touches.length !== 1) { touchStart = null; return; }
@@ -130,11 +130,10 @@
     const touch = event.changedTouches[0];
     const deltaX = touch.clientX - touchStart.x;
     const deltaY = touch.clientY - touchStart.y;
-    const startX = touchStart.x;
     touchStart = null;
     if (Math.abs(deltaX) < 72 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
     const isOpen = sidebar && sidebar.classList.contains("is-open");
-    if (!isOpen && startX <= 44 && deltaX > 72) setSidebar(true, false, false);
+    if (!isOpen && deltaX > 72) setSidebar(true, false, false);
     else if (isOpen && deltaX < -72) setSidebar(false, false, false);
   }, { passive: true, capture: true });
   document.addEventListener("touchcancel", () => { touchStart = null; }, { passive: true, capture: true });
