@@ -1,27 +1,44 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>{{ page.title }} — ZynAyush</title>
-<link href="{{ '/style.css' | relative_url }}" rel="stylesheet"/>
+<link rel="stylesheet" href="{{ '/docs-shell.css?v=20261118-full-site' | relative_url }}"/>
 </head>
 <body>
-<header class="wrap top">
-<a class="brand" href="{{ '/home/' | relative_url }}">ZYN<span>AYUSH</span></a>
-<nav aria-label="Main navigation">
-<a href="{{ '/docs/' | relative_url }}">Documentation</a>
-<a href="{{ '/updates/' | relative_url }}">Updates</a>
-<a href="https://github.com/ZynAyush">GitHub</a>
-</nav>
+<div class="site-sidebar-backdrop" data-sidebar-backdrop hidden></div>
+<aside class="site-sidebar" id="site-sidebar" aria-label="Site navigation" aria-hidden="true">
+<div class="sidebar-head"><button class="sidebar-close" type="button" data-sidebar-close aria-label="Close navigation">×</button></div>
+</aside>
+<header class="site-header">
+<button class="sidebar-open" type="button" data-sidebar-open aria-controls="site-sidebar" aria-expanded="false">☰</button>
+<button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><span class="theme-toggle-icon">☾</span></button>
 </header>
-<main class="wrap doc-content">
-<p class="eyebrow">PROJECT DOCUMENTATION</p>
-<h1>{{ page.title }}</h1>
-    {{ content }}
-    <p class="back"><a href="{{ '/docs/' | relative_url }}">← All documentation</a></p>
+<div class="site-language-bar">
+<div class="site-language-inner">
+<span class="language-caption">LANGUAGE</span>
+<label class="visually-hidden" for="site-language-select">Translate this page</label>
+<select id="site-language-select" aria-label="Choose page language">
+<option value="">Translate this page…</option>
+<option value="hi">हिन्दी · Hindi</option><option value="bn">বাংলা · Bengali</option>
+<option value="ur">اردو · Urdu</option><option value="es">Español · Spanish</option>
+<option value="fr">Français · French</option><option value="de">Deutsch · German</option>
+<option value="pt">Português · Portuguese</option><option value="ja">日本語 · Japanese</option>
+<option value="ko">한국어 · Korean</option><option value="zh-CN">简体中文 · Chinese</option>
+<option value="ar">العربية · Arabic</option><option value="ru">Русский · Russian</option>
+</select>
+<button class="translate-page-button" data-translate-page type="button">TRANSLATE ↗</button>
+<small>Translation uses Google Translate, so the wording may differ from the original.</small>
+</div>
+</div>
+<main class="doc-wrap docs-markdown-page">
+<div class="doc-top"><a href="{{ '/docs/' | relative_url }}">← DOCUMENTATION</a><span class="eyebrow">PROJECT REFERENCE</span></div>
+{{ content }}
 </main>
-<footer class="wrap footer"><span>© ZynAyush</span><span>Independent Minecraft projects.</span></footer>
+<footer class="footer"><span>© ZynAyush</span><span>Independent Minecraft projects.</span></footer>
+<script src="{{ '/theme.js?v=20261118-full-site' | relative_url }}"></script>
+<script src="{{ '/site-ui.js?v=20261118-full-site' | relative_url }}"></script>
+<script src="{{ '/docs-shell.js?v=20261118-full-site' | relative_url }}"></script>
 </body>
 </html>
