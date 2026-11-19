@@ -366,15 +366,15 @@ document.querySelectorAll(".project-card[data-doc-url]").forEach(card => {
   const style = document.createElement("style");
   style.id = "site-search-styles";
   style.textContent = `
-    .site-search-trigger{display:inline-flex;align-items:center;gap:7px;margin:0 10px;padding:8px 10px;border:1px solid var(--line,rgba(150,170,190,.25));border-radius:7px;background:var(--panel2,rgba(20,30,45,.8));color:var(--muted,#9aa9ba);font:12px inherit;cursor:pointer;white-space:nowrap}
+    .site-search-trigger{display:inline-flex;align-items:center;gap:7px;margin:0 10px;padding:8px 10px;border:1px solid var(--line,rgba(150,170,190,.25));border-radius:7px;background:var(--panel2,rgba(20,30,45,.8));color:var(--muted,#9aa9ba);font:inherit;font-size:12px;cursor:pointer;white-space:nowrap}
     .site-search-trigger:hover,.site-search-trigger:focus-visible{border-color:var(--cyan,#55d8e8);color:var(--white,#fff);outline:none}
     .site-search-trigger>span:first-child{font-size:19px;line-height:12px;color:var(--cyan,#55d8e8)}
-    .site-search-trigger kbd{font:10px inherit;border:1px solid var(--line,rgba(150,170,190,.25));border-radius:4px;padding:2px 4px;color:var(--muted,#9aa9ba)}
+    .site-search-trigger kbd{font:inherit;font-size:10px;border:1px solid var(--line,rgba(150,170,190,.25));border-radius:4px;padding:2px 4px;color:var(--muted,#9aa9ba)}
     .site-search-overlay{position:fixed;inset:0;z-index:10030;display:grid;place-items:start center;padding:14vh 18px 28px;background:rgba(0,0,0,.64);backdrop-filter:blur(6px)}
     .site-search-overlay[hidden]{display:none!important}
     .site-search-dialog{width:min(620px,100%);overflow:hidden;border:1px solid var(--line,rgba(150,170,190,.3));border-radius:13px;background:var(--panel,#101827);color:var(--white,#fff);box-shadow:0 25px 90px #0009}
     .site-search-row{display:flex;align-items:center;gap:12px;padding:15px 17px;border-bottom:1px solid var(--line,rgba(150,170,190,.25));color:var(--cyan,#55d8e8);font-size:22px}
-    .site-search-row input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--white,#fff);font:14px inherit}
+    .site-search-row input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--white,#fff);font:inherit;font-size:14px}
     .site-search-row input::placeholder{color:var(--muted,#9aa9ba)}
     .site-search-close{border:0;background:transparent;color:var(--muted,#9aa9ba);font-size:25px;cursor:pointer}
     .site-search-results{max-height:52vh;overflow:auto;padding:10px}
